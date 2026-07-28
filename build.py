@@ -16,6 +16,7 @@ CO      = 'ADSD Steel Technical Services Contracting L.L.C'
 CO_SHORT= 'ADSD Steel'
 PHONE   = '+971 56 996 8611'
 PHONE_H = '+971569968611'
+WA      = PHONE_H.replace('+', '')
 EMAIL   = 'ads.techdxb@gmail.com'
 POBOX   = 'P.O. Box 282615, Dubai, UAE'
 TRN     = '104023207400003'
@@ -27,6 +28,7 @@ NAV = [
     ('Capability', '#capability'),
     ('Products',   '#products'),
     ('Projects',   '#projects'),
+    ('Gallery',    'gallery.html'),
     ('Contact',    '#contact'),
 ]
 
@@ -230,6 +232,12 @@ PRODUCTS = [
             'A pre-engineered building is the most efficient way to get covered industrial space onto a plot. The frame is designed around your required clear span and eaves height, fabricated as marked members in our workshop, then bolted together on site in a fraction of the time an in-situ structure would take.',
             'We supply the whole envelope: primary frames, purlins and side rails, bracing, roof and wall sheeting, insulation, gutters and downpipes, and the openings — roller shutters, personnel doors, louvers and translucent roof lights. Mezzanine floors, crane gantries and office fit-out steel can be built into the same frame from the outset.',
         ],
+        benefits=[
+            ('Faster to close in', 'Bolted portal frames erect in days, not the weeks an in-situ structure needs, so the building is weathertight sooner.'),
+            ('One package, one contract', 'Frame, envelope and openings come from the same crew, so there is no gap between who built it and who clads it.'),
+            ('Built for expansion', 'Mezzanines, crane gantries and bays designed into the frame from the outset, not retrofitted later.'),
+            ('Engineered to your span', 'Sized around the clear span and eaves height you actually need, not a standard catalogue module.'),
+        ],
         features=[
             ('Clear-span portal frames', 'Column and rafter frames sized to your span and eaves height, with haunches detailed for the applied loading.'),
             ('Secondary steel', 'Purlins, side rails, eave beams, ridge members and full bracing sets, marked to the erection drawing.'),
@@ -261,6 +269,12 @@ PRODUCTS = [
         overview=[
             'Parking shades take more punishment than most people expect: forty-plus degrees of daily thermal cycling, wind uplift that tries to peel the covering off, and airborne salt working on every fixing. The frame therefore matters more than the fabric.',
             'We fabricate cantilever, single-post and back-to-back frames from hollow sections and plate, hot-dip galvanise or powder coat them, and set them on cast-in or post-installed base plates surveyed to the parking layout. The covering can be tensioned membrane, profiled sheet or insulated panel depending on the look, the budget and the maintenance you want to sign up for.',
+        ],
+        benefits=[
+            ('Engineered for the uplift case', 'Sized for the wind load that actually fails Gulf shade structures, not just the dead weight.'),
+            ('Finish that survives a coastal summer', 'Hot-dip galvanised or powder coated steelwork specified for salt and UV exposure.'),
+            ('Bays stay usable', 'Bases set out against the surveyed parking layout, not the drawing, so columns land where cars actually park.'),
+            ('Covering to match the budget', 'Tensioned membrane, profiled sheet or insulated panel — whichever suits the look and the maintenance you want.'),
         ],
         features=[
             ('Frame configurations', 'Cantilever, single-post, double-cantilever and back-to-back arrangements to suit the bay layout.'),
@@ -294,6 +308,12 @@ PRODUCTS = [
             'Handrails and ladders are safety items, and they are also the last thing installed before an inspection. Both facts argue for measuring the actual structure rather than scaling the drawing: slab edges move, stair rises get adjusted, and a rail fabricated to the design dimension often arrives 30 mm short.',
             'We measure on site, fabricate to that dimension, and install with the fixings the substrate actually needs. Systems are available in galvanised tube, painted section, stainless steel and aluminium, with mid-rails, kick plates and infill panels to suit the exposure and the specification.',
         ],
+        benefits=[
+            ('Measured, not assumed', 'Every run is set out from the as-built structure, which is why it fits first time.'),
+            ('Passes inspection first time', 'Fabricated as a safety item to the standard the inspector is actually checking against.'),
+            ('Substrate-correct fixing', 'Base plates and anchors selected for the concrete or steel actually being fixed into.'),
+            ('Matched to the main steel', 'Detailed to sit correctly against the primary frame, since we fabricated that too.'),
+        ],
         features=[
             ('Stair and landing handrails', 'Stringer-mounted and floor-mounted rails with returns, wall brackets and continuous top rails.'),
             ('Platform balustrades', 'Stanchions, mid-rails and kick plates to platform and roof edge conditions.'),
@@ -326,6 +346,12 @@ PRODUCTS = [
             'Louvers do two jobs at once: let air through and keep weather out. Getting both right is a matter of blade profile, pitch and the drainage path behind the blade — which is why an off-the-shelf panel cut down to size on site usually leaks.',
             'We fabricate louver panels and screens to the measured opening, with the frame, blades, mesh and flashing detailed as one assembly. Applications range from generator and chiller enclosures to substation ventilation, plant screening on roofs, and privacy screens on facades and balconies.',
         ],
+        benefits=[
+            ("Doesn't leak", 'Blade pitch and drainage path detailed as one assembly, not a panel cut down on site and hoped for.'),
+            ('Made to the opening, not a standard size', 'Fabricated to the measured opening with the flashings built into the assembly.'),
+            ('Mesh you don\'t see', 'Bird and insect mesh fitted within the frame rather than tacked over the face.'),
+            ('Serviceable behind the screen', 'Removable and hinged panels provided where the plant behind needs access.'),
+        ],
         features=[
             ('Weather louvers', 'Blade profile and pitch selected for the required free area and rain defence.'),
             ('Privacy and screening panels', 'Fixed blade, vertical fin and perforated screens for facades, roofs and balconies.'),
@@ -357,6 +383,12 @@ PRODUCTS = [
         overview=[
             'Substation chequer plate is named in the company profile because it is a scope that gets ordered late and needed urgently. It is also unforgiving: a cover that rocks, a plate that deflects under load, or a lifting point that has corroded shut is a hazard, not a detail.',
             'We fabricate chequer plate and grating flooring against the measured opening, with framing, stiffeners, seatings and lifting provision designed for the imposed load and the way the panel will actually be lifted. The same fabrication covers maintenance platforms, walkways and step-overs around plant.',
+        ],
+        benefits=[
+            ('Load-checked, not standard-detail', 'Framing and stiffeners are sized from the stated imposed load, not a generic table.'),
+            ('Lifting points that still work', 'Recessed keys and eyes detailed to survive a year outdoors, not seize shut.'),
+            ('No rocking covers', 'Seatings and stops set out from the measured opening so panels sit flush.'),
+            ('Fast turnaround on urgent orders', 'Fabricated against the scope that typically gets ordered late and needed immediately.'),
         ],
         features=[
             ('Substation chequer plate', 'Floor plate, trench covers and access panels framed and stiffened for the imposed load.'),
@@ -391,6 +423,12 @@ PRODUCTS = [
         overview=[
             'A cladding package succeeds or fails at the junctions. The sheets themselves are straightforward; it is the eaves, verges, corners, penetrations and gutter outlets that decide whether the building leaks in the first heavy rain.',
             'We supply and fix single-skin and insulated panel systems together with all the flashings, closures, fixings and rainwater goods, and we detail the junctions before the sheets arrive. Because we also fabricate the frame, the purlin and rail layout is set up to suit the cladding rather than fought against on site.',
+        ],
+        benefits=[
+            ('Detailed at the junctions', 'Eaves, verges and penetrations worked out before the sheets arrive, which is where roofs actually leak.'),
+            ('Purlins set up for the cladding', 'Since we fabricate the frame too, the rail layout suits the panel rather than fighting it on site.'),
+            ('One scope, one warranty conversation', 'Sheet, flashing and rainwater goods supplied and fixed as a single package.'),
+            ('Repairs on existing buildings too', 'Recladding, gutter refurbishment and leak remediation, not just new build.'),
         ],
         features=[
             ('Profiled sheet roofing', 'Single-skin trapezoidal and corrugated profiles with the specified coating and fixing pattern.'),
@@ -604,13 +642,16 @@ def head(title, desc, canon, base='', img='assets/img/og-cover.jpg', jsonld=None
 </head>'''
 
 
-def nav(base='', active=None):
-    links = ''.join(
-        f'<a class="nav__a" href="{base if base and h.startswith("#") else ""}{"index.html" + h if base and h.startswith("#") else h}" data-nav-link>{n}</a>'
-        for n, h in NAV)
+def nav(base='', home=False):
+    # `home` means this page IS index.html, so its own #section anchors resolve
+    # in place. Every other page (including root-level ones like gallery.html)
+    # must route hash links back through index.html. Entries that aren't a
+    # #section (e.g. Gallery, a real standalone page) just get the base path.
+    prefix = '' if home else f'{base}index.html'
+    href_for = lambda h: f'{prefix}{h}' if h.startswith('#') else f'{base}{h}'
+    links = ''.join(f'<a class="nav__a" href="{href_for(h)}" data-nav-link>{n}</a>' for n, h in NAV)
     mlinks = ''.join(
-        f'<a href="{base}index.html{h}" data-nav-link><span class="mono">{i+1:02d}</span>{n}</a>' if base
-        else f'<a href="{h}" data-nav-link><span class="mono">{i+1:02d}</span>{n}</a>'
+        f'<a href="{href_for(h)}" data-nav-link><span class="mono">{i+1:02d}</span>{n}</a>'
         for i, (n, h) in enumerate(NAV))
     return f'''
 <header class="nav">
@@ -666,18 +707,17 @@ def cta(base='', img='frame-erection-crane',
         p='Quotations are free. Our sales staff assist by phone and email, and we price the options where a specification is still open.'):
     return f'''
 <section class="cta sec">
-  <div class="cta__bg" aria-hidden="true">
-    <img src="{base}assets/img/{img}-1400.jpg" alt="" width="1400" height="1400" loading="lazy" decoding="async" data-parallax="-8">
-  </div>
-  <div class="wrap cta__in">
-    <div>
-      <p class="eyebrow eyebrow--i" data-reveal>{eyebrow}</p>
-      <h2 class="h2 cta__h" style="margin-top:1rem" data-split>{h}</h2>
-      <p class="lead lead--i" style="margin-top:1.1rem;max-width:52ch" data-reveal data-delay=".1">{p}</p>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:.75rem" data-reveal data-delay=".18">
-      <a class="btn btn--pri" href="{base}index.html#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
-      <a class="btn btn--ghost-i" href="tel:{PHONE_H}" data-magnet="0.18"><span class="btn__t">{PHONE}</span></a>
+  <div class="wrap">
+    <div class="cta__card">
+      <div class="cta__in">
+        <p class="eyebrow eyebrow--i" data-reveal>{eyebrow}</p>
+        <h2 class="h2 cta__h" data-split>{h}</h2>
+        <p class="lead lead--i" data-reveal data-delay=".1">{p}</p>
+        <div class="cta__acts" data-reveal data-delay=".18">
+          <a class="btn btn--white" href="{base}index.html#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
+          <a class="btn btn--ghost-i" href="tel:{PHONE_H}" data-magnet="0.18"><span class="btn__t">{PHONE}</span></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>'''
@@ -700,7 +740,7 @@ def footer(base=''):
       </div>
       <div class="ft__col">
         <h3>Capability</h3>
-        <ul>{svc}<li><a href="{base}index.html#capability">All five disciplines</a></li></ul>
+        <ul>{svc}</ul>
       </div>
       <div class="ft__col">
         <h3>Products</h3>
@@ -727,6 +767,18 @@ def footer(base=''):
     </div>
   </div>
 </footer>
+
+<div class="fab-stack" aria-label="Quick contact">
+  <a class="fab fab--call" href="tel:{PHONE_H}" aria-label="Call {CO_SHORT}">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2 2.2Z"/></svg>
+  </a>
+  <a class="fab fab--mail" href="mailto:{EMAIL}" aria-label="Email {CO_SHORT}">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+  </a>
+  <a class="fab fab--wa" href="https://wa.me/{WA}" target="_blank" rel="noopener" aria-label="WhatsApp {CO_SHORT}">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+  </a>
+</div>
 
 <div class="lbox" role="dialog" aria-modal="true" aria-label="Project image" aria-hidden="true">
   <button class="lbox__x" aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
@@ -880,7 +932,7 @@ def build_index():
     return head(title, desc, SITE + '/', '', jsonld=ld, extra='''
   <link rel="preload" as="image" href="assets/img/og-cover.jpg" fetchpriority="high">
   <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"}}</script>
-  <script type="module" src="assets/js/hero-frame.js"></script>''') + shell_open() + nav() + f'''
+  <script type="module" src="assets/js/hero-frame.js"></script>''') + shell_open() + nav(home=True) + f'''
 <main id="main">
 
   <!-- ============================================================ HERO -->
@@ -1015,7 +1067,7 @@ def build_index():
         </div>
       </div>
     </div>
-    <div class="wrap"><div class="proc">{proc}</div></div>
+    <div class="wrap"><div class="proc" data-stagger>{proc}</div></div>
   </section>
 
   <!-- ======================================================== PROJECTS -->
@@ -1108,8 +1160,6 @@ def build_index():
           <div class="cred"><p class="cred__k">Phone</p><p class="cred__v"><a href="tel:{PHONE_H}">{PHONE}</a></p></div>
           <div class="cred"><p class="cred__k">Email</p><p class="cred__v"><a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
           <div class="cred"><p class="cred__k">Post</p><p class="cred__v">{POBOX}</p></div>
-          <div class="cred"><p class="cred__k">Dubai licence — Department of Economy &amp; Tourism</p><p class="cred__v">No. {LIC_DXB} · Technical Services Works · issued 31 March 2022 · <span class="live" style="color:var(--lime)">Active</span></p></div>
-          <div class="cred"><p class="cred__k">Group workshop — Sharjah Economic Development Department</p><p class="cred__v">Industrial licence No. {LIC_SHJ} · issued 2022</p></div>
           <div class="cred"><p class="cred__k">Tax registration number</p><p class="cred__v">{TRN}</p></div>
         </div>
       </div>
@@ -1169,7 +1219,7 @@ def build_service(s, i):
       <h1 class="h1 phero__h" data-hero-h>{s['title']}</h1>
       <p class="lead lead--i phero__d" data-hero-sub>{s['lead']}</p>
       <div class="hero__acts" data-hero-act>
-        <a class="btn btn--pri" href="#enquire" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
+        <a class="btn btn--pri" href="{base}index.html#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
         <a class="btn btn--ghost-i" href="tel:{PHONE_H}" data-magnet="0.18"><span class="btn__t">{PHONE}</span></a>
       </div>
     </div>
@@ -1186,7 +1236,7 @@ def build_service(s, i):
       <aside class="aside" data-reveal>
         <h3 class="h4">Scope and specification</h3>
         <dl class="specs-tbl">{specs}</dl>
-        <a class="tlink" href="#enquire">Enquire about this scope{ICON['arr_sm']}</a>
+        <a class="tlink" href="{base}index.html#contact">Enquire about this scope{ICON['arr_sm']}</a>
       </aside>
     </div>
   </section>
@@ -1226,7 +1276,6 @@ def build_service(s, i):
     </div>
   </section>
 
-  <div id="enquire"></div>
 </main>
 {cta(base, s['gallery'][1] if len(s['gallery']) > 1 else s['hero'],
      'Enquire', 'Send the drawings for ' + plain.lower() + ' and we will price it.',
@@ -1246,6 +1295,7 @@ def build_product(p, i):
         <p>{d}</p>
       </article>''' for n, (t, d) in enumerate(p['features']))
     specs = ''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in p['specs'])
+    bens = ''.join(f'<li>{ICON["tick"]}<span><b>{t}</b> — {d}</span></li>' for t, d in p['benefits'])
     gal = ''.join(f'''
       <figure class="gal__i{' gal__i--w' if n == 0 else ''}" data-full="{base}assets/img/{g}-1400.jpg">
         <img src="{base}assets/img/{g}-800.jpg" alt="{html.unescape(p['title'])} — {g.replace('-',' ')}" width="800" height="800" loading="lazy" decoding="async">
@@ -1285,7 +1335,7 @@ def build_product(p, i):
       <h1 class="h1 phero__h" data-hero-h>{p['title']}</h1>
       <p class="lead lead--i phero__d" data-hero-sub>{p['lead']}</p>
       <div class="hero__acts" data-hero-act>
-        <a class="btn btn--pri" href="#enquire" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
+        <a class="btn btn--pri" href="{base}index.html#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
         <a class="btn btn--ghost-i" href="mailto:{EMAIL}" data-magnet="0.18"><span class="btn__t">{EMAIL}</span></a>
       </div>
     </div>
@@ -1296,12 +1346,14 @@ def build_product(p, i):
       <div class="rich">
         <p class="eyebrow" data-reveal>Product overview</p>
         {over}
+        <h2 class="h3" style="margin-top:1.4rem" data-reveal>Benefits</h2>
+        <ul class="ticks" data-stagger>{bens}</ul>
       </div>
       <aside class="aside" data-reveal>
         <h2 class="h4">Specifications</h2>
         <dl class="specs-tbl">{specs}</dl>
         <p style="font-size:.82rem;color:var(--t3)">Sizes, grades and finishes are confirmed against your drawings or a site survey before quotation.</p>
-        <a class="tlink" href="#enquire">Request a quotation{ICON['arr_sm']}</a>
+        <a class="tlink" href="{base}index.html#contact">Request a quotation{ICON['arr_sm']}</a>
       </aside>
     </div>
   </section>
@@ -1341,7 +1393,6 @@ def build_product(p, i):
     </div>
   </section>
 
-  <div id="enquire"></div>
 </main>
 {cta(base, p['gallery'][1] if len(p['gallery']) > 1 else p['hero'],
      'Enquire', 'Tell us the sizes. We will price the ' + plain.lower() + '.',

@@ -27,7 +27,7 @@ function init(canvas) {
   scene.fog = new THREE.Fog(INK, 26, 96);
 
   const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 200);
-  camera.position.set(19, 9.6, 25);
+  camera.position.set(19, 9.6, 29);
   camera.lookAt(0, 4.4, 0);
 
   const renderer = new THREE.WebGLRenderer({
@@ -143,7 +143,7 @@ function init(canvas) {
     camera.aspect = w / h;
     /* pull the camera back on narrow viewports so the frame still reads */
     const k = w / h;
-    camera.position.set(19, 9.6, k < 1 ? 40 : k < 1.4 ? 32 : 25);
+    camera.position.set(19, 9.6, k < 1 ? 46 : k < 1.4 ? 37 : 29);
     camera.lookAt(0, 4.4, 0);
     camera.updateProjectionMatrix();
   }
