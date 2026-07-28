@@ -459,6 +459,25 @@
     });
   }
 
+  /* ------------------------------------------------------------ table rows */
+  function initTableLinks() {
+    $$('[data-rows] tbody tr[data-href]').forEach((tr) => {
+      tr.tabIndex = 0;
+      const go = (e) => {
+        const href = tr.dataset.href;
+        if (e.metaKey || e.ctrlKey || e.button === 1) { window.open(href, '_blank'); return; }
+        window.location.href = href;
+      };
+      tr.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        go(e);
+      });
+      tr.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); }
+      });
+    });
+  }
+
   /* ------------------------------------------------------------------ boot */
   function boot() {
     initScroll();
@@ -469,6 +488,7 @@
     initFaq();
     initLightbox();
     initForm();
+    initTableLinks();
     initReveals();
     initCounters();
     if (has('ScrollTrigger')) ScrollTrigger.refresh();

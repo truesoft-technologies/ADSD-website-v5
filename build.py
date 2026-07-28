@@ -26,7 +26,6 @@ NAV = [
     ('About',      '#about'),
     ('Capability', '#capability'),
     ('Products',   '#products'),
-    ('Industries', '#industries'),
     ('Projects',   '#projects'),
     ('Contact',    '#contact'),
 ]
@@ -66,121 +65,15 @@ SERVICES = [
             ('Scope options', 'Supply and fix, fabrication only, erection only, or labour and supervision'),
             ('Coverage', 'Dubai, Sharjah, Abu Dhabi and the Northern Emirates'),
         ],
-        gallery=['fabricated-beams', 'frame-erection-crane', 'curved-roof-erection', 'warehouse-frame-erected',
-                 'portal-frame-lift', 'portal-structure-glazed'],
-    ),
-    dict(
-        slug='equipment-installation',
-        title='Equipment Installation',
-        plain='Equipment Installation',
-        short='Setting, aligning and grouting production plant, conveyors, silos and packaged units on prepared foundations.',
-        hero='silo-platform-access',
-        lead='Mechanical installation of production plant and packaged equipment — rigged into place, aligned to tolerance, grouted and handed to your commissioning team.',
-        body=[
-            'Equipment installation is where a plant layout stops being a drawing. We take delivery of the unit, check the foundation and holding-down bolts against the vendor drawing, rig the equipment into position, then shim, align and grout it to the tolerances the manufacturer specifies.',
-            'Most installations also need steel that was never on the equipment order: access platforms, maintenance walkways, hopper supports, guarding and small bracketry. Because we fabricate as well as install, that steel is made and fitted by the same team instead of becoming a separate package with its own lead time.',
-        ],
-        features=[
-            ('Foundation and bolt check', 'Anchor positions, projections and levels verified against the vendor drawing before the unit is lifted.'),
-            ('Rigging and placement', 'Lift plans, slinging and setting of skids, tanks, conveyors, silos and packaged units into final position.'),
-            ('Alignment and grouting', 'Shimming, levelling and laser or dial alignment, then non-shrink grouting of base plates and soleplates.'),
-            ('Support and access steel', 'Platforms, stairs, walkways, hopper supports and guarding fabricated to suit the equipment as installed.'),
-            ('Mechanical connection', 'Coupling of guards, chutes, ducts and inline items ready for the electrical and instrument trades.'),
-            ('Handover for commissioning', 'Alignment records, torque records and a walkdown with your commissioning engineer.'),
-        ],
-        benefits=[
-            ('Vendor tolerances met', 'Alignment is recorded, not assumed, so warranty conditions on rotating plant are protected.'),
-            ('No gap between disciplines', 'Access steel, guarding and brackets come from the same team, closing the usual gap between supply and install.'),
-            ('Works around production', 'Installations are sequenced for shutdown windows and night work where a plant cannot stop.'),
-            ('Site-ready crews', 'Riggers, fitters and welders arrive with the certification and PPE your site induction requires.'),
-        ],
-        specs=[
-            ('Equipment types', 'Process skids, conveyors, silos, hoppers, mixers, pumps, packaged plant'),
-            ('Alignment methods', 'Precision level, dial gauge and laser alignment as the vendor specification requires'),
-            ('Grouting', 'Cementitious and epoxy non-shrink grouts to the specified bearing area'),
-            ('Rigging', 'Method statements and lift plans issued for approval before mobilisation'),
-            ('Interfaces', 'Coordinated with civil, electrical and instrumentation contractors'),
-            ('Working hours', 'Day shift, night shift and shutdown working available'),
-        ],
-        gallery=['plant-steel-structure', 'process-platform-steel', 'workshop-interior-crane', 'tank-platform-crane',
-                 'portal-frame-crane'],
-    ),
-    dict(
-        slug='pipe-fabrication',
-        title='Pipe Fabrication, Installation &amp; Inline Equipment',
-        plain='Pipe Fabrication, Installation and Inline Equipment',
-        short='Shop and field spooling in carbon and stainless steel, with valves, strainers and inline items set to the P&amp;ID.',
-        hero='plant-steel-structure',
-        lead='Pipe spools fabricated to the isometric, installed on pipe supports we make ourselves, with valves and inline equipment set the right way round.',
-        body=[
-            'Pipework is fabricated from the isometrics as spools wherever shop conditions will give a better weld than a site position would. Spools are marked, tacked, welded and dimensionally checked before they leave the workshop, then installed against the line list and P&amp;ID.',
-            'Inline equipment — valves, strainers, flow elements, sight glasses — is fitted with attention to orientation, flow direction and access for operation and maintenance. Pipe supports, shoes, guides and small structural steel are made in the same workshop, so a support that does not suit the route can be modified the same day.',
-        ],
-        features=[
-            ('Spool fabrication', 'Cutting, bevelling, fit-up and welding of carbon and stainless spools from approved isometrics.'),
-            ('Field erection', 'Routing, hanging and closure welds against the line list, P&amp;ID and approved route drawings.'),
-            ('Inline equipment', 'Valves, strainers, flow elements and instrument connections installed to orientation and flow direction.'),
-            ('Pipe supports', 'Shoes, guides, anchors, hangers and support steel fabricated in-house to suit the installed route.'),
-            ('Test support', 'Preparation for hydrostatic and pneumatic testing, including temporary spades, vents and drains.'),
-            ('Reinstatement', 'Painting, insulation interface and clean handover of the completed line.'),
-        ],
-        benefits=[
-            ('Better welds, fewer positions', 'Shop-welded spools reduce overhead and confined-position welding on site.'),
-            ('Supports made to fit', 'Support steel is fabricated against the installed route, not just the design assumption.'),
-            ('Maintainable layouts', 'Valve handles, strainer baskets and instrument taps are set where an operator can actually reach them.'),
-            ('Single interface', 'Pipe, supports and structural steel come from one supplier with one programme.'),
-        ],
-        specs=[
-            ('Materials', 'Carbon steel, stainless steel, galvanised pipework'),
-            ('Joining', 'Butt-welded, socket-welded, flanged and threaded connections'),
-            ('Fabrication basis', 'Approved isometrics, line lists and P&amp;IDs'),
-            ('Inline items', 'Valves, strainers, sight glasses, flow elements, instrument connections'),
-            ('Testing', 'Hydrostatic and pneumatic test support with your QA/QC team'),
-            ('Supports', 'Shoes, guides, anchors, spring hangers, fabricated support steel'),
-        ],
-        gallery=['tank-installation-plant', 'process-platform-steel', 'silo-platform-access', 'plant-steel-structure'],
-    ),
-    dict(
-        slug='tank-installation',
-        title='Tank Installation',
-        plain='Tanks Installation',
-        short='Shell erection, internals and access steel for storage and process tanks, complete with testing support.',
-        hero='tank-installation-plant',
-        lead='Storage and process tanks set, erected and fitted out — shell, internals, nozzles and the access steel that makes them serviceable.',
-        body=[
-            'Tank work covers both the placing of shop-built vessels and the site erection of plate tanks. Foundations and anchor arrangements are checked first, then the tank is rigged into position, plumbed and secured, with shell courses, roof plates and nozzles set out to the fabrication drawing.',
-            'A tank is only useful if it can be operated and inspected, so the scope normally extends to platforms, cage ladders, handrails, dip hatches, gauge access and pipe supports. All of that steel is fabricated in our own workshop against the tank as installed rather than against an assumed dimension.',
-        ],
-        features=[
-            ('Foundation verification', 'Levels, anchor bolt positions and bearing arrangement checked before placement.'),
-            ('Placement and erection', 'Rigging of shop-built vessels, or site erection of shell courses, annular plates and roof.'),
-            ('Nozzles and internals', 'Nozzle setting, manway fit-up, baffles, supports and internal steel to the fabrication drawing.'),
-            ('Access steel', 'Platforms, cage ladders, stairs and handrails to give safe operating and inspection access.'),
-            ('Testing support', 'Preparation and attendance for hydrostatic and leak testing with your inspection team.'),
-            ('Coating and insulation interface', 'Surface preparation, primer and finish, and coordination with the insulation contractor.'),
-        ],
-        benefits=[
-            ('Access designed in', 'Platforms and ladders are fabricated to the installed tank, so gauges and manways are genuinely reachable.'),
-            ('One team, shell to handrail', 'Vessel work and secondary steel are not split between two contractors with two programmes.'),
-            ('Inspection-ready', 'Weld records, alignment checks and test preparation are handled as part of the scope.'),
-            ('Site-condition experience', 'Work delivered inside live industrial plants across the UAE, including phased shutdowns.'),
-        ],
-        specs=[
-            ('Tank types', 'Vertical and horizontal storage tanks, process vessels, day tanks, buffer tanks'),
-            ('Scope', 'Placement of shop-built vessels or site erection of plate tanks'),
-            ('Fittings', 'Nozzles, manways, dip hatches, vents, level and gauge connections'),
-            ('Access', 'Platforms, cage ladders, stairs, handrails, chequer plate walkways'),
-            ('Testing', 'Hydrostatic and leak test support'),
-            ('Finish', 'Specified primer and finish system, insulation interface coordinated'),
-        ],
-        gallery=['tank-installation-plant', 'silo-platform-access', 'process-platform-steel', 'tank-platform-crane'],
+        gallery=['ssf-rooftop-screen-ladder', 'ssf-canopy-entrance', 'ssf-cantilever-walkway',
+                 'ssf-stair-balustrade', 'ssf-cnc-screen-wall'],
     ),
     dict(
         slug='miscellaneous-metal-works',
         title='Miscellaneous Metal Works',
         plain='Miscellaneous Metal Work',
         short='Handrails, ladders, aluminium louvers, car parking sheds and substation chequer plate — the finishing steel.',
-        hero='louver-screen-enclosure',
+        hero='laser-metal-cutting',
         lead='The secondary metalwork that finishes a building: handrails, aluminium louvers, car parking sheds, substation chequer plate, ladders, gates and brackets.',
         body=[
             'The company profile groups this work as miscellaneous metal work, and it is usually the scope that decides whether a project feels finished. It is measured on site rather than scaled off a drawing, because openings, floor levels and kerb lines are never exactly where the design put them.',
@@ -208,147 +101,119 @@ SERVICES = [
             ('Finishes', 'Hot-dip galvanised, powder coated, two-pack painted, mill finish aluminium'),
             ('Basis', 'Site-measured fabrication, delivered and installed by our own crews'),
         ],
-        gallery=['louver-screen-corner', 'car-parking-shade-row', 'car-parking-shade-single', 'process-platform-steel'],
+        gallery=['mmw-glass-marble-staircase', 'mmw-brass-room-divider', 'mmw-laser-cut-ceiling-trim',
+                 'mmw-acp-signage-panel', 'mmw-stained-glass-staircase', 'mmw-gold-mirror-trim',
+                 'mmw-fabricated-rack-frame', 'mmw-stainless-step-stool', 'mmw-floor-drain-grate',
+                 'mmw-slot-drain-grate', 'mmw-recessed-floor-drain', 'mmw-commercial-kitchen-counter',
+                 'mmw-outdoor-kitchen-cabinet', 'mmw-recessed-wash-trough', 'mmw-walkin-pantry-shelving',
+                 'mmw-decorative-bollard', 'mmw-tv-feature-wall', 'mmw-island-cooking-range',
+                 'mmw-outdoor-sink-bbq-combo', 'mmw-tandoori-oven-unit', 'mmw-fish-display-counter',
+                 'mmw-display-cabinet-gold', 'mmw-gold-slatted-shelving'],
     ),
     dict(
-        slug='manpower-supply',
-        title='Manpower Supply',
-        plain='Manpower supply',
-        short='Trade-tested fabricators, welders, riggers, fitters and helpers released to your site under your supervision.',
-        hero='fabrication-welding',
-        lead='Trade-tested steel and mechanical labour released to your project — by the day, the month or the duration of the contract.',
+        slug='tailor-made-fabrication-civil',
+        title='Tailor-Made Fabrication Products for the Civil Sector',
+        plain='Tailor-Made Fabrication Products for the Civil Sector',
+        short='Custom-fabricated steelwork engineered to the civil drawing — embedments, temporary works and site-specific metalwork made to order.',
+        hero='structure-under-erection',
+        lead='Steel fabricated to the exact dimension a civil scope calls for — embedments, temporary works and access steel made to your drawing, not picked off a standard range.',
         body=[
-            'When your own programme is tighter than your own crew, we release trades from the same workforce that staffs our contracts. Welders, fabricators, fitters, riggers, painters and helpers are available with the trade test, experience and documentation your site induction asks for.',
-            'Labour can work under your supervision, or under one of our chargehands if you would rather take an output than manage a crew. Rates, shift patterns, accommodation and transport are agreed in writing before mobilisation so there are no surprises when the invoice arrives.',
+            'Civil works rarely fit a catalogue item. Foundations, grade beams, embedments and site conditions are different on every project, so we fabricate to the drawing and the site measurement rather than asking a civil contractor to design around stock sizes.',
+            'From embedded plates and cast-in items through to temporary works steel, access platforms and site railings, the same workshop that fabricates our structural frames turns civil-specific requests around against your programme, with drawings developed and approved before cutting starts.',
         ],
         features=[
-            ('Trades available', 'Structural welders, pipe welders, fabricators, fitters, riggers, scaffolders, painters, helpers.'),
-            ('Trade-tested', 'Welders and fabricators tested before release, with records provided to your QA/QC team.'),
-            ('Documentation ready', 'Valid visas, medicals, insurance and site-safety cards in place for induction.'),
-            ('Supervision optional', 'Work under your supervision, or under our chargehand where you want an output rather than a crew.'),
-            ('Flexible duration', 'Daily, monthly and contract-duration releases, with agreed shift and overtime patterns.'),
-            ('Logistics handled', 'Accommodation, transport and PPE arranged so the crew arrives ready to work.'),
+            ('Embedded and cast-in steel', 'Base plates, anchor cages and embedment items detailed to the civil drawing and delivered ahead of the pour.'),
+            ('Temporary works steel', 'Props, bracing, formwork support and lifting frames fabricated to the design issued by the engineer.'),
+            ('Access and edge protection', 'Site railings, guardrails and edge protection fabricated to fit the actual excavation or slab edge.'),
+            ('Site-measured brackets', 'One-off brackets, supports and fixings made to a site dimension rather than a standard size.'),
+            ('Shop drawings on request', 'Detail drawings produced from your design intent and issued for approval before fabrication.'),
+            ('Fast turnaround', 'Civil programmes move quickly, so urgent items are prioritised through the workshop.'),
         ],
         benefits=[
-            ('Cover a peak without hiring', 'Scale up for an erection window and release the labour when the peak passes.'),
-            ('Trades that have done the work', 'The same people who staff our own steel and piping contracts, not agency generalists.'),
-            ('Induction without delay', 'Documentation is prepared before mobilisation, so day one is a working day.'),
-            ('Costs agreed up front', 'Rates, shifts and overtime are fixed in writing before the crew moves.'),
+            ('Made to the drawing, not the catalogue', 'Every item is fabricated to the actual dimension, so it fits without site modification.'),
+            ('One workshop, any quantity', 'From a single embedment plate to a full package of temporary works steel.'),
+            ('Keeps the pour on programme', 'Cast-in and embedded items are delivered ahead of the concrete date, not chasing it.'),
+            ('Direct from the fabricator', 'No middleman mark-up between the drawing and the steel — priced and made in-house.'),
         ],
         specs=[
-            ('Trades', 'Welders (structural and pipe), fabricators, fitters, riggers, painters, scaffolders, helpers'),
-            ('Testing', 'Trade tests carried out before release; records issued on request'),
-            ('Supervision', 'Client-supervised or ADSD chargehand-supervised'),
-            ('Duration', 'Daily, monthly, or contract duration'),
-            ('Shifts', 'Day, night and rotating shift patterns'),
-            ('Provided', 'PPE, transport and accommodation as agreed in the release terms'),
+            ('Typical items', 'Embedded plates, anchor cages, temporary works steel, site railings, brackets'),
+            ('Materials', 'Mild steel, galvanised steel, stainless steel on request'),
+            ('Basis', 'Civil and structural drawings, site measurement, or the engineer design issued for the works'),
+            ('Finishes', 'Primer, galvanised, or mill finish as specified'),
+            ('Lead times', 'Prioritised against civil pour and programme dates'),
+            ('Scope options', 'Supply only, or supply and fix on site'),
         ],
-        gallery=['steel-cutting', 'workshop-interior-crane', 'fabricated-beams', 'structure-under-erection'],
+        gallery=['structure-under-erection', 'site-warehouse-build', 'structure-crane-lift', 'steel-cutting'],
     ),
     dict(
-        slug='anchor-bolts-fasteners-supply',
-        title='Anchor Bolts &amp; Fastener Supply',
-        plain='Anchor Bolts and Fasteners Supply',
-        short='Holding-down bolt assemblies, templates and structural fasteners supplied to grade, coating and cast-in schedule.',
-        hero='base-plates-fabrication',
-        lead='Holding-down bolt assemblies, setting templates and structural fasteners supplied against the base-plate schedule — before the concrete pour, not after it.',
+        slug='tailor-made-fabrication-mep',
+        title='Tailor-Made Fabrication Products for the MEP Sector',
+        plain='Tailor-Made Fabrication Products for the MEP Sector',
+        short='Custom steel supports, platforms and brackets fabricated to suit mechanical, electrical and plumbing installations.',
+        hero='process-platform-steel',
+        lead='Supports, platforms and brackets fabricated to fit the equipment, ductwork and containment an MEP contractor is actually installing — not a generic bracket range.',
         body=[
-            'Anchor bolts are the first steel item on a project and the one most likely to delay it. We supply holding-down bolt assemblies made up to the base-plate detail: bolt, plate washer, nuts, sleeve and the setting template that keeps the group square while the concrete goes in.',
-            'Structural bolting for the frame is supplied against the same take-off used for fabrication, so grades, lengths and quantities match the connection details rather than a rounded estimate. Coatings are specified for the exposure the fixing will actually see.',
+            'MEP installations carry steel that is rarely off the shelf: plant supports, duct hangers, cable tray ladder racks, pipe bridges and equipment platforms all need to match a specific layout. We fabricate these to your coordinated drawing, so the support is right the first time it reaches site.',
+            'Because the same workshop cuts, drills and welds every piece, changes that come out of a coordination meeting can be turned around quickly — a revised bracket or an extra hanger does not have to wait behind a large order.',
         ],
         features=[
-            ('Holding-down assemblies', 'Bolt, nuts, plate washer, sleeve and cone assembled to the base-plate detail.'),
-            ('Setting templates', 'Fabricated templates that hold the bolt group to position and projection through the pour.'),
-            ('Structural bolting', 'Bolts, nuts and washers to grade, supplied against the connection schedule.'),
-            ('Chemical and mechanical anchors', 'Post-installed anchors where the fixing has to go into cured concrete.'),
-            ('Coatings', 'Hot-dip galvanised, zinc plated or self-colour to suit the exposure.'),
-            ('Cast-in scheduling', 'Delivered in pour sequence and marked to the grid reference on the drawing.'),
+            ('Plant and equipment supports', 'Steel stands, cradles and frames fabricated to suit chillers, AHUs, pumps and packaged plant.'),
+            ('Duct and cable tray supports', 'Hangers, trapezes and brackets sized to the coordinated services drawing.'),
+            ('Pipe bridges and racks', 'Support steel for MEP pipe routes crossing plant rooms, risers and roof levels.'),
+            ('Access platforms', 'Maintenance platforms and walkways built around plant that needs to stay serviceable.'),
+            ('Builders work coordination', 'Support steel detailed to coordinate with builders work openings and civil elements.'),
+            ('Quick-turn revisions', 'Late coordination changes are fabricated and delivered without holding up the wider package.'),
         ],
         benefits=[
-            ('The frame fits the bolts', 'Assemblies are made to the base-plate detail, so column bases land on bolts that are where they should be.'),
-            ('Pours are not held up', 'Templates and assemblies arrive scheduled against the pour, not against the fabrication programme.'),
-            ('Correct grades supplied', 'Quantities and grades come from the same take-off as the steel, so nothing is substituted on site.'),
-            ('Right coating, right place', 'External, buried and internal fixings are specified separately rather than uniformly.'),
+            ('Fits the coordinated drawing', 'Supports are made to the services layout as coordinated, not a standard span table.'),
+            ('One point of contact', 'Mechanical, electrical and plumbing support steel comes from a single fabricator.'),
+            ('Responsive to site changes', 'Coordination revisions are turned around from the same workshop, not re-ordered from scratch.'),
+            ('Finished for the environment', 'Coatings specified for plant rooms, roof exposure or corrosive environments as needed.'),
         ],
         specs=[
-            ('Assemblies', 'Holding-down bolts with nuts, plate washers, sleeves and cones'),
-            ('Templates', 'Fabricated steel setting templates to bolt-group geometry'),
-            ('Structural fasteners', 'Bolts, nuts and washers to specified structural grade'),
-            ('Post-installed anchors', 'Chemical and mechanical anchors to approved manufacturer systems'),
-            ('Coatings', 'Hot-dip galvanised, zinc plated, self-colour'),
-            ('Delivery', 'Marked and batched to grid reference and pour sequence'),
+            ('Typical items', 'Plant stands, duct and pipe hangers, cable tray supports, access platforms'),
+            ('Materials', 'Mild steel, galvanised steel, stainless steel on request'),
+            ('Basis', 'Coordinated MEP shop drawings or site survey'),
+            ('Finishes', 'Galvanised, powder coated, or primer and paint as specified'),
+            ('Coordination', 'Builders work and clash coordination with the wider MEP package'),
+            ('Scope options', 'Supply only, or supply and install on site'),
         ],
-        gallery=['base-plates-fabrication', 'fabricated-beams', 'warehouse-frame-erected', 'structure-crane-lift'],
+        gallery=['process-platform-steel', 'plant-steel-structure', 'silo-platform-access', 'tank-platform-crane'],
     ),
     dict(
-        slug='supply-service',
-        title='Supply Service',
-        plain='Supply Service',
-        short='Pre-fabricated building products supplied through our own engineering, manufacturing and delivery systems.',
-        hero='supply-team',
-        lead='Supply of pre-fabricated construction products, backed by our own engineering, manufacturing and delivery systems — and a sales team you can reach for a free quotation.',
+        slug='tailor-made-fabrication-landscape-hospitality',
+        title='Tailor-Made Fabrication Products for the Landscape &amp; Hospitality Industry',
+        plain='Tailor-Made Fabrication Products for the Landscape and Hospitality Industry',
+        short='Custom steel pergolas, shade structures and outdoor metalwork fabricated for landscape and hospitality projects.',
+        hero='canopy-steel-frame',
+        lead='Pergolas, shade structures and outdoor metalwork fabricated to a landscape or hospitality design intent, built to hold a finish as well as a load.',
         body=[
-            'The company profile commits to supplying exceptional quality products and services in the pre-fabricated construction industry by developing and employing the most advanced information, engineering, manufacturing and delivery systems available. In practice that means a supply route where the drawing, the workshop and the delivery schedule are managed together rather than handed between three parties.',
-            'For any kind of building project our sales staff will take the enquiry by phone or email and come back with a free quotation. Where a specification is still open, we will price the options rather than guess which one you meant.',
+            'Landscape and hospitality work is judged on appearance as much as strength, so fabrication is set out from the design drawing issued by the architect or landscape designer, with attention to clean welds, consistent radii and a finish that will be seen up close.',
+            'From pergolas and shade canopies to planters, screens and outdoor furniture frames, pieces are fabricated in the workshop and finished before delivery, so installation on a live landscape or hospitality site is fast and clean.',
         ],
         features=[
-            ('Pre-fabricated building products', 'Frames, sheds, canopies, cladding, louvers and secondary steel supplied as a package.'),
-            ('Engineering support', 'Shop drawings, take-off and material scheduling from your design or performance specification.'),
-            ('Manufacturing capacity', 'Own workshop for cutting, drilling, welding and finishing, with capacity reserved against the delivery date.'),
-            ('Delivery scheduling', 'Loads planned in the sequence the site needs, with call-off arranged against your programme.'),
-            ('Free quotation', 'Enquiries answered by phone or email, with a priced quotation and options where the specification is open.'),
-            ('Supply-only or supply and fix', 'Take the material and fix it yourself, or hand the whole scope to our erection crews.'),
+            ('Pergolas and shade structures', 'Steel-framed pergolas and shade canopies fabricated to the landscape design.'),
+            ('Planters and screens', 'Custom planter boxes, privacy screens and decorative metalwork to a specified profile.'),
+            ('Outdoor furniture frames', 'Steel frames for benches, loungers and fixed furniture built for outdoor use.'),
+            ('Feature and decorative steel', 'Architectural metalwork where the weld line and finish are part of the design.'),
+            ('Weather-ready finishes', 'Galvanising and powder coating specified for sun, humidity and coastal exposure.'),
+            ('Coordinated installation', 'Delivered and fixed to suit the landscaping or hospitality fit-out programme.'),
         ],
         benefits=[
-            ('One quotation, one programme', 'Engineering, manufacture and delivery priced together instead of assembled from three suppliers.'),
-            ('Options priced, not assumed', 'Where the specification leaves a choice, you see the cost of each route before deciding.'),
-            ('Capacity you can rely on', 'Workshop time is reserved against your delivery date rather than allocated on arrival.'),
-            ('A sales team that answers', 'Enquiries handled by named staff, contactable by phone and email.'),
+            ('Built to the design, not a catalogue', 'Every piece is fabricated to the drawing issued by the architect or designer.'),
+            ('Finish-first fabrication', 'Welds, edges and coatings are finished to be seen, not just to hold load.'),
+            ('One workshop for the whole package', 'Pergolas, screens, planters and furniture frames from a single supplier.'),
+            ('Durable in the Gulf climate', 'Coatings specified to survive sun, humidity and coastal exposure.'),
         ],
         specs=[
-            ('Product range', 'Pre-engineered frames, sheds, canopies, cladding and roofing, louvers, secondary steel'),
-            ('Engineering', 'Shop drawings, take-off, material scheduling'),
-            ('Basis of supply', 'Supply only, or supply and fix'),
-            ('Quotation', 'Free quotation by phone or email'),
-            ('Delivery', 'Scheduled call-off in site sequence'),
-            ('Coverage', 'UAE-wide delivery from Dubai and Sharjah'),
+            ('Typical items', 'Pergolas, shade canopies, planters, screens, outdoor furniture frames'),
+            ('Materials', 'Mild steel, galvanised steel, aluminium on request'),
+            ('Basis', 'Architect or landscape design drawings, or a supplied concept'),
+            ('Finishes', 'Hot-dip galvanised, powder coated, feature paint finishes'),
+            ('Sectors', 'Landscaping contractors, hotels, resorts, leisure and F&amp;B fit-outs'),
+            ('Scope options', 'Supply only, or supply and install on site'),
         ],
-        gallery=['warehouse-exterior', 'open-shed-structure', 'cladding-panel-wall', 'clad-warehouse-green'],
-    ),
-    dict(
-        slug='building-maintenance',
-        title='Building Maintenance',
-        plain='Building Maintenace',
-        short='In-house cleaning, handyman and facility upkeep delivered by our own directly employed and supervised teams.',
-        hero='building-maintenance',
-        lead='Cleaning, handyman work and facility upkeep carried out by our own directly employed staff — no outsourcing, no subcontracting, one accountable party.',
-        body=[
-            'Our in-house staff perform all cleaning and maintenance, waste and recycling management, and handyman work, while our trained property managers schedule and monitor everything we do. We are always fully accountable for these services, because our own team carries out the work without outsourcing or subcontracting.',
-            'That structure is the point of the service. When a task is missed, there is no chain of suppliers to work through — the manager who set the schedule is the manager who fixes it. Scopes are agreed as a written schedule with frequencies and standards, so performance can be measured rather than debated.',
-        ],
-        features=[
-            ('Cleaning and housekeeping', 'Scheduled cleaning of common areas, offices, industrial floors and external areas.'),
-            ('Waste and recycling', 'Waste and recycling management, including segregation and scheduled removal.'),
-            ('Handyman work', 'Minor repairs, fixings, doors, fittings and general upkeep across the property.'),
-            ('Managed scheduling', 'Trained property managers set, monitor and record the schedule for every task.'),
-            ('Directly employed teams', 'All work carried out by our own staff, without outsourcing or subcontracting.'),
-            ('Reactive attendance', 'Call-out response for faults and incidents alongside the planned schedule.'),
-        ],
-        benefits=[
-            ('Accountability sits in one place', 'Because nothing is subcontracted, there is one company answering for the standard of the work.'),
-            ('Consistent teams on site', 'The same staff attend the property, so they know the building rather than learning it each visit.'),
-            ('Measurable performance', 'Frequencies and standards are written down, monitored and reported.'),
-            ('Steel and fabric together', 'Structural repairs, handrails and metalwork are handled by the same company that maintains the building.'),
-        ],
-        specs=[
-            ('Cleaning', 'Common areas, offices, industrial floors, external areas, periodic deep cleaning'),
-            ('Waste', 'Waste and recycling management with scheduled removal'),
-            ('Handyman', 'Minor repairs, fixings, doors, fittings, general upkeep'),
-            ('Management', 'Trained property managers scheduling and monitoring all work'),
-            ('Delivery model', 'Directly employed teams — no outsourcing or subcontracting'),
-            ('Coverage', 'Industrial, commercial and mixed-use properties across Dubai and Sharjah'),
-        ],
-        gallery=['building-maintenance', 'warehouse-interior-lighting', 'completed-warehouse', 'cladding-blue-facade'],
+        gallery=['canopy-steel-frame', 'car-parking-shade-row', 'car-parking-shade-single', 'open-shed-structure'],
     ),
 ]
 
@@ -423,7 +288,7 @@ PRODUCTS = [
         title='Handrails, Ladders &amp; Balustrades',
         tag='Access &amp; safety',
         short='Edge protection, stair handrails, cage ladders and platform balustrades fabricated to site-measured dimensions.',
-        hero='process-platform-steel',
+        hero='hlb-tubular-stair-handrail',
         lead='Edge protection and access metalwork — stair handrails, platform balustrades, cage ladders and step-overs, fabricated to a site measurement so they fit first time.',
         overview=[
             'Handrails and ladders are safety items, and they are also the last thing installed before an inspection. Both facts argue for measuring the actual structure rather than scaling the drawing: slab edges move, stair rises get adjusted, and a rail fabricated to the design dimension often arrives 30 mm short.',
@@ -447,8 +312,8 @@ PRODUCTS = [
             ('Basis', 'Site survey, fabrication and installation by our own crews'),
             ('Typical use', 'Plant platforms, stairs, mezzanines, roof access, substations'),
         ],
-        gallery=['process-platform-steel', 'silo-platform-access', 'plant-steel-structure', 'canopy-steel-frame',
-                 'workshop-interior-crane', 'tank-platform-crane'],
+        gallery=['hlb-wall-mounted-handrail', 'hlb-tubular-stair-handrail', 'hlb-circular-baluster-handrail',
+                 'hlb-pool-handrail', 'hlb-ramp-handrail'],
     ),
     dict(
         slug='aluminium-louvers-screens',
@@ -511,8 +376,10 @@ PRODUCTS = [
             ('Applications', 'Substations, plant rooms, pump pits, cable trenches, maintenance access'),
             ('Basis', 'Site measurement, fabrication and installation'),
         ],
-        gallery=['silo-platform-access', 'process-platform-steel', 'plant-steel-structure', 'base-plates-fabrication',
-                 'workshop-interior-crane', 'tank-installation-plant'],
+        gallery=['cpp-recessed-cover-tray', 'cpp-access-hatch-door', 'cpp-floor-grate-vent',
+                 'cpp-chequer-plate-cover', 'cpp-stacked-floor-covers', 'cpp-channel-grating',
+                 'cpp-heavy-duty-manhole', 'cpp-roof-hatch-cover', 'cpp-linear-slot-drain',
+                 'cpp-rain-water-outlet'],
     ),
     dict(
         slug='cladding-roofing-systems',
@@ -543,37 +410,107 @@ PRODUCTS = [
             ('Rooflights', 'Translucent GRP and polycarbonate sheets, ridge and roof ventilators'),
             ('Basis', 'Supply and fix on new build, or recladding and repair on existing structures'),
         ],
-        gallery=['cladding-blue-facade', 'cladding-panel-wall', 'clad-warehouse-green', 'completed-warehouse',
-                 'site-warehouse-build', 'warehouse-exterior'],
+        gallery=['crs-copper-clad-entrance', 'cladding-blue-facade', 'cladding-panel-wall', 'clad-warehouse-green',
+                 'completed-warehouse', 'site-warehouse-build', 'warehouse-exterior'],
     ),
 ]
 
 # ---------------------------------------------------------------- projects --
 PROJECTS = [
-    (1,  'Hamriyah Free Zone', 'Sharjah',            'MBS — Meemar Building System', 'SEWA',                     'Completed'),
-    (2,  'Ind-18',             'Sharjah',            'Al Aswar Cont. LLC',           '—',                        'Completed'),
-    (3,  'Khalid Port',        'Sharjah',            'Al Aamedah Al Maseyah',        'Lamprel',                  'Completed'),
-    (4,  'CMW',                'Abu Dhabi',          'MBS — Meemar Building System', 'Six Sigma',                'Completed'),
-    (5,  'Hamriyah Free Zone', 'Sharjah',            'Al Aamedah Al Maseyah',        'Lamprel',                  'Completed'),
-    (6,  'ICAD-1',             'Mussafah, Abu Dhabi','MBS — Meemar Building System', 'Al Ghurair Iron &amp; Steel',  'Completed'),
-    (7,  'ICAD-1',             'Mussafah, Abu Dhabi','MBS — Meemar Building System', 'Al Ghurair Iron &amp; Steel',  'Completed'),
-    (8,  'Kizad',              'Abu Dhabi',          'Capital Engineering Consultant','Cloid Steel Co.',         'Completed'),
-    (9,  'ICAD-1',             'Mussafah, Abu Dhabi','MBS — Meemar Building System', 'Al Ghurair Iron &amp; Steel',  'Completed'),
-    (10, 'ICAD-1',             'Mussafah, Abu Dhabi','MBS — Meemar Building System', '—',                        'Not yet started'),
+    dict(slug='hamriyah-free-zone-sewa', name='Hamriyah Free Zone', location='Sharjah',
+         contractor='MBS — Meemar Building System', client='SEWA', status='Completed',
+         summary='Structural steel and support work delivered inside Hamriyah Free Zone for Sharjah Electricity and Water Authority, carried out under main contractor MBS — Meemar Building System. The scope covered fabrication and erection of the steel package to the approved drawings, handed over complete and ready for the utility fit-out that followed.',
+         hero='plant-steel-structure',
+         gallery=['plant-steel-structure', 'silo-platform-access', 'frame-erection-crane', 'structure-under-erection']),
+    dict(slug='ind-18', name='Ind-18', location='Sharjah',
+         contractor='Al Aswar Cont. LLC', client='—', status='Completed',
+         summary='An industrial shed package at Ind-18, Sharjah, delivered under main contractor Al Aswar Contracting LLC. The scope covered the structural frame, secondary steel and envelope for the unit, fabricated in our own workshop and erected on programme.',
+         hero='warehouse-exterior',
+         gallery=['warehouse-exterior', 'portal-frame-erection', 'completed-warehouse', 'fabricated-beams']),
+    dict(slug='khalid-port', name='Khalid Port', location='Sharjah',
+         contractor='Al Aamedah Al Maseyah', client='Lamprel', status='Completed',
+         summary='Structural steelwork at Khalid Port, Sharjah, delivered for Lamprel under main contractor Al Aamedah Al Maseyah. The scope covered fabrication and site erection of process and support steel across the facility, coordinated with the wider port works programme.',
+         hero='process-platform-steel',
+         gallery=['process-platform-steel', 'plant-steel-structure', 'structure-crane-lift', 'tank-installation-plant']),
+    dict(slug='cmw', name='CMW', location='Abu Dhabi',
+         contractor='MBS — Meemar Building System', client='Six Sigma', status='Completed',
+         summary='Steel fabrication and installation at the CMW facility in Abu Dhabi, delivered for Six Sigma under main contractor MBS — Meemar Building System. The scope covered plant support steel, platforms and access structures fabricated to the approved drawings.',
+         hero='silo-platform-access',
+         gallery=['silo-platform-access', 'tank-platform-crane', 'workshop-interior-crane', 'portal-frame-crane']),
+    dict(slug='hamriyah-free-zone-lamprel', name='Hamriyah Free Zone', location='Sharjah',
+         contractor='Al Aamedah Al Maseyah', client='Lamprel', status='Completed',
+         summary='A second scope inside Hamriyah Free Zone, this one delivered for Lamprel under main contractor Al Aamedah Al Maseyah. The workshop fabricated the steel package to the approved drawings, with our own crews carrying out the site erection.',
+         hero='fabrication-welding',
+         gallery=['fabrication-welding', 'steel-cutting', 'frame-erection-crane', 'structure-under-erection']),
+    dict(slug='icad-1-al-ghurair-phase-1', name='ICAD-1', location='Mussafah, Abu Dhabi',
+         contractor='MBS — Meemar Building System', client='Al Ghurair Iron &amp; Steel', status='Completed',
+         summary='Phase one of a multi-phase steel package at ICAD-1, Mussafah, delivered for Al Ghurair Iron and Steel under main contractor MBS — Meemar Building System. The scope covered fabrication and erection of the primary and secondary structure for the facility.',
+         hero='warehouse-frame-erected',
+         gallery=['warehouse-frame-erected', 'curved-roof-erection', 'portal-structure-glazed', 'fabricated-beams']),
+    dict(slug='icad-1-al-ghurair-phase-2', name='ICAD-1', location='Mussafah, Abu Dhabi',
+         contractor='MBS — Meemar Building System', client='Al Ghurair Iron &amp; Steel', status='Completed',
+         summary='Phase two of the ICAD-1 steel package for Al Ghurair Iron and Steel, again delivered under main contractor MBS — Meemar Building System. The scope extended the structure fabricated in phase one, with cladding and envelope work completed alongside the frame.',
+         hero='clad-warehouse-green',
+         gallery=['clad-warehouse-green', 'cladding-blue-facade', 'cladding-panel-wall', 'completed-warehouse']),
+    dict(slug='kizad', name='Kizad', location='Abu Dhabi',
+         contractor='Capital Engineering Consultant', client='Cloid Steel Co.', status='Completed',
+         summary='Structural steelwork at Kizad, Abu Dhabi, delivered for Cloid Steel Co. under main contractor Capital Engineering Consultant. The scope covered fabrication and erection of the steel frame and support structure for the facility.',
+         hero='structure-crane-lift',
+         gallery=['structure-crane-lift', 'portal-frame-lift', 'open-shed-structure', 'site-warehouse-build']),
+    dict(slug='icad-1-al-ghurair-phase-3', name='ICAD-1', location='Mussafah, Abu Dhabi',
+         contractor='MBS — Meemar Building System', client='Al Ghurair Iron &amp; Steel', status='Completed',
+         summary='Phase three of the ICAD-1 steel package for Al Ghurair Iron and Steel, completing the scope delivered under main contractor MBS — Meemar Building System across the earlier two phases. Structural steel, cladding and site finishing were carried out by our own crews.',
+         hero='cladding-panel-wall',
+         gallery=['cladding-panel-wall', 'clad-warehouse-green', 'warehouse-frame-erected', 'curved-roof-erection']),
+    dict(slug='icad-1-upcoming', name='ICAD-1', location='Mussafah, Abu Dhabi',
+         contractor='MBS — Meemar Building System', client='—', status='Not yet started',
+         summary='A further steel package at ICAD-1, Mussafah, under main contractor MBS — Meemar Building System. The scope is confirmed and the project is programmed to start, with fabrication drawings in preparation ahead of mobilisation.',
+         hero='structure-under-erection',
+         gallery=['structure-under-erection', 'frame-erection-crane', 'steel-cutting', 'fabricated-beams']),
+    dict(slug='private-villa-pearl-jumeirah', name='Private Villa in Pearl Jumeirah', location='Dubai',
+         contractor='—', client='Private Client', status='Completed',
+         summary='Bespoke steel and metalwork for a private villa on Pearl Jumeirah, Dubai, delivered direct to the owner with no main contractor between the drawing and the site. The scope covered pergolas, gates, balustrades and feature metalwork fabricated and finished to a residential standard.',
+         hero='villa-entrance-gate',
+         gallery=['villa-entrance-gate', 'villa-glass-facade', 'villa-fin-screen', 'villa-access-hatch']),
+]
+
+# ----------------------------------------------------------------- gallery --
+GALLERY = [
+    ('villa-entrance-gate', 'Private villa entrance gate and stone facade, Pearl Jumeirah'),
+    ('villa-glass-facade', 'Curved glass and metal facade, private villa, Pearl Jumeirah'),
+    ('villa-fin-screen', 'Fabricated steel fin screen fixed to a stone-clad wall'),
+    ('villa-access-hatch', 'Recessed steel access hatch with built-in ladder'),
+    ('ssf-rooftop-screen-ladder', 'Rooftop CNC-cut screen enclosure with fixed access ladder'),
+    ('ssf-canopy-entrance', 'Cantilevered entrance canopy in stainless steel and glass'),
+    ('ssf-cantilever-walkway', 'Cantilevered stainless steel walkway and balustrade'),
+    ('ssf-stair-balustrade', 'Tubular stainless steel stair balustrade with circular infill'),
+    ('ssf-cnc-screen-wall', 'CNC-cut decorative screen wall enclosing rooftop plant'),
+    ('mmw-glass-marble-staircase', 'Glass balustrade staircase with marble treads'),
+    ('mmw-brass-room-divider', 'Brushed brass room-divider screen with integrated shelf'),
+    ('mmw-laser-cut-ceiling-trim', 'Laser-cut decorative ceiling trim with chandelier'),
+    ('mmw-acp-signage-panel', 'Fabricated aluminium composite panel signboard'),
+    ('mmw-stained-glass-staircase', 'Marble staircase with stained-glass panelled balustrade'),
+    ('mmw-gold-mirror-trim', 'Gold-finish CNC-cut mirror surround and wall trim'),
+    ('mmw-recessed-wash-trough', 'Recessed stainless steel wash trough set into tiled floor'),
+    ('mmw-decorative-bollard', 'Domed stainless steel bollard, brushed brass finish'),
+    ('mmw-tv-feature-wall', 'Fabricated gold-trim TV feature wall with fluted panelling'),
+    ('mmw-display-cabinet-gold', 'Glass and gold-trim display cabinet'),
+    ('hlb-wall-mounted-handrail', 'Wall-mounted tubular handrail along an access ramp'),
+    ('hlb-tubular-stair-handrail', 'Polished tubular stainless steel stair balustrade'),
+    ('hlb-circular-baluster-handrail', 'Stainless steel handrail with circular baluster infill'),
+    ('hlb-pool-handrail', 'Stainless steel handrail set into a mosaic-tiled pool edge'),
+    ('cpp-heavy-duty-manhole', 'Heavy-duty double manhole cover under fabrication'),
+    ('cpp-roof-hatch-cover', 'Aluminium roof hatch cover, factory finished'),
+    ('cpp-channel-grating', 'Stainless steel channel grating, full length'),
+    ('cpp-stacked-floor-covers', 'Stacked recessed floor covers ready for despatch'),
+    ('crs-copper-clad-entrance', 'Copper-clad entrance pavilion cladding'),
+    ('workshop-interior-crane', 'Workshop interior with overhead crane and steel roof structure'),
+    ('curved-roof-erection', 'Curved roof structure being erected with mobile cranes'),
 ]
 
 CLIENTS = ['MBS — Meemar Building System', 'SEWA', 'Al Ghurair Iron &amp; Steel', 'Lamprel',
            'Al Aamedah Al Maseyah', 'Six Sigma', 'Capital Engineering Consultant',
            'Al Aswar Contracting', 'Cloid Steel Co.']
-
-INDUSTRIES = [
-    ('Oil, Gas &amp; Petrochemical', 'Pipe spools, tanks, pipe racks and access steel inside live process plant.', 'plant-steel-structure'),
-    ('Power &amp; Utilities',        'Substation chequer plate, support steel and enclosures — including work for SEWA.', 'silo-platform-access'),
-    ('Ports &amp; Logistics',        'Warehousing, canopies and heavy support steel, including Khalid Port, Sharjah.', 'completed-warehouse'),
-    ('Industrial Manufacturing', 'Workshop frames, mezzanines, crane gantries and equipment installation.', 'workshop-interior-crane'),
-    ('Cement, Steel &amp; Heavy Materials', 'Silo platforms, conveyor supports and plant structures, including CMW Abu Dhabi.', 'tank-installation-plant'),
-    ('Commercial &amp; Infrastructure', 'Car parking shades, handrails, louvers and building maintenance packages.', 'car-parking-shade-row'),
-]
 
 PROCESS = [
     ('Enquiry and take-off', 'We price from your drawings or a site visit, with a measured take-off rather than a rate per tonne guess.'),
@@ -590,8 +527,8 @@ WHY = [
      'The group workshop has held a Sharjah industrial licence since October 2022, with the Dubai contracting licence active alongside it.'),
     ('Fabrication and erection together',
      'The crew that welds a connection is the crew that bolts it up, so fit-up issues are corrected on the spot instead of escalated.'),
-    ('Nine disciplines, one contract',
-     'Steel, piping, tanks, equipment, metalwork, fasteners, supply, manpower and maintenance under a single point of contact.'),
+    ('Five disciplines, one contract',
+     'Structural steel, metalwork and tailor-made fabrication for the civil, MEP and landscape and hospitality sectors, under a single point of contact.'),
 ]
 
 FAQ = [
@@ -758,12 +695,12 @@ def footer(base=''):
           <span class="brand__tick" aria-hidden="true"></span>
           <span class="brand__mark">ADSD</span>
         </span>
-        <p>Structural steel fabrication, erection, piping, tanks and industrial metalwork — self-performed across the UAE from Dubai and Sharjah.</p>
+        <p>Structural steel fabrication, erection and industrial metalwork, plus tailor-made fabrication for the civil, MEP and landscape and hospitality sectors — self-performed across the UAE from Dubai and Sharjah.</p>
         <p class="live" style="margin-top:1.1rem;color:var(--t2i)">Dubai licence {LIC_DXB} active</p>
       </div>
       <div class="ft__col">
         <h3>Capability</h3>
-        <ul>{svc}<li><a href="{base}index.html#capability">All nine disciplines</a></li></ul>
+        <ul>{svc}<li><a href="{base}index.html#capability">All five disciplines</a></li></ul>
       </div>
       <div class="ft__col">
         <h3>Products</h3>
@@ -784,6 +721,7 @@ def footer(base=''):
       <ul>
         <li><a href="{base}index.html#about">About</a></li>
         <li><a href="{base}index.html#projects">Projects</a></li>
+        <li><a href="{base}gallery.html">Gallery</a></li>
         <li><a href="{base}index.html#contact">Contact</a></li>
       </ul>
     </div>
@@ -837,7 +775,7 @@ def build_index():
                 "email": EMAIL,
                 "foundingDate": "2022",
                 "vatID": TRN,
-                "description": "Structural steel fabrication and installation, equipment installation, pipe fabrication, tank installation, miscellaneous metal works, manpower supply, anchor bolt supply, pre-fabricated building supply and building maintenance across the UAE.",
+                "description": "Structural steel fabrication and installation, miscellaneous metal works, and tailor-made fabrication products for the civil, MEP and landscape and hospitality sectors across the UAE.",
                 "address": {"@type": "PostalAddress", "postOfficeBoxNumber": "282615",
                             "addressLocality": "Dubai", "addressCountry": "AE"},
                 "areaServed": [{"@type": "Place", "name": n} for n in
@@ -893,14 +831,6 @@ def build_index():
         </div>
       </a>''' for p in PRODUCTS)
 
-    ind = ''.join(f'''
-      <div class="ind__row">
-        <div class="ind__bg" aria-hidden="true"><img src="assets/img/{im}-800.jpg" alt="" width="800" height="800" loading="lazy" decoding="async"></div>
-        <span class="ind__n">{i+1:02d}</span>
-        <h3 class="ind__t">{t}</h3>
-        <p class="ind__meta">{d}</p>
-      </div>''' for i, (t, d, im) in enumerate(INDUSTRIES))
-
     proc = ''.join(f'''
       <div class="proc__s">
         <span class="proc__bar" aria-hidden="true"></span>
@@ -910,33 +840,12 @@ def build_index():
       </div>''' for i, (t, d) in enumerate(PROCESS))
 
     rows = ''.join(f'''
-        <tr>
-          <td class="tbl__n">{n:02d}</td>
-          <td><span class="tbl__p">{p}</span><span class="tbl__loc">{loc}</span></td>
-          <td class="tbl__c">{mc}</td>
-          <td class="tbl__c">{cl}</td>
-          <td><span class="tbl__st tbl__st--{'done' if st=='Completed' else 'soon'}">{st}</span></td>
-        </tr>''' for n, p, loc, mc, cl, st in PROJECTS)
-
-    GAL = ['warehouse-exterior', 'portal-frame-erection', 'fabricated-beams', 'car-parking-shade-row',
-           'workshop-interior-crane', 'louver-screen-corner', 'tank-installation-plant', 'curved-roof-erection',
-           'completed-warehouse', 'silo-platform-access', 'cladding-blue-facade', 'frame-erection-crane']
-    GAL_ALT = ['Completed steel-framed warehouse with cladding and canopy',
-               'Portal frame under erection with rafters and purlins in place',
-               'Fabricated steel beams and columns marked and stacked for delivery',
-               'Row of steel-framed car parking shades with tensioned membrane covering',
-               'Workshop interior with overhead crane and steel roof structure',
-               'Louvered screen enclosure in coated aluminium',
-               'Tank installation with process platform steel and access',
-               'Curved roof structure being erected with mobile cranes',
-               'Completed clad industrial building with roller shutter opening',
-               'Silo platform access steel with cage ladder and handrails',
-               'Insulated panel cladding to an industrial facade',
-               'Portal frame lifted into position by mobile crane']
-    gal = ''.join(f'''
-      <figure class="gal__i{' gal__i--w' if i in (0,7) else ''}" data-full="assets/img/{g}-1400.jpg">
-        <img src="assets/img/{g}-800.jpg" alt="{a}" width="800" height="800" loading="lazy" decoding="async">
-      </figure>''' for i, (g, a) in enumerate(zip(GAL, GAL_ALT)))
+        <tr data-href="projects/{pr['slug']}.html">
+          <td><a class="tbl__p" href="projects/{pr['slug']}.html">{pr['name']}</a><span class="tbl__loc">{pr['location']}</span></td>
+          <td class="tbl__c">{pr['contractor']}</td>
+          <td class="tbl__c">{pr['client']}</td>
+          <td><span class="tbl__st tbl__st--{'done' if pr['status']=='Completed' else 'soon'}">{pr['status']}</span></td>
+        </tr>''' for pr in PROJECTS)
 
     QUOTES = [
         ('They fabricate and erect with the same crew, so fit-up problems get solved on the day instead of turning into a fortnight of correspondence.',
@@ -964,9 +873,9 @@ def build_index():
     scope_opts = ''.join(f'<option>{html.unescape(s["plain"])}</option>' for s in SERVICES)
 
     title = f'{CO} — Structural Steel Fabrication &amp; Erection, Dubai'
-    desc = ('Structural steel fabrication and erection, equipment and tank installation, pipe fabrication, '
-            'metalwork, manpower and building maintenance. Self-performed across Dubai, Sharjah and Abu Dhabi '
-            'since 2022.')
+    desc = ('Structural steel fabrication and erection, miscellaneous metalwork, and tailor-made fabrication '
+            'products for the civil, MEP and landscape and hospitality sectors. Self-performed across Dubai, '
+            'Sharjah and Abu Dhabi since 2022.')
 
     return head(title, desc, SITE + '/', '', jsonld=ld, extra='''
   <link rel="preload" as="image" href="assets/img/og-cover.jpg" fetchpriority="high">
@@ -983,24 +892,20 @@ def build_index():
 
     <div class="wrap hero__in">
       <div class="hero__top">
-        <div>
-          <p class="eyebrow eyebrow--i" data-hero-eye>Dubai · Sharjah · Abu Dhabi — licensed since 2022</p>
-          <h1 class="h1 hero__h1" style="margin-top:1.4rem" data-hero-h>Structural steel, fabricated and erected to the grid line.</h1>
-        </div>
-        <div>
-          <p class="lead lead--i hero__sub" data-hero-sub>{CO} fabricates, installs and maintains structural steel, process piping, tanks and industrial metalwork — self-performed by our own workshop and site crews.</p>
-          <div class="hero__acts" data-hero-act>
-            <a class="btn btn--pri" href="#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
-            <a class="btn btn--ghost-i" href="#capability" data-magnet="0.18"><span class="btn__t">See our capability</span></a>
-          </div>
+        <p class="eyebrow eyebrow--i" data-hero-eye>Dubai · Sharjah · Abu Dhabi — licensed since 2022</p>
+        <h1 class="h1 hero__h1" data-hero-h>Structural steel, fabricated and erected to the grid line.</h1>
+        <p class="lead lead--i hero__sub" data-hero-sub>{CO} fabricates and installs structural steel, industrial metalwork and tailor-made fabrication products for the civil, MEP and landscape and hospitality sectors — self-performed by our own workshop and site crews.</p>
+        <div class="hero__acts" data-hero-act>
+          <a class="btn btn--pri" href="#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
+          <a class="btn btn--ghost-i" href="#capability" data-magnet="0.18"><span class="btn__t">See our capability</span></a>
         </div>
       </div>
 
       <div class="hero__specs" data-hero-spec>
-        <div><p class="spec__k">Established</p><p class="spec__v"><span data-count="2022" data-dec="0">2022</span><small>Group workshop licensed in Sharjah</small></p></div>
-        <div><p class="spec__k">Disciplines</p><p class="spec__v"><span data-count="9">9</span><small>Steel, piping, tanks, metalwork, more</small></p></div>
-        <div><p class="spec__k">Reference projects</p><p class="spec__v"><span data-count="10">10</span><small>Free zones, ports and industrial areas</small></p></div>
-        <div><p class="spec__k">Licence status</p><p class="spec__v" style="font-size:clamp(1.1rem,1.7vw,1.4rem)"><span class="live">Active</span><small>Dubai DED {LIC_DXB}</small></p></div>
+        <div><span class="spec__k">Established</span><span class="spec__v"><span data-count="2022" data-dec="0">2022</span></span></div>
+        <div><span class="spec__k">Disciplines</span><span class="spec__v"><span data-count="5">5</span></span></div>
+        <div><span class="spec__k">Reference projects</span><span class="spec__v"><span data-count="10">10</span></span></div>
+        <div><span class="spec__k">Licence status</span><span class="spec__v spec__v--sm"><span class="live">Active</span></span></div>
       </div>
     </div>
     <div class="hero__cue" aria-hidden="true"><span></span></div>
@@ -1018,15 +923,12 @@ def build_index():
         <div class="shead__top"><span class="shead__idx">01</span><p class="eyebrow">The company</p></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>Extensive experience, kept inside one company.</h2>
-          <p class="lead" data-reveal>Extensive experience in the industry has been fundamental in securing work from corporate companies. We have segmented our main objects into the categories on this page — and we carry them out with our own people.</p>
         </div>
       </div>
 
       <div class="about__grid">
         <div class="about__body">
-          <p data-reveal>{CO} works from two bases: a Sharjah workshop that has held an industrial licence since 2022, and a Dubai contracting licence issued by the Department of Economy and Tourism. Between them they cover fabrication, erection, mechanical installation and maintenance across the Emirates.</p>
-          <p data-reveal data-delay=".06">Most of our work reaches site through main contractors and steel suppliers — MBS Meemar Building System, Al Aamedah Al Maseyah, Al Aswar Contracting and Capital Engineering Consultant among them — for end clients including SEWA, Lamprel, Six Sigma and Al Ghurair Iron &amp; Steel. Projects have been delivered in Hamriyah Free Zone, Khalid Port, ICAD-1 Mussafah and Kizad.</p>
-          <p data-reveal data-delay=".12">The structure is deliberately simple: our own team carries out the work, without outsourcing or subcontracting. It is the same commitment the company makes on building maintenance, and it applies to every discipline we take on.</p>
+          <p data-reveal>{CO} works from two bases — a Sharjah workshop that has held an industrial licence since 2022, and a Dubai contracting licence issued by the Department of Economy and Tourism — fabricating and erecting structural steel, metalwork and tailor-made fabrication products across the Emirates.</p>
 
           <div class="about__stack">
             <div class="vm" data-reveal>
@@ -1076,14 +978,14 @@ def build_index():
       <div class="shead">
         <div class="shead__top"><span class="shead__idx">03</span><p class="eyebrow">Capability</p></div>
         <div class="shead__grid">
-          <h2 class="h2 shead__title" data-split>Nine disciplines under one contract.</h2>
-          <p class="lead" data-reveal>The company profile groups our main objects into six core categories, with supply and maintenance alongside them. Open any discipline for scope, features and the way we price it.</p>
+          <h2 class="h2 shead__title" data-split>Five disciplines under one contract.</h2>
+          <p class="lead" data-reveal>Structural steel and metalwork, plus tailor-made fabrication products for the civil, MEP and landscape and hospitality sectors. Open any discipline for scope, features and the way we price it.</p>
         </div>
       </div>
       <div class="srv">{srv}</div>
       <div class="dim" style="margin-top:2rem">
         <span class="dim__txt">01</span><span class="dim__line"></span>
-        <span class="dim__txt">Nine disciplines</span><span class="dim__line"></span><span class="dim__txt">09</span>
+        <span class="dim__txt">Five disciplines</span><span class="dim__line"></span><span class="dim__txt">05</span>
       </div>
     </div>
   </section>
@@ -1092,7 +994,7 @@ def build_index():
   <section class="sec sec--white" id="products">
     <div class="wrap">
       <div class="shead">
-        <div class="shead__top"><span class="shead__idx">04</span><p class="eyebrow">Products</p></div>
+        <div class="shead__top"><span class="shead__idx">04</span><p class="eyebrow">Products</p><a class="tlink" href="gallery.html" style="margin-left:auto">Explore gallery{ICON['arr_sm']}</a></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>Things we make, ready to specify.</h2>
           <p class="lead" data-reveal>Six product families drawn from the metalwork we fabricate most often. Each one is supplied and fixed by the same crews, or supply-only if you have your own installers.</p>
@@ -1102,28 +1004,14 @@ def build_index():
     </div>
   </section>
 
-  <!-- ====================================================== INDUSTRIES -->
-  <section class="sec sec--ink" id="industries">
-    <div class="wrap">
-      <div class="shead">
-        <div class="shead__top"><span class="shead__idx">05</span><p class="eyebrow eyebrow--i">Industries</p></div>
-        <div class="shead__grid">
-          <h2 class="h2 shead__title" data-split>Where the steel ends up.</h2>
-          <p class="lead lead--i" data-reveal>Six sectors, taken from the projects in our reference list rather than from a brochure.</p>
-        </div>
-      </div>
-      <div class="ind">{ind}</div>
-    </div>
-  </section>
-
   <!-- ========================================================= PROCESS -->
-  <section class="sec sec--white" id="process">
+  <section class="sec sec--ink" id="process">
     <div class="wrap">
       <div class="shead">
-        <div class="shead__top"><span class="shead__idx">06</span><p class="eyebrow">Process</p></div>
+        <div class="shead__top"><span class="shead__idx">05</span><p class="eyebrow eyebrow--i">Process</p></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>Enquiry to handover, in five steps.</h2>
-          <p class="lead" data-reveal>The sequence is genuinely sequential — nothing gets cut before drawings are approved, and nothing leaves the workshop out of erection order.</p>
+          <p class="lead lead--i" data-reveal>The sequence is genuinely sequential — nothing gets cut before drawings are approved, and nothing leaves the workshop out of erection order.</p>
         </div>
       </div>
     </div>
@@ -1134,9 +1022,9 @@ def build_index():
   <section class="sec sec--paper" id="projects">
     <div class="wrap">
       <div class="shead">
-        <div class="shead__top"><span class="shead__idx">07</span><p class="eyebrow">Reference projects</p></div>
+        <div class="shead__top"><span class="shead__idx">06</span><p class="eyebrow">Reference projects</p></div>
         <div class="shead__grid">
-          <h2 class="h2 shead__title" data-split>Ten projects, named.</h2>
+          <h2 class="h2 shead__title" data-split>Eleven projects, named.</h2>
           <p class="lead" data-reveal>Taken directly from our company profile. Contractor and client names are listed as recorded — references available on request.</p>
         </div>
       </div>
@@ -1145,17 +1033,11 @@ def build_index():
         <table class="tbl">
           <caption class="sr">Reference projects with location, main contractor and client</caption>
           <thead>
-            <tr><th scope="col">No.</th><th scope="col">Project / location</th><th scope="col">Main contractor</th><th scope="col">Client</th><th scope="col">Status</th></tr>
+            <tr><th scope="col">Project / location</th><th scope="col">Main contractor</th><th scope="col">Client</th><th scope="col">Status</th></tr>
           </thead>
           <tbody>{rows}</tbody>
         </table>
       </div>
-
-      <div class="dim" style="margin:clamp(2.5rem,5vw,4rem) 0 1.6rem">
-        <span class="dim__txt">Project gallery</span><span class="dim__line"></span><span class="dim__txt">12 frames</span>
-      </div>
-      <div class="gal" data-stagger>{gal}</div>
-      <p class="cap" style="margin-top:1.2rem"><b>Note</b> All photography above is from the ADSD company profile — own fabrication and site work.</p>
     </div>
   </section>
 
@@ -1163,7 +1045,7 @@ def build_index():
   <section class="sec sec--white" id="testimonials">
     <div class="wrap">
       <div class="shead">
-        <div class="shead__top"><span class="shead__idx">08</span><p class="eyebrow">In their words</p></div>
+        <div class="shead__top"><span class="shead__idx">07</span><p class="eyebrow">In their words</p></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>What site teams say.</h2>
           <p class="lead" data-reveal>Attributions are held back at the clients' request. Named references are provided with quotations.</p>
@@ -1177,7 +1059,7 @@ def build_index():
   <section class="sec sec--paper" id="faq">
     <div class="wrap">
       <div class="shead">
-        <div class="shead__top"><span class="shead__idx">09</span><p class="eyebrow">Questions</p></div>
+        <div class="shead__top"><span class="shead__idx">08</span><p class="eyebrow">Questions</p></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>Answers before you ask.</h2>
           <p class="lead" data-reveal>The six things contractors ask us most often, answered plainly.</p>
@@ -1191,7 +1073,7 @@ def build_index():
   <section class="sec sec--ink" id="contact">
     <div class="wrap">
       <div class="shead">
-        <div class="shead__top"><span class="shead__idx">10</span><p class="eyebrow eyebrow--i">Contact</p></div>
+        <div class="shead__top"><span class="shead__idx">09</span><p class="eyebrow eyebrow--i">Contact</p></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>Send drawings. Get a priced take-off.</h2>
           <p class="lead lead--i" data-reveal>For any kind of building project, feel free to reach our sales staff — they will assist you by phone or email for a free quotation.</p>
@@ -1235,7 +1117,6 @@ def build_index():
   </section>
 
 </main>
-{cta()}
 {footer()}'''
 
 
@@ -1340,7 +1221,7 @@ def build_service(s, i):
       </div>
       <div class="aside" style="position:static" data-reveal>
         <div class="aside__list">{rel}</div>
-        <a class="tlink" href="{base}index.html#capability">All nine disciplines{ICON['arr_sm']}</a>
+        <a class="tlink" href="{base}index.html#capability">All five disciplines{ICON['arr_sm']}</a>
       </div>
     </div>
   </section>
@@ -1468,25 +1349,156 @@ def build_product(p, i):
 {footer(base)}'''
 
 
+# ============================================================== PROJECT ===
+def build_project(pr, i):
+    base = '../'
+    gal = ''.join(f'''
+      <figure class="gal__i{' gal__i--w' if n == 0 else ''}" data-full="{base}assets/img/{g}-1400.jpg">
+        <img src="{base}assets/img/{g}-800.jpg" alt="{html.unescape(pr['name'])} — {g.replace('-',' ')}" width="800" height="800" loading="lazy" decoding="async">
+      </figure>''' for n, g in enumerate(pr['gallery']))
+
+    plain = html.unescape(pr['name'])
+    title = f'{pr["name"]} — {CO_SHORT} Reference Project'
+    desc = html.unescape(pr['summary'])
+    canon = f'{SITE}/projects/{pr["slug"]}.html'
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CreativeWork", "name": plain, "url": canon, "description": desc,
+         "image": f"{SITE}/assets/img/{pr['hero']}-1400.jpg",
+         "about": {"@type": "Place", "name": html.unescape(pr['location'])},
+         "author": {"@type": "Organization", "name": CO, "url": SITE + "/"}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": SITE + "/#projects"},
+            {"@type": "ListItem", "position": 3, "name": plain, "item": canon}]}]}
+
+    return head(title, desc, canon, base, jsonld=ld) + shell_open(base) + nav(base) + f'''
+<main id="main">
+
+  <section class="phero">
+    <div class="phero__bg" aria-hidden="true">
+      <img src="{base}assets/img/{pr['hero']}-1400.jpg" alt="" width="1400" height="1400" fetchpriority="high" decoding="async" data-parallax="-8">
+    </div>
+    <div class="wrap phero__in">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="{base}index.html">Home</a><span>/</span><a href="{base}index.html#projects">Projects</a><span>/</span><span style="opacity:1;color:var(--t2i)">{pr['name']}</span>
+      </nav>
+      <p class="eyebrow eyebrow--i" style="margin-top:1.4rem">Project {i+1:02d} of {len(PROJECTS)}</p>
+      <h1 class="h1 phero__h" data-hero-h>{pr['name']}</h1>
+      <p class="lead lead--i phero__d" data-hero-sub>{pr['location']} · {pr['status']}</p>
+      <div class="hero__acts" data-hero-act>
+        <a class="btn btn--pri" href="{base}index.html#contact" data-magnet="0.22"><span class="btn__t">Discuss a similar project</span>{ICON['arrow']}</a>
+        <a class="btn btn--ghost-i" href="tel:{PHONE_H}" data-magnet="0.18"><span class="btn__t">{PHONE}</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--paper">
+    <div class="wrap two">
+      <div class="rich">
+        <p class="eyebrow" data-reveal>Overview</p>
+        <p data-reveal>{pr['summary']}</p>
+      </div>
+      <aside class="aside" data-reveal>
+        <h3 class="h4">Project details</h3>
+        <dl class="specs-tbl"><div><dt>Location</dt><dd>{pr['location']}</dd></div><div><dt>Main contractor</dt><dd>{pr['contractor']}</dd></div><div><dt>Client</dt><dd>{pr['client']}</dd></div><div><dt>Status</dt><dd><span class="tbl__st tbl__st--{'done' if pr['status']=='Completed' else 'soon'}">{pr['status']}</span></dd></div></dl>
+        <a class="tlink" href="{base}index.html#projects">All projects{ICON['arr_sm']}</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec sec--white">
+    <div class="wrap">
+      <div class="dim" style="margin-bottom:1.6rem">
+        <span class="dim__txt">Project gallery</span><span class="dim__line"></span><span class="dim__txt">{len(pr['gallery'])} frames</span>
+      </div>
+      <div class="gal" data-stagger>{gal}</div>
+    </div>
+  </section>
+
+</main>
+{cta(base, pr['gallery'][1] if len(pr['gallery']) > 1 else pr['hero'],
+     'Enquire', 'Have a similar scope? Send the drawings and we will price it.',
+     'Quotations are free. Give us the location, the programme dates and whatever drawings you have.')}
+{footer(base)}'''
+
+
+def build_gallery():
+    gal = ''.join(f'''
+      <figure class="gal__i{' gal__i--w' if i in (0, 9) else ''}" data-full="assets/img/{g}-1400.jpg">
+        <img src="assets/img/{g}-800.jpg" alt="{a}" width="800" height="800" loading="lazy" decoding="async">
+      </figure>''' for i, (g, a) in enumerate(GALLERY))
+
+    title = f'Project Gallery — {CO_SHORT}, Dubai'
+    desc = 'Fabrication and installation photography from ADSD Steel reference projects — structural steel, handrails and balustrades, access covers, cladding and bespoke metalwork.'
+    canon = f'{SITE}/gallery.html'
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "ImageGallery", "name": "ADSD Steel Project Gallery", "url": canon, "description": desc},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Gallery", "item": canon}]}]}
+
+    return head(title, desc, canon, jsonld=ld) + shell_open() + nav() + f'''
+<main id="main">
+
+  <section class="phero">
+    <div class="phero__bg" aria-hidden="true">
+      <img src="assets/img/mmw-stained-glass-staircase-1400.jpg" alt="" width="1400" height="1400" fetchpriority="high" decoding="async" data-parallax="-8">
+    </div>
+    <div class="wrap phero__in">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span style="opacity:1;color:var(--t2i)">Gallery</span>
+      </nav>
+      <p class="eyebrow eyebrow--i" style="margin-top:1.4rem">Photography</p>
+      <h1 class="h1 phero__h" data-hero-h>The full project gallery.</h1>
+      <p class="lead lead--i phero__d" data-hero-sub>Structural steel, handrails and balustrades, access covers, cladding and bespoke metalwork — own fabrication and site work, drawn from our reference projects.</p>
+      <div class="hero__acts" data-hero-act>
+        <a class="btn btn--pri" href="index.html#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
+        <a class="btn btn--ghost-i" href="tel:{PHONE_H}" data-magnet="0.18"><span class="btn__t">{PHONE}</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--white">
+    <div class="wrap">
+      <div class="dim" style="margin-bottom:1.6rem">
+        <span class="dim__txt">Gallery</span><span class="dim__line"></span><span class="dim__txt">{len(GALLERY)} frames</span>
+      </div>
+      <div class="gal" data-stagger>{gal}</div>
+      <p class="cap" style="margin-top:1.2rem"><b>Note</b> All photography above is ADSD's own fabrication and site work.</p>
+    </div>
+  </section>
+
+</main>
+{cta('', 'ssf-canopy-entrance', 'Enquire',
+     'Send drawings. Get a priced take-off.',
+     'Quotations are free. Give us the location, the programme dates and whatever drawings you have.')}
+{footer()}'''
+
+
 # ============================================================== WRITE =====
 def write(path, txt):
     with open(os.path.join(OUT, path), 'w', encoding='utf-8') as f:
         f.write(txt)
 
 write('index.html', build_index())
+write('gallery.html', build_gallery())
 for i, s in enumerate(SERVICES):
     write(f'services/{s["slug"]}.html', build_service(s, i))
 for i, p in enumerate(PRODUCTS):
     write(f'products/{p["slug"]}.html', build_product(p, i))
+for i, pr in enumerate(PROJECTS):
+    write(f'projects/{pr["slug"]}.html', build_project(pr, i))
 
 # sitemap + robots
-urls = [(SITE + '/', '1.0')]
+urls = [(SITE + '/', '1.0'), (SITE + '/gallery.html', '0.6')]
 urls += [(f'{SITE}/services/{s["slug"]}.html', '0.8') for s in SERVICES]
 urls += [(f'{SITE}/products/{p["slug"]}.html', '0.8') for p in PRODUCTS]
+urls += [(f'{SITE}/projects/{pr["slug"]}.html', '0.7') for pr in PROJECTS]
 write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n'
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
       + ''.join(f'  <url><loc>{u}</loc><priority>{p}</priority></url>\n' for u, p in urls)
       + '</urlset>\n')
 write('robots.txt', f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
 
-print(f'built 1 + {len(SERVICES)} + {len(PRODUCTS)} = {1+len(SERVICES)+len(PRODUCTS)} pages')
+print(f'built 1 + {len(SERVICES)} + {len(PRODUCTS)} + {len(PROJECTS)} = '
+      f'{1+len(SERVICES)+len(PRODUCTS)+len(PROJECTS)} pages')
