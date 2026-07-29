@@ -580,6 +580,23 @@ body.menu-open .menu { clip-path: inset(0 0 0 0); visibility: visible; }
 .pgrid__item { display: grid; gap: .65rem; align-content: start; }
 .pgrid__cap { font: 500 .82rem/1.35 var(--ff-b); color: var(--t2); }
 
+/* --- 20c. reference-projects grid --------------------------------------- */
+.proj { display: grid; gap: clamp(1.6rem,2.6vw,2.4rem) clamp(1.4rem,2.2vw,2rem); grid-template-columns: repeat(1,1fr); }
+@media (min-width: 520px) { .proj { grid-template-columns: repeat(2,1fr); } }
+@media (min-width: 900px) { .proj { grid-template-columns: repeat(3,1fr); } }
+.proj__item {
+  display: grid; background: var(--white); border: 1px solid var(--hair); border-radius: 18px;
+  overflow: hidden; transition: box-shadow .4s var(--ease), transform .4s var(--ease), border-color .4s var(--ease);
+}
+.proj__item:hover {
+  box-shadow: 0 24px 44px -22px rgba(11,16,20,.22); transform: translateY(-4px);
+  border-color: rgba(0,169,232,.35);
+}
+.proj__item .proj__m { aspect-ratio: 4/3; border-radius: 0; }
+.proj__body { padding: 1.3rem 1.4rem 1.5rem; display: grid; gap: .4rem; }
+.proj__cap { font-size: 1.2rem; letter-spacing: -.01em; line-height: 1.3; color: var(--t1); }
+.proj__loc { color: var(--t3); font-size: .9rem; }
+
 .lbox { position: fixed; inset: 0; z-index: 170; background: rgba(11,16,20,.94); backdrop-filter: blur(6px); display: grid; place-items: center; padding: clamp(1rem,4vw,3rem); opacity: 0; visibility: hidden; transition: opacity .4s var(--ease), visibility .4s; }
 .lbox.on { opacity: 1; visibility: visible; }
 .lbox img { max-width: 100%; max-height: 82vh; object-fit: contain; border-radius: var(--r); }
