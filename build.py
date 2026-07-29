@@ -908,7 +908,6 @@ def footer(base=''):
           <span class="brand__mark">ADSD</span>
         </span>
         <p>Structural steel fabrication, erection and industrial metalwork, plus tailor-made fabrication for the civil, MEP and landscape and hospitality sectors, self-performed across the UAE from Dubai and Sharjah.</p>
-        <p class="live" style="margin-top:1.1rem;color:var(--t2i)">Dubai licence {LIC_DXB} active</p>
       </div>
       <div class="ft__col">
         <h3>Services</h3>
@@ -929,7 +928,7 @@ def footer(base=''):
       </div>
     </div>
     <div class="ft__bot">
-      <p>© <span id="yr">2026</span> {CO}. Dubai licence {LIC_DXB} · Group workshop licence {LIC_SHJ} · TRN {TRN}</p>
+      <p>© <span id="yr">2026</span> {CO}. TRN {TRN}</p>
       <ul>
         <li><a href="{base}index.html#about">About</a></li>
         <li><a href="{base}index.html#projects">Projects</a></li>
