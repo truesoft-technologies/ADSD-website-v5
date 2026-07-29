@@ -152,8 +152,11 @@
     $$('[data-stagger]').forEach((grp) => {
       const kids = Array.from(grp.children);
       gsap.set(kids, { opacity: 0, y: 26 });
+      // Cap the total spread so large grids (e.g. the all-products grid)
+      // don't take many seconds for the last items to fade in.
+      const each = Math.min(.085, 3.5 / kids.length);
       gsap.to(kids, {
-        opacity: 1, y: 0, duration: .85, ease: 'power3.out', stagger: .085,
+        opacity: 1, y: 0, duration: .85, ease: 'power3.out', stagger: each,
         scrollTrigger: { trigger: grp, start: 'top 84%', once: true }
       });
     });

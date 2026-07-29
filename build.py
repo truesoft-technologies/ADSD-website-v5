@@ -9,7 +9,7 @@ in CONTENT-NOTES.md.
 """
 import os, json, html, shutil
 
-OUT = 'site'
+OUT = '.'
 SITE = 'https://www.adsdsteel.ae'          # <- replace with the live domain
 
 CO      = 'ADSD Steel Technical Services Contracting L.L.C'
@@ -25,7 +25,7 @@ LIC_SHJ = '502971'
 
 NAV = [
     ('About',      '#about'),
-    ('Capability', '#capability'),
+    ('Services', '#services'),
     ('Products',   '#products'),
     ('Projects',   '#projects'),
     ('Gallery',    'gallery.html'),
@@ -453,6 +453,18 @@ PRODUCTS = [
     ),
 ]
 
+# ------------------------------------------------------- home page products --
+# Five featured items shown on the home page as image + name only — not
+# linked to individual product pages. "View All Products" routes to the
+# full photo catalogue built from ALL_PRODUCT_PHOTOS below.
+HOME_PRODUCTS = [
+    ('prd-access-hatch-1', 'Access Hatch'),
+    ('prd-floor-access-hatch', 'Access Hatch Floor'),
+    ('prd-roof-access-hatch', 'Access Hatch Roof'),
+    ('prd-wall-access-panel', 'Wall Access Hatch'),
+    ('prd-handrain-3', 'Handrail'),
+]
+
 # ---------------------------------------------------------------- projects --
 PROJECTS = [
     dict(slug='hamriyah-free-zone-sewa', name='Hamriyah Free Zone', location='Sharjah',
@@ -544,6 +556,147 @@ GALLERY = [
     ('crs-copper-clad-entrance', 'Copper-clad entrance pavilion cladding'),
     ('workshop-interior-crane', 'Workshop interior with overhead crane and steel roof structure'),
     ('curved-roof-erection', 'Curved roof structure being erected with mobile cranes'),
+
+    # ---- product photography, drawn from ALL_PRODUCT_PHOTOS below ----
+    ('prd-ablution-gratings', 'Decorative ablution gratings with brass surround, floor drain'),
+    ('prd-decorative-screen-with-table-for-vase', 'Brushed brass fin screen with integrated console table'),
+    ('prd-decorative-panels', 'CNC-cut geometric screen doors, private villa entrance'),
+    ('prd-decorative-wall-display', 'Fretwork brass grille panel, framed wall display'),
+    ('prd-balcony-balustard', 'Horizontal-fin balustrade at a villa entrance'),
+    ('prd-balcony-fence', 'Horizontal-fin balcony screen and guarding'),
+    ('prd-kitchen-hood', 'Patterned stainless steel kitchen extraction hood'),
+    ('prd-kitchen-hood-duct', 'Kitchen extraction ducting fixed to a building facade'),
+    ('prd-metal-car-shade', 'Steel-framed car shade over a villa driveway'),
+    ('prd-handrain-3', 'Stainless steel and glass stair handrail, on site'),
+    ('prd-cat-ladder', 'Fixed cat ladder to a workshop roof'),
+    ('prd-grp-water-tank', 'GRP sectional water tank, plant room'),
+    ('prd-grp-ladder-for-pump-room', 'GRP ladder fitted inside a pump room access hatch'),
+    ('prd-access-hatch-1', 'Factory-finished steel access hatch, hinge and stay detail'),
+    ('prd-floor-access-hatch', 'Floor access hatch set into a waterproofed upstand'),
+    ('prd-elv-trench-panel', 'Chequer plate trench covers, ready for installation'),
+    ('prd-protection-guard', 'Stainless bollard guards at an escalator landing'),
+    ('prd-swimming-pool-fence', 'Stainless steel pool safety fence and self-closing gate'),
+    ('prd-tree-grate', 'Decorative sunburst tree grate, mall floor'),
+    ('prd-slot-drain', 'Linear slot drain channel, workshop finish'),
+    ('prd-basement-access-hatch-alain-municipality-project', 'Basement access hatch, Al Ain municipality project'),
+    ('prd-whatsapp-image-2026-07-21-at-12-01-21-1', 'Fabricated steel staircase frame under construction'),
+    ('prd-wall-access-panel', 'Flush wall access panel, service duct'),
+    ('prd-roof-access-hatch', 'Roof access hatch, factory finished'),
+    ('prd-radius-water-feature-linear-drain', 'Radius linear drain trim for a water feature, on site'),
+]
+
+# ------------------------------------------------------- all-products page --
+# All 106 usable photos from the product reference folder ("D:\Grease Trap
+# C type drwg" — misleadingly named; it holds mixed product photography, not
+# just grease traps). One .mp4 in that folder is not an image and is excluded.
+# (slug, title) — files copied in as assets/img/{slug}-800.jpg / -1400.jpg.
+ALL_PRODUCT_PHOTOS = [
+    ('prd-upvc-dry-manhole-cover', 'UPVC Dry Manhole Cover'),
+    ('prd-decorative-ac-grill', 'Decorative AC Grille'),
+    ('prd-nouf-private-villa-kitchen-2', 'Nouf Private Villa Kitchen (2)'),
+    ('prd-whatsapp-image-2026-07-21-at-13-03-13', 'Restaurant Kitchen Hood Installation 3'),
+    ('prd-etihad-staff-catering-storage-cabinet', 'Etihad Staff Catering Storage Cabinet'),
+    ('prd-grp-water-tank', 'GRP Water Tank'),
+    ('prd-lazzat-resturant-tandoor-kitchen', 'Lazzat Restaurant Tandoor Kitchen'),
+    ('prd-ablution-gratings', 'Ablution Gratings'),
+    ('prd-metal-door-miniature', 'Metal Door Miniature'),
+    ('prd-handrain-type-4', 'Handrail Type 4'),
+    ('prd-enclosure', 'Enclosure'),
+    ('prd-recessed-mhc', 'Recessed MHC'),
+    ('prd-balcony-balustard', 'Balcony Balustrade'),
+    ('prd-solid-top-mhc', 'Solid Top MHC'),
+    ('prd-tree-grate', 'Tree Grate'),
+    ('prd-pool-linear-gratings', 'Pool Linear Gratings'),
+    ('prd-floor-gully-trap', 'Floor Gully Trap'),
+    ('prd-lazzat-resturant-in-karam', 'LAZZAT Restaurant In Karam'),
+    ('prd-villa-in-khawaneej', 'Villa In Khawaneej'),
+    ('prd-metal-stari-case-2', 'Metal Stair Case 2'),
+    ('prd-dry-gully-trap-upvc', 'Dry Gully Trap UPVC'),
+    ('prd-water-feature-slot-drain', 'Water Feature Slot Drain'),
+    ('prd-dubai-hill-mall-display-unit-olab-cafe', 'Dubai Hill Mall Display Unit Olab Cafe'),
+    ('prd-dubai-south-dewa-substation', 'Dubai South - DEWA Substation'),
+    ('prd-meter-box', 'Meter Box'),
+    ('prd-ramp-rail', 'Ramp Rail'),
+    ('prd-whatsapp-image-2026-07-21-at-12-01-21-1', 'Metal Staircase Fabrication'),
+    ('prd-kitchen-hood', 'Kitchen Hood'),
+    ('prd-resturant-in-al-zahia-c4', 'Restaurant In Al Zahia C4'),
+    ('prd-multi-tray-mhc', 'Multi Tray MHC'),
+    ('prd-kitchen-hood-duct', 'Kitchen Hood Duct'),
+    ('prd-dunage-trolley', 'Dunnage Trolley'),
+    ('prd-majilis-meal-screen', 'Majlis Meal Screen'),
+    ('prd-display-unit', 'Display Unit'),
+    ('prd-elv-trench-panel', 'ELV Trench Panel'),
+    ('prd-basement-access-hatch-alain-municipality-project', 'Basement Access Hatch - Alain Municipality Project'),
+    ('prd-grp-water-tank1', 'GRP Water Tank 2'),
+    ('prd-balcony-fence', 'Balcony Fence'),
+    ('prd-door-screen', 'Door Screen'),
+    ('prd-decorative-screen-with-table-for-vase', 'Decorative Screen With Table For Vase'),
+    ('prd-alain-municipality-park-access-hatch', 'Alain Municipality Park Access Hatch'),
+    ('prd-whatsapp-image-2026-07-21-at-13-03-13-1', 'Restaurant Kitchen Hood Installation'),
+    ('prd-center-table', 'Center Table'),
+    ('prd-janitorial-sink', 'Janitorial Sink'),
+    ('prd-enclosure-3', 'Enclosure 3'),
+    ('prd-water-duct-khood', 'Water Duct - Kitchen Hood'),
+    ('prd-metal-canopy', 'Metal Canopy'),
+    ('prd-floor-deck-cover-with-stone-infill', 'Floor Deck Cover With Stone Infill'),
+    ('prd-swimming-pool-fence', 'Swimming Pool Fence'),
+    ('prd-metal-stair-case', 'Metal Stair Case'),
+    ('prd-etihad-dry-kitchen', 'Etihad - Dry Kitchen'),
+    ('prd-private-villa-in-rahmaniya', 'Private Villa In Rahmaniya'),
+    ('prd-lazzat-kitchen-supplied-products', 'Lazzat Kitchen Supplied Products'),
+    ('prd-wall-access-cover', 'Wall Access Cover'),
+    ('prd-grp-watertank-ladder', 'GRP Water Tank Ladder'),
+    ('prd-decorative-wall-display', 'Decorative Wall Display'),
+    ('prd-bbq-outdoor-unit', 'BBQ Outdoor Unit'),
+    ('prd-handrain-3', 'Handrail Type 3'),
+    ('prd-khawanij-private-villa-kitchen', 'Khawanij Private Villa - Kitchen'),
+    ('prd-duct', 'Duct'),
+    ('prd-whatsapp-image-2026-07-21-at-13-03-13-2', 'Restaurant Kitchen Hood Installation 2'),
+    ('prd-private-villa-hot-kitchen', 'Private Villa Hot Kitchen'),
+    ('prd-access-hatch-1', 'Access Hatch 1'),
+    ('prd-resturant-in-al-zahia-mall', 'Restaurant In Al Zahia Mall'),
+    ('prd-storage-unit-bbq-counter', 'Storage Unit - BBQ Counter'),
+    ('prd-decorative-panels', 'Decorative Panels'),
+    ('prd-socet-enclosure', 'Socket Enclosure'),
+    ('prd-skirting-profile', 'Skirting Profile'),
+    ('prd-etihad-staff-storage-cabinet', 'Etihad Staff - Storage Cabinet'),
+    ('prd-wall-cabinet', 'Wall Cabinet'),
+    ('prd-grease-trap-c-type', 'Grease Trap C Type'),
+    ('prd-metal-cage', 'Metal Cage'),
+    ('prd-partician-rail', 'Partition Rail'),
+    ('prd-nouf-private-villa-kitchen', 'Nouf Private Villa Kitchen'),
+    ('prd-private-villa-1', 'Private Villa 1'),
+    ('prd-radius-water-feature-linear-drain', 'Radius Water Feature Linear Drain'),
+    ('prd-dewa-dubai-south-project-access-door', 'DEWA Dubai South Project - Access Door'),
+    ('prd-grp-ladder-for-pump-room', 'GRP Ladder For Pump Room'),
+    ('prd-showerdrain', 'Showerdrain'),
+    ('prd-pearl-jumeirah-villa', 'Pearl Jumeirah Villa'),
+    ('prd-cafe-display-unit', 'Cafe Display Unit'),
+    ('prd-staff-locker-cabinet', 'Staff Locker Cabinet'),
+    ('prd-whatsapp-image-2026-07-21-at-12-41-02-1', 'Wall-Mounted Duct Enclosure'),
+    ('prd-etihad-hotkitchen', 'Etihad - Hot Kitchen'),
+    ('prd-slot-drain', 'Slot Drain'),
+    ('prd-shower-drain', 'Shower Drain'),
+    ('prd-multi-cover-mhc-with-grp', 'Multi Cover MHC With GRP'),
+    ('prd-customized-mop-sink', 'Customized Mop Sink'),
+    ('prd-bainmarie', 'Bain Marie'),
+    ('prd-wall-access-panel', 'Wall Access Panel'),
+    ('prd-khawanij-private-villa', 'Khawanij Private Villa'),
+    ('prd-stair-case-type-1', 'Stair Case Type 1'),
+    ('prd-roof-access-hatch', 'Roof Access Hatch'),
+    ('prd-protection-guard', 'Protection Guard'),
+    ('prd-wall-enclosure-2', 'Wall Enclosure 2'),
+    ('prd-enclosure-4', 'Enclosure 4'),
+    ('prd-handrail-type-2', 'Handrail Type 2'),
+    ('prd-table-top-bbq-grill', 'Table Top BBQ Grill'),
+    ('prd-metal-car-shade', 'Metal Car Shade'),
+    ('prd-floor-access-hatch', 'Floor Access Hatch'),
+    ('prd-hot-plate-with-burner', 'Hot Plate With Burner'),
+    ('prd-mobile-trolley', 'Mobile Trolley'),
+    ('prd-upvc-fittings', 'UPVC Fittings'),
+    ('prd-cat-ladder', 'Cat Ladder'),
+    ('prd-oil-pullout-tralley', 'Oil Pullout Trolley'),
+    ('prd-grease-trap', 'Grease Trap'),
 ]
 
 CLIENTS = ['MBS — Meemar Building System', 'SEWA', 'Al Ghurair Iron &amp; Steel', 'Lamprel',
@@ -739,7 +892,7 @@ def footer(base=''):
         <p class="live" style="margin-top:1.1rem;color:var(--t2i)">Dubai licence {LIC_DXB} active</p>
       </div>
       <div class="ft__col">
-        <h3>Capability</h3>
+        <h3>Services</h3>
         <ul>{svc}</ul>
       </div>
       <div class="ft__col">
@@ -838,7 +991,7 @@ def build_index():
                     {"@type": "PropertyValue", "name": "TRN", "value": TRN},
                 ],
                 "hasOfferCatalog": {
-                    "@type": "OfferCatalog", "name": "Capability",
+                    "@type": "OfferCatalog", "name": "Services",
                     "itemListElement": [
                         {"@type": "Offer", "itemOffered": {
                             "@type": "Service", "name": html.unescape(s['plain']),
@@ -872,16 +1025,14 @@ def build_index():
       </a>''' for i, s in enumerate(SERVICES))
 
     prod = ''.join(f'''
-      <a class="pc" href="products/{p['slug']}.html">
+      <div class="pc">
         <div class="pc__m">
-          <span class="pc__tag">{p['tag']}</span>
-          {img_tag(p['hero'], p['title'].replace('&amp;','and') + ' by ' + CO_SHORT, 800, 600)}
+          {img_tag(hero, title + ' — ' + CO_SHORT, 800, 600)}
         </div>
         <div class="pc__b">
-          <h3 class="h4 pc__t">{p['title']}</h3>
-          <p>{p['short']}</p>
+          <h3 class="h4 pc__t">{title}</h3>
         </div>
-      </a>''' for p in PRODUCTS)
+      </div>''' for hero, title in HOME_PRODUCTS)
 
     proc = ''.join(f'''
       <div class="proc__s">
@@ -949,7 +1100,7 @@ def build_index():
         <p class="lead lead--i hero__sub" data-hero-sub>{CO} fabricates and installs structural steel, industrial metalwork and tailor-made fabrication products for the civil, MEP and landscape and hospitality sectors — self-performed by our own workshop and site crews.</p>
         <div class="hero__acts" data-hero-act>
           <a class="btn btn--pri" href="#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
-          <a class="btn btn--ghost-i" href="#capability" data-magnet="0.18"><span class="btn__t">See our capability</span></a>
+          <a class="btn btn--ghost-i" href="#services" data-magnet="0.18"><span class="btn__t">See our services</span></a>
         </div>
       </div>
 
@@ -1024,11 +1175,11 @@ def build_index():
     </div>
   </section>
 
-  <!-- ====================================================== CAPABILITY -->
-  <section class="sec sec--paper" id="capability">
+  <!-- ========================================================= SERVICES -->
+  <section class="sec sec--paper" id="services">
     <div class="wrap">
       <div class="shead">
-        <div class="shead__top"><span class="shead__idx">03</span><p class="eyebrow">Capability</p></div>
+        <div class="shead__top"><span class="shead__idx">03</span><p class="eyebrow">Services</p></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>Five disciplines under one contract.</h2>
           <p class="lead" data-reveal>Structural steel and metalwork, plus tailor-made fabrication products for the civil, MEP and landscape and hospitality sectors. Open any discipline for scope, features and the way we price it.</p>
@@ -1049,10 +1200,13 @@ def build_index():
         <div class="shead__top"><span class="shead__idx">04</span><p class="eyebrow">Products</p><a class="tlink" href="gallery.html" style="margin-left:auto">Explore gallery{ICON['arr_sm']}</a></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>Things we make, ready to specify.</h2>
-          <p class="lead" data-reveal>Six product families drawn from the metalwork we fabricate most often. Each one is supplied and fixed by the same crews, or supply-only if you have your own installers.</p>
+          <p class="lead" data-reveal>Five items pulled straight from completed projects — access hatches, floor and roof covers, and handrail work. They are a sample; the full range runs well past a hundred products.</p>
         </div>
       </div>
       <div class="prod" data-stagger>{prod}</div>
+      <div class="prod__more" data-reveal>
+        <a class="btn btn--pri" href="all-products.html" data-magnet="0.2"><span class="btn__t">View All Products</span>{ICON['arrow']}</a>
+      </div>
     </div>
   </section>
 
@@ -1201,7 +1355,7 @@ def build_service(s, i):
          "areaServed": {"@type": "Country", "name": "United Arab Emirates"}},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": "Capability", "item": SITE + "/#capability"},
+            {"@type": "ListItem", "position": 2, "name": "Services", "item": SITE + "/#services"},
             {"@type": "ListItem", "position": 3, "name": plain, "item": canon}]}]}
 
     return head(title, desc, canon, base, jsonld=ld) + shell_open(base) + nav(base) + f'''
@@ -1213,7 +1367,7 @@ def build_service(s, i):
     </div>
     <div class="wrap phero__in">
       <nav class="crumbs" aria-label="Breadcrumb">
-        <a href="{base}index.html">Home</a><span>/</span><a href="{base}index.html#capability">Capability</a><span>/</span><span style="opacity:1;color:var(--t2i)">{s['title']}</span>
+        <a href="{base}index.html">Home</a><span>/</span><a href="{base}index.html#services">Services</a><span>/</span><span style="opacity:1;color:var(--t2i)">{s['title']}</span>
       </nav>
       <p class="eyebrow eyebrow--i" style="margin-top:1.4rem">Discipline {i+1:02d} of {len(SERVICES)}</p>
       <h1 class="h1 phero__h" data-hero-h>{s['title']}</h1>
@@ -1271,7 +1425,7 @@ def build_service(s, i):
       </div>
       <div class="aside" style="position:static" data-reveal>
         <div class="aside__list">{rel}</div>
-        <a class="tlink" href="{base}index.html#capability">All five disciplines{ICON['arr_sm']}</a>
+        <a class="tlink" href="{base}index.html#services">All five disciplines{ICON['arr_sm']}</a>
       </div>
     </div>
   </section>
@@ -1526,6 +1680,131 @@ def build_gallery():
 {footer()}'''
 
 
+# ========================================================= ALL PRODUCTS =====
+ALLPROD_OVERVIEW = [
+    'This page is a working photograph library rather than a single specified product — access hatches and covers, drains and gratings, handrails and balustrades, kitchen and catering metalwork, enclosures, cabinets and other bespoke items we have fabricated and installed on completed projects across the UAE.',
+    'Every item shown was measured, fabricated and fitted to the opening or run it was made for, not picked from a standard catalogue. Treat the photographs as a reference for the kind of work we take on — send us a drawing, a site photo, or a description of what you need, and we will confirm size, material and finish before quoting.',
+]
+ALLPROD_BENEFITS = [
+    ('Made to the actual opening', 'Every item is measured on site or against your drawing, not selected from a standard size run.'),
+    ('One crew, start to finish', 'The same team fabricates and installs, so a hatch, drain or handrail arrives fitted rather than boxed and left for someone else.'),
+    ('Small works handled properly', 'Single items and short runs get the same shop-drawing and finish control as a full package.'),
+    ('Matched to the rest of the works', 'Where these items sit inside a larger scope, they are detailed to suit the structural steel or metalwork already being fabricated for the same project.'),
+]
+ALLPROD_SPECS = [
+    ('Categories shown', 'Access hatches and covers, drains and gratings, handrails and balustrades, kitchen and catering metalwork, enclosures, cabinets and bespoke fabrication'),
+    ('Materials', 'Mild steel, stainless steel, aluminium and GRP, finished to the specified coating or grade'),
+    ('Basis', 'Site-measured or drawing-based fabrication, supplied and installed or supply-only'),
+    ('Sourcing', 'Photographed on completed projects — not stock imagery'),
+    ('Quotation', 'Free, based on your drawing, a site measurement, or a reference photo from this page'),
+]
+ALLPROD_FEATURES = [
+    ('Access hatches and covers', 'Floor, roof and wall access hatches and panels, sized to the opening and finished to suit the surrounding surface.'),
+    ('Drains and gratings', 'Floor gullies, linear slot drains, pool and ablution gratings, and manhole and trench covers.'),
+    ('Handrails and balustrades', 'Stair, ramp and balcony handrails in tube, box section, glass-infill and stainless steel.'),
+    ('Kitchen and catering metalwork', 'Extraction hoods and ducting, worktops, sinks, trolleys and storage units for commercial kitchens.'),
+    ('Enclosures and cabinets', 'Plant enclosures, meter boxes, staff lockers and storage cabinets fabricated to the space available.'),
+    ('Bespoke and decorative items', 'Screens, display units, planters and one-off fabrication built to a design rather than a standard part.'),
+]
+
+
+def build_all_products():
+    pgrid = ''.join(f'''
+      <div class="pgrid__item">
+        <figure class="gal__i" data-full="assets/img/{g}-1400.jpg">
+          <img src="assets/img/{g}-800.jpg" alt="{t}" width="800" height="800" loading="lazy" decoding="async">
+        </figure>
+        <p class="pgrid__cap">{t}</p>
+      </div>''' for g, t in ALL_PRODUCT_PHOTOS)
+
+    over = ''.join(f'<p data-reveal>{x}</p>' for x in ALLPROD_OVERVIEW)
+    bens = ''.join(f'<li>{ICON["tick"]}<span><b>{t}</b> — {d}</span></li>' for t, d in ALLPROD_BENEFITS)
+    specs = ''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in ALLPROD_SPECS)
+    feats = ''.join(f'''
+      <article class="card">
+        <p class="card__n">{n+1:02d}</p>
+        <h3 class="h4">{t}</h3>
+        <p>{d}</p>
+      </article>''' for n, (t, d) in enumerate(ALLPROD_FEATURES))
+
+    title = f'All Products — {CO_SHORT}, Dubai'
+    desc = ('The full range of products fabricated and installed by ' + CO + ' — access hatches and covers, '
+            'handrails, drains, kitchen and catering metalwork, enclosures and bespoke items, drawn from '
+            'completed projects.')
+    canon = f'{SITE}/all-products.html'
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "ImageGallery", "name": "ADSD Steel — All Products", "url": canon, "description": desc},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "All Products", "item": canon}]}]}
+
+    return head(title, desc, canon, jsonld=ld) + shell_open() + nav() + f'''
+<main id="main">
+
+  <section class="phero">
+    <div class="phero__bg" aria-hidden="true">
+      <img src="assets/img/prd-access-hatch-1-1400.jpg" alt="" width="1400" height="1400" fetchpriority="high" decoding="async" data-parallax="-8">
+    </div>
+    <div class="wrap phero__in">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span style="opacity:1;color:var(--t2i)">All Products</span>
+      </nav>
+      <p class="eyebrow eyebrow--i" style="margin-top:1.4rem">Products</p>
+      <h1 class="h1 phero__h" data-hero-h>Every product, one page.</h1>
+      <p class="lead lead--i phero__d" data-hero-sub>Access hatches and covers, drains, handrails, kitchen and catering metalwork, enclosures and bespoke items — photographed on completed projects. Click any photo for a larger view.</p>
+      <div class="hero__acts" data-hero-act>
+        <a class="btn btn--pri" href="index.html#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>
+        <a class="btn btn--ghost-i" href="tel:{PHONE_H}" data-magnet="0.18"><span class="btn__t">{PHONE}</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--paper">
+    <div class="wrap two">
+      <div class="rich">
+        <p class="eyebrow" data-reveal>Overview</p>
+        {over}
+        <h2 class="h3" style="margin-top:1.4rem" data-reveal>Benefits</h2>
+        <ul class="ticks" data-stagger>{bens}</ul>
+      </div>
+      <aside class="aside" data-reveal>
+        <h3 class="h4">Scope and specification</h3>
+        <dl class="specs-tbl">{specs}</dl>
+        <a class="tlink" href="index.html#contact">Enquire about an item{ICON['arr_sm']}</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec sec--white">
+    <div class="wrap">
+      <div class="shead">
+        <div class="shead__top"><span class="shead__idx">01</span><p class="eyebrow">Key features</p></div>
+        <div class="shead__grid">
+          <h2 class="h2 shead__title" data-split>What the photographs cover.</h2>
+          <p class="lead" data-reveal>Six groups the 106 photographs below fall into — a sample of the small works we take on alongside the main scope.</p>
+        </div>
+      </div>
+      <div class="cards cards--3" data-stagger>{feats}</div>
+    </div>
+  </section>
+
+  <section class="sec sec--paper">
+    <div class="wrap">
+      <div class="dim" style="margin-bottom:1.6rem">
+        <span class="dim__txt">Gallery</span><span class="dim__line"></span><span class="dim__txt">{len(ALL_PRODUCT_PHOTOS)} items</span>
+      </div>
+      <div class="pgrid" data-stagger>{pgrid}</div>
+      <p class="cap" style="margin-top:1.4rem"><b>Note</b> Photography above is drawn directly from completed projects and workshop production.</p>
+    </div>
+  </section>
+
+</main>
+{cta('', 'ssf-canopy-entrance', 'Enquire',
+     'Send drawings. Get a priced take-off.',
+     'Quotations are free. Give us the location, the programme dates and whatever drawings you have.')}
+{footer()}'''
+
+
 # ============================================================== WRITE =====
 def write(path, txt):
     with open(os.path.join(OUT, path), 'w', encoding='utf-8') as f:
@@ -1533,6 +1812,7 @@ def write(path, txt):
 
 write('index.html', build_index())
 write('gallery.html', build_gallery())
+write('all-products.html', build_all_products())
 for i, s in enumerate(SERVICES):
     write(f'services/{s["slug"]}.html', build_service(s, i))
 for i, p in enumerate(PRODUCTS):
@@ -1541,7 +1821,7 @@ for i, pr in enumerate(PROJECTS):
     write(f'projects/{pr["slug"]}.html', build_project(pr, i))
 
 # sitemap + robots
-urls = [(SITE + '/', '1.0'), (SITE + '/gallery.html', '0.6')]
+urls = [(SITE + '/', '1.0'), (SITE + '/gallery.html', '0.6'), (SITE + '/all-products.html', '0.6')]
 urls += [(f'{SITE}/services/{s["slug"]}.html', '0.8') for s in SERVICES]
 urls += [(f'{SITE}/products/{p["slug"]}.html', '0.8') for p in PRODUCTS]
 urls += [(f'{SITE}/projects/{pr["slug"]}.html', '0.7') for pr in PROJECTS]
@@ -1551,5 +1831,5 @@ write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n'
       + '</urlset>\n')
 write('robots.txt', f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
 
-print(f'built 1 + {len(SERVICES)} + {len(PRODUCTS)} + {len(PROJECTS)} = '
-      f'{1+len(SERVICES)+len(PRODUCTS)+len(PROJECTS)} pages')
+print(f'built 2 + {len(SERVICES)} + {len(PRODUCTS)} + {len(PROJECTS)} = '
+      f'{2+len(SERVICES)+len(PRODUCTS)+len(PROJECTS)} pages')
