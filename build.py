@@ -26,7 +26,7 @@ LIC_SHJ = '502971'
 NAV = [
     ('About',      '#about'),
     ('Services', '#services'),
-    ('Products',   '#products'),
+    ('Products',   'all-products.html'),
     ('Projects',   '#projects'),
     ('Gallery',    'gallery.html'),
     ('Contact',    '#contact'),
@@ -802,10 +802,29 @@ def nav(base='', home=False):
     # #section (e.g. Gallery, a real standalone page) just get the base path.
     prefix = '' if home else f'{base}index.html'
     href_for = lambda h: f'{prefix}{h}' if h.startswith('#') else f'{base}{h}'
-    links = ''.join(f'<a class="nav__a" href="{href_for(h)}" data-nav-link>{n}</a>' for n, h in NAV)
-    mlinks = ''.join(
-        f'<a href="{href_for(h)}" data-nav-link><span class="mono">{i+1:02d}</span>{n}</a>'
-        for i, (n, h) in enumerate(NAV))
+    caret = '<svg class="nav__care" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>'
+
+    def desktop_item(n, h):
+        if n != 'Services':
+            return f'<a class="nav__a" href="{href_for(h)}" data-nav-link>{n}</a>'
+        drop = ''.join(f'<a href="{base}services/{s["slug"]}.html">{s["title"]}</a>' for s in SERVICES)
+        return f'''<div class="nav__item">
+      <a class="nav__a" href="{href_for(h)}" data-nav-link>{n}{caret}</a>
+      <div class="nav__drop">{drop}</div>
+    </div>'''
+
+    def mobile_item(i, n, h):
+        num = f'<span class="mono">{i+1:02d}</span>'
+        if n != 'Services':
+            return f'<a href="{href_for(h)}" data-nav-link>{num}{n}</a>'
+        drop = ''.join(f'<a href="{base}services/{s["slug"]}.html">{s["title"]}</a>' for s in SERVICES)
+        return f'''<details class="msub">
+        <summary>{num}{n}{caret}</summary>
+        <div class="msub__list">{drop}</div>
+      </details>'''
+
+    links = ''.join(desktop_item(n, h) for n, h in NAV)
+    mlinks = ''.join(mobile_item(i, n, h) for i, (n, h) in enumerate(NAV))
     return f'''
 <header class="nav">
   <div class="nav__in">
