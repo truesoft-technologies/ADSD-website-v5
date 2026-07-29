@@ -451,7 +451,7 @@
       ].join('\n');
       const to = form.dataset.mailto || 'ads.techdxb@gmail.com';
       window.location.href = 'mailto:' + to
-        + '?subject=' + encodeURIComponent('Enquiry — ' + (g('scope') || 'General') + ' — ' + g('company'))
+        + '?subject=' + encodeURIComponent('Enquiry: ' + (g('scope') || 'General') + ', ' + g('company'))
         + '&body=' + encodeURIComponent(body);
 
       if (ok) {
