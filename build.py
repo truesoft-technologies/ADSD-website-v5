@@ -492,6 +492,12 @@ _HANDRAIL_SLUGS = [
     'prd-protection-guard', 'prd-cat-ladder', 'prd-metal-stair-case', 'prd-metal-stari-case-2',
     'prd-stair-case-type-1', 'prd-whatsapp-image-2026-07-21-at-12-01-21-1',
 ]
+_DECORATIVE_SLUGS = [
+    'prd-decorative-ac-grill', 'prd-decorative-bollard', 'prd-decorative-book-shelf',
+    'prd-decorative-ceiling-feature', 'prd-decorative-customized-board', 'prd-decorative-display-shelf',
+    'prd-decorative-screen-panel', 'prd-decorative-swimming-pool-handrail', 'prd-decorative-wall-design',
+    'prd-decorative-water-feature', 'prd-decorative-window-panel', 'prd-laundry-cabinet-unit',
+]
 
 PRODUCT_CATEGORIES = [
     dict(
@@ -657,7 +663,40 @@ PRODUCT_CATEGORIES = [
             ('One-off fabrication', 'Anything else that does not fit a standard product line, built to your drawing or design.'),
         ],
         noun='tailor-made',
-        photos=[],  # filled in below once ALL_PRODUCT_PHOTOS exists — everything the other four don't claim
+        photos=[],  # filled in below once ALL_PRODUCT_PHOTOS exists — everything the other five don't claim
+    ),
+    dict(
+        slug='decorative-products', title='Decorative Products', tag='Design &amp; finishes', hero='prd-decorative-wall-design',
+        short='Architectural metalwork, feature screens, ceiling designs, wall panels and bespoke decorative installations.',
+        lead='Decorative metalwork and architectural features: bespoke screens, ceiling designs, wall panels, garden features and one-off installations tailored to your design or specification.',
+        overview=[
+            'Decorative products combine structural integrity with aesthetic design, creating distinctive architectural features that enhance any space. From floor to ceiling, our fabrication capabilities span decorative screens, feature walls, ceiling installations, garden elements and custom architectural metalwork.',
+            'Every piece is fabricated to your specification, with material and finish selections matched to your design intent and the space it will occupy. Custom options include brass, stainless steel, powder-coated finishes, and multi-material combinations.',
+        ],
+        benefits=[
+            ('Bespoke design and fabrication', 'Architectural features created specifically for your space, not off-the-shelf components.'),
+            ('Material range and finishes', 'Brass, stainless steel, mild steel, powder coating and specialty finishes for durability and aesthetics.'),
+            ('Ceiling to floor capability', 'From overhead installations to landscape features, everything fabricated as one coordinated project.'),
+            ('Professional installation', 'Custom mounting and installation by experienced fabricators who understand the design intent.'),
+        ],
+        specs=[
+            ('Application areas', 'Ceiling features, wall panels, room dividers, garden screens, architectural accents'),
+            ('Materials', 'Brass, stainless steel, mild steel, aluminium, with custom plating and coating options'),
+            ('Finishes', 'Powder coating, plating, brushed, mirror polish, patina, specialty paint applications'),
+            ('Design basis', 'Architect drawings, design renderings, or collaborative design development'),
+            ('Installation', 'Professional on-site installation with finishing and alignment included'),
+            ('Scope', 'Custom fabrication for private residences, hospitality, retail and commercial interiors'),
+        ],
+        features=[
+            ('Decorative screens and room dividers', 'Perforated, laser-cut or fretwork screens creating visual interest and spatial definition.'),
+            ('Ceiling installations and features', 'Suspended, recessed or applied ceiling elements with integrated lighting or structural integration.'),
+            ('Feature wall panels', 'Textured, patterned or sculptural wall treatments that become focal points in any space.'),
+            ('Garden and landscape elements', 'Decorative screens, planters, water features, gates and architectural garden structures.'),
+            ('Bollards and protective elements', 'Functional bollards and protective screens with aesthetic design integration.'),
+            ('Bespoke cabinet and storage', 'Custom display shelving, cabinetry and storage solutions designed as decorative architectural elements.'),
+        ],
+        noun='decorative',
+        photos=_DECORATIVE_SLUGS,
     ),
 ]
 
@@ -848,12 +887,24 @@ ALL_PRODUCT_PHOTOS = [
     ('prd-cat-ladder', 'Cat Ladder'),
     ('prd-oil-pullout-tralley', 'Oil Pullout Trolley'),
     ('prd-grease-trap', 'Grease Trap'),
+    ('prd-decorative-ac-grill', 'Decorative AC Grill'),
+    ('prd-decorative-bollard', 'Decorative Bollard'),
+    ('prd-decorative-book-shelf', 'Decorative Book Shelf'),
+    ('prd-decorative-ceiling-feature', 'Decorative Ceiling Feature'),
+    ('prd-decorative-customized-board', 'Decorative Customized Board'),
+    ('prd-decorative-display-shelf', 'Decorative Display Shelf'),
+    ('prd-decorative-screen-panel', 'Decorative Screen Panel'),
+    ('prd-decorative-swimming-pool-handrail', 'Decorative Swimming Pool Handrail'),
+    ('prd-decorative-wall-design', 'Decorative Wall Design'),
+    ('prd-decorative-water-feature', 'Decorative Water Feature'),
+    ('prd-decorative-window-panel', 'Decorative Window Panel'),
+    ('prd-laundry-cabinet-unit', 'Laundry Cabinet Unit'),
 ]
 
-# Tailor Made Products picks up every photo the other four categories didn't
+# Tailor Made Products picks up every photo the other five categories didn't
 # explicitly claim. Validate as we go so a typo'd slug fails loudly.
 _ALL_PHOTO_SLUGS = [s for s, _ in ALL_PRODUCT_PHOTOS]
-_CLAIMED = _UPVC_SLUGS + _HATCH_SLUGS + _KITCHEN_SLUGS + _HANDRAIL_SLUGS
+_CLAIMED = _UPVC_SLUGS + _HATCH_SLUGS + _KITCHEN_SLUGS + _HANDRAIL_SLUGS + _DECORATIVE_SLUGS
 for _s in _CLAIMED:
     assert _s in _ALL_PHOTO_SLUGS, f'unknown photo slug in a product category: {_s}'
 assert len(_CLAIMED) == len(set(_CLAIMED)), 'a photo slug is claimed by more than one category'
@@ -1057,7 +1108,7 @@ def cta(base='', img='frame-erection-crane',
 
 def footer(base=''):
     svc = ''.join(f'<li><a href="{base}services/{s["slug"]}.html">{s["title"]}</a></li>' for s in SERVICES[:6])
-    prd = ''.join(f'<li><a href="{base}products/{p["slug"]}.html">{p["title"]}</a></li>' for p in PRODUCTS)
+    prd = ''.join(f'<li><a href="{base}products/{p["slug"]}.html">{p["title"]}</a></li>' for p in PRODUCT_CATEGORIES)
     return f'''
 <footer class="ft">
   <div class="wrap">
