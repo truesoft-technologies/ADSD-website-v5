@@ -927,8 +927,8 @@ WHY = [
      'The group workshop has held a Sharjah industrial licence since October 2022, with the Dubai contracting licence active alongside it.'),
     ('Fabrication and erection together',
      'The crew that welds a connection is the crew that bolts it up, so fit-up issues are corrected on the spot instead of escalated.'),
-    ('Five disciplines, one contract',
-     'Structural steel, metalwork and tailor-made fabrication for the civil, MEP and landscape and hospitality sectors, under a single point of contact.'),
+    ('Value engineering',
+     'We design as per your requirements based on site conditions, and apply value engineering principles when estimating costs to optimize both performance and budget.'),
 ]
 
 FAQ = [
@@ -1362,6 +1362,8 @@ def build_index():
       <div class="about__grid">
         <div class="about__body">
           <p data-reveal>{CO} works from two bases: a Sharjah workshop that has held an industrial licence since 2022, and a Dubai contracting licence issued by the Department of Economy and Tourism, fabricating and erecting structural steel, metalwork and tailor-made fabrication products across the Emirates.</p>
+
+          <p data-reveal>We are a diversified metal fabrication company serving the commercial and residential sectors, providing products and systems for structural applications, MEP requirements, landscape installations and hospitality projects. Each project is designed according to your specific requirements and site conditions, with solutions tailored to your needs whether for drainage systems, handrails, screens, or any custom fabrication.</p>
 
           <div class="about__stack">
             <div class="vm" data-reveal>
