@@ -1499,7 +1499,7 @@ def build_index():
     <div class="wrap hero__in">
       <div class="hero__top">
         <p class="eyebrow eyebrow--i" data-hero-eye>Dubai · Sharjah · Abu Dhabi, licensed since 2022</p>
-        <h1 class="h1 hero__h1" data-hero-h>Structural Steel Engineered To Your Vision.</h1>
+        <h1 class="h1 hero__h1" data-hero-h>Structural Steel Engineering Metal Crafts Works.</h1>
         <p class="lead lead--i hero__sub" data-hero-sub>{CO} fabricates and installs structural steel, industrial metalwork and tailor-made fabrication products for the civil, MEP and landscape and hospitality sectors, self-performed by our own workshop and site crews.</p>
         <div class="hero__acts" data-hero-act>
           <a class="btn btn--pri" href="#contact" data-magnet="0.22"><span class="btn__t">Request a quotation</span>{ICON['arrow']}</a>

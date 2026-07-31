@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(git commit -m ' *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")",
+      "Read(//c//**)",
+      "Bash(npm ls *)",
+      "Read(//tmp/**)",
+      "Bash(netstat -ano)"
     ]
   }
 }
