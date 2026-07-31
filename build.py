@@ -455,10 +455,10 @@ PRODUCTS = [
 ]
 
 # ------------------------------------------------------ product categories --
-# Five home-page product categories, each with its own dedicated page under
+# Home-page product categories, each with its own dedicated page under
 # products/. Every photo in ALL_PRODUCT_PHOTOS (defined further down) is
 # assigned to exactly one category — Tailor Made Products picks up whatever
-# the other four don't claim.
+# the others don't claim.
 _UPVC_SLUGS = [
     'prd-dry-gully-trap-upvc', 'prd-upvc-dry-manhole-cover', 'prd-upvc-fittings',
     'prd-grease-trap', 'prd-grease-trap-c-type', 'prd-grp-ladder-for-pump-room',
@@ -498,6 +498,36 @@ _DECORATIVE_SLUGS = [
     'prd-decorative-screen-panel', 'prd-decorative-swimming-pool-handrail', 'prd-decorative-wall-design',
     'prd-decorative-water-feature', 'prd-decorative-window-panel', 'prd-laundry-cabinet-unit',
 ]
+_DRAINAGE_SLUGS = [
+    # gully & floor traps
+    'prd-floor-gully-trap', 'prd-drainage-floor-drain-ss', 'prd-drainage-floor-trap',
+    'prd-drainage-round-floor-drain', 'prd-drainage-catch-basin-cover',
+    # floor & shower drains
+    'prd-shower-drain', 'prd-showerdrain', 'prd-drainage-ss-recessed-drain',
+    'prd-drainage-ss-slot-type-drain', 'prd-drainage-slotted-floor-drain',
+    'prd-drainage-ss-floor-drain-cover', 'prd-drainage-ss-floor-cover',
+    'prd-drainage-floor-drain-recessed', 'prd-drainage-balcony-drain',
+    'prd-drainage-slotted-top-threaded-outlet',
+    # slot & linear drains
+    'prd-slot-drain', 'prd-water-feature-slot-drain', 'prd-radius-water-feature-linear-drain',
+    'prd-drainage-radius-slot-drain', 'prd-drainage-linear-drain', 'prd-drainage-linear-slot-drain',
+    'prd-drainage-double-slot-drain', 'prd-drainage-ss-double-slot-drain', 'prd-drainage-di-channel-ss-top',
+    'prd-drainage-recessed-slotted-top', 'prd-drainage-ss-slotted-drain',
+    # channel gratings
+    'prd-drainage-amul-trap', 'prd-drainage-angle-frame-ladder-grating',
+    'prd-drainage-angle-frame-non-slip-grating', 'prd-drainage-angle-frame-slotted-top',
+    'prd-drainage-channel-grating', 'prd-drainage-channel-heel-guard',
+    'prd-drainage-channel-non-slip-grating', 'prd-drainage-heavy-duty-grating',
+    'prd-drainage-ladder-type-grating', 'prd-drainage-ss-ladder-grating-frame',
+    'prd-drainage-industrial-floor-grating', 'prd-pool-linear-gratings', 'prd-ablution-gratings',
+    # rain water outlets & clean-outs
+    'prd-drainage-ss-rain-water-outlet', 'prd-drainage-alu-clean-out',
+    'prd-drainage-powder-coated-clean-out', 'prd-drainage-roof-drain',
+    'prd-drainage-rain-water-outlet-round', 'prd-drainage-ss-flap-type-drain',
+    'prd-drainage-scrupper-drain', 'prd-drainage-slotted-drain-outlet', 'prd-drainage-parapet-drain',
+    # misc
+    'prd-duct',
+]
 
 PRODUCT_CATEGORIES = [
     dict(
@@ -532,6 +562,39 @@ PRODUCT_CATEGORIES = [
         ],
         noun='UPVC',
         photos=_UPVC_SLUGS,
+    ),
+    dict(
+        slug='drainage-products', title='Drainage Products', tag='Drainage &amp; gratings', hero='prd-floor-gully-trap',
+        short='Floor and shower drains, slot and linear drains, channel gratings and rain water outlets, fabricated to the drainage run.',
+        lead='Floor traps, slot and linear drains, channel gratings and rain water outlets installed over a drainage system to carry water away and keep debris out, sized and finished to the drawing.',
+        overview=[
+            'Drainage products sit at the point where a floor, roof, balcony or channel meets the wider drainage network: gully and floor traps, slot and linear drains, channel gratings and rain water outlets that carry water away while keeping debris out of the pipe run.',
+            'The range covers everything from a single recessed shower drain to a full car park or roof drainage package: catch basins and gully traps at the collection point, channel and slot drains along the run, and rain water outlets, scuppers and clean-outs where the water leaves the building.',
+        ],
+        benefits=[
+            ('Matched to the drainage run', 'Traps, drains and outlets are sized to the pipe run and invert levels already on site, not a generic catalogue size.'),
+            ('Keeps debris out', 'Gratings and covers are selected to stop leaves, grit and site debris entering the drainage system while still passing the design flow.'),
+            ('Covers and gratings set flush', 'Floor, channel and roof-level items are set to finish flush with the surrounding surface or paving.'),
+            ('One supplier for the whole run', 'Collection points, channel drains and outlets are coordinated so the same fabricator carries the drainage package end to end.'),
+        ],
+        specs=[
+            ('Typical items', 'Gully and floor traps, catch basins, slot and linear drains, channel gratings, rain water outlets, scuppers, clean-outs'),
+            ('Materials', 'Stainless steel, galvanised steel, ductile iron, with UPVC or GRP components where specified'),
+            ('Basis', 'Site-measured against the drawing and the as-built invert levels'),
+            ('Finishes', 'Mill finish or brushed stainless, galvanised, powder coated'),
+            ('Applications', 'Bathrooms, balconies, car parks, roofs, plant rooms, landscape and water features'),
+            ('Scope options', 'Supply only, or supply and install on site'),
+        ],
+        features=[
+            ('Gully and floor traps', 'Floor-mounted traps and catch basins sized to the drainage run and finished flush with the floor.'),
+            ('Shower and floor drains', 'Recessed, slotted and round floor drains for bathrooms, balconies and plant areas.'),
+            ('Slot and linear drains', 'Channel and linear slot drains, including radius trims for water features, sized to the flow rate.'),
+            ('Channel gratings', 'Heavy-duty, ladder-type, non-slip and heel-guard gratings for car parks, plant rooms and public floors.'),
+            ('Rain water outlets', 'Roof drains, parapet drains, scuppers and clean-outs in stainless steel, aluminium or powder-coated finish.'),
+            ('Site-measured installation', 'Every item is checked against the as-built pipe run and invert level before it is fixed.'),
+        ],
+        noun='drainage',
+        photos=_DRAINAGE_SLUGS,
     ),
     dict(
         slug='access-hatch-cover', title='Access Hatch Cover', tag='Access &amp; covers', hero='prd-floor-access-hatch',
@@ -893,12 +956,54 @@ ALL_PRODUCT_PHOTOS = [
     ('prd-decorative-water-feature', 'Decorative Water Feature'),
     ('prd-decorative-window-panel', 'Decorative Window Panel'),
     ('prd-laundry-cabinet-unit', 'Laundry Cabinet Unit'),
+
+    # ---- Drainage Products (Tailor-Made-Drainage reference folder) ----
+    ('prd-drainage-floor-drain-ss', 'Floor Drain SS'),
+    ('prd-drainage-floor-trap', 'Floor Trap'),
+    ('prd-drainage-round-floor-drain', 'Round Floor Drain'),
+    ('prd-drainage-catch-basin-cover', 'Catch Basin Cover'),
+    ('prd-drainage-ss-recessed-drain', 'SS Recessed Drain'),
+    ('prd-drainage-ss-slot-type-drain', 'SS Slot Type Drain'),
+    ('prd-drainage-slotted-floor-drain', 'Slotted Floor Drain'),
+    ('prd-drainage-ss-floor-drain-cover', 'SS Floor Drain Cover'),
+    ('prd-drainage-ss-floor-cover', 'SS Floor Cover'),
+    ('prd-drainage-floor-drain-recessed', 'Floor Drain Recessed'),
+    ('prd-drainage-balcony-drain', 'Balcony Drain'),
+    ('prd-drainage-slotted-top-threaded-outlet', 'Slotted Top Threaded Outlet'),
+    ('prd-drainage-radius-slot-drain', 'Radius Type Slot Drain'),
+    ('prd-drainage-linear-drain', 'Linear Drain'),
+    ('prd-drainage-linear-slot-drain', 'Linear Slot Drain'),
+    ('prd-drainage-double-slot-drain', 'Double Slot Drain'),
+    ('prd-drainage-ss-double-slot-drain', 'SS Double Slot Drain'),
+    ('prd-drainage-di-channel-ss-top', 'DI Channel With SS Top'),
+    ('prd-drainage-recessed-slotted-top', 'Recessed Slotted Top'),
+    ('prd-drainage-ss-slotted-drain', 'SS Slotted Drain'),
+    ('prd-drainage-amul-trap', 'Amul Trap'),
+    ('prd-drainage-angle-frame-ladder-grating', 'Angle Frame With Ladder Type Grating'),
+    ('prd-drainage-angle-frame-non-slip-grating', 'Angle Frame With Non Slip Grating'),
+    ('prd-drainage-angle-frame-slotted-top', 'Angle Frame With Slotted Top'),
+    ('prd-drainage-channel-grating', 'Channel Grating'),
+    ('prd-drainage-channel-heel-guard', 'Channel With Heel Guard'),
+    ('prd-drainage-channel-non-slip-grating', 'Channel With Non Slip Grating'),
+    ('prd-drainage-heavy-duty-grating', 'Heavy Duty Grating'),
+    ('prd-drainage-ladder-type-grating', 'Ladder Type Grating'),
+    ('prd-drainage-ss-ladder-grating-frame', 'SS Ladder Type Grating With Frame'),
+    ('prd-drainage-industrial-floor-grating', 'Industrial Floor Grating'),
+    ('prd-drainage-ss-rain-water-outlet', 'SS Rain Water Outlet'),
+    ('prd-drainage-alu-clean-out', 'Aluminium Clean Out'),
+    ('prd-drainage-powder-coated-clean-out', 'Powder Coated Clean Out'),
+    ('prd-drainage-roof-drain', 'Roof Drain'),
+    ('prd-drainage-rain-water-outlet-round', 'Rain Water Outlet - Round'),
+    ('prd-drainage-ss-flap-type-drain', 'SS Flap Type Drain'),
+    ('prd-drainage-scrupper-drain', 'Scupper Drain'),
+    ('prd-drainage-slotted-drain-outlet', 'Slotted Drain Outlet'),
+    ('prd-drainage-parapet-drain', 'Parapet Drain'),
 ]
 
 # Tailor Made Products picks up every photo the other five categories didn't
 # explicitly claim. Validate as we go so a typo'd slug fails loudly.
 _ALL_PHOTO_SLUGS = [s for s, _ in ALL_PRODUCT_PHOTOS]
-_CLAIMED = _UPVC_SLUGS + _HATCH_SLUGS + _KITCHEN_SLUGS + _HANDRAIL_SLUGS + _DECORATIVE_SLUGS
+_CLAIMED = _UPVC_SLUGS + _HATCH_SLUGS + _KITCHEN_SLUGS + _HANDRAIL_SLUGS + _DECORATIVE_SLUGS + _DRAINAGE_SLUGS
 for _s in _CLAIMED:
     assert _s in _ALL_PHOTO_SLUGS, f'unknown photo slug in a product category: {_s}'
 assert len(_CLAIMED) == len(set(_CLAIMED)), 'a photo slug is claimed by more than one category'
@@ -1428,7 +1533,7 @@ def build_index():
         <div class="shead__top"><span class="shead__idx">04</span><p class="eyebrow">Products</p><a class="tlink" href="gallery.html" style="margin-left:auto">Explore gallery{ICON['arr_sm']}</a></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>Things we make, ready to specify.</h2>
-          <p class="lead" data-reveal>Five product categories drawn from completed projects: UPVC drainage, access hatches and covers, customised kitchens, handrails, and tailor-made fabrication. Open a category for the full range.</p>
+          <p class="lead" data-reveal>Product categories drawn from completed projects: UPVC drainage, dedicated drainage products, access hatches and covers, customised kitchens, handrails, decorative metalwork, and tailor-made fabrication. Open a category for the full range.</p>
         </div>
       </div>
       <div class="prod" data-stagger>{prod}</div>
@@ -1878,7 +1983,7 @@ def build_product_category(pc, i):
       </div>
       <div class="aside" style="position:static" data-reveal>
         <div class="aside__list">{rel}</div>
-        <a class="tlink" href="{base}index.html#products">All five categories{ICON['arr_sm']}</a>
+        <a class="tlink" href="{base}index.html#products">All {len(PRODUCT_CATEGORIES)} categories{ICON['arr_sm']}</a>
       </div>
     </div>
   </section>
