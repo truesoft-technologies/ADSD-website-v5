@@ -26,7 +26,6 @@ LIC_SHJ = '502971'
 NAV = [
     ('About',      '#about'),
     ('Services', '#services'),
-    ('Products',   'all-products.html'),
     ('Projects',   '#projects'),
     ('Gallery',    'gallery.html'),
     ('Contact',    '#contact'),
@@ -2202,7 +2201,6 @@ def write(path, txt):
 
 write('index.html', build_index())
 write('gallery.html', build_gallery())
-write('all-products.html', build_all_products())
 for i, s in enumerate(SERVICES):
     write(f'services/{s["slug"]}.html', build_service(s, i))
 for i, p in enumerate(PRODUCTS):
@@ -2211,7 +2209,7 @@ for i, pc in enumerate(PRODUCT_CATEGORIES):
     write(f'products/{pc["slug"]}.html', build_product_category(pc, i))
 
 # sitemap + robots
-urls = [(SITE + '/', '1.0'), (SITE + '/gallery.html', '0.6'), (SITE + '/all-products.html', '0.6')]
+urls = [(SITE + '/', '1.0'), (SITE + '/gallery.html', '0.6')]
 urls += [(f'{SITE}/services/{s["slug"]}.html', '0.8') for s in SERVICES]
 urls += [(f'{SITE}/products/{p["slug"]}.html', '0.8') for p in PRODUCTS]
 urls += [(f'{SITE}/products/{pc["slug"]}.html', '0.8') for pc in PRODUCT_CATEGORIES]
