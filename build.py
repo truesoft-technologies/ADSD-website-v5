@@ -473,17 +473,21 @@ _HATCH_SLUGS = [
     'prd-dubai-south-dewa-substation',
 ]
 _KITCHEN_SLUGS = [
+    # ducting
+    'prd-kitchen-hood-duct', 'prd-water-duct-khood', 'prd-duct',
+    'prd-whatsapp-image-2026-07-21-at-12-41-02-1',
+    # kitchen & catering metalwork
     'prd-bainmarie', 'prd-bbq-outdoor-unit', 'prd-cafe-display-unit', 'prd-customized-mop-sink',
     'prd-etihad-dry-kitchen',
     'prd-etihad-hotkitchen', 'prd-etihad-staff-storage-cabinet', 'prd-etihad-staff-catering-storage-cabinet',
     'prd-hot-plate-with-burner', 'prd-janitorial-sink', 'prd-khawanij-private-villa-kitchen',
-    'prd-kitchen-hood', 'prd-kitchen-hood-duct', 'prd-lazzat-kitchen-supplied-products',
+    'prd-kitchen-hood', 'prd-lazzat-kitchen-supplied-products',
     'prd-lazzat-resturant-in-karam', 'prd-lazzat-resturant-tandoor-kitchen',
     'prd-nouf-private-villa-kitchen', 'prd-nouf-private-villa-kitchen-2', 'prd-oil-pullout-tralley',
     'prd-private-villa-hot-kitchen', 'prd-resturant-in-al-zahia-c4', 'prd-resturant-in-al-zahia-mall',
     'prd-whatsapp-image-2026-07-21-at-13-03-13-1', 'prd-whatsapp-image-2026-07-21-at-13-03-13-2',
     'prd-whatsapp-image-2026-07-21-at-13-03-13',
-    'prd-storage-unit-bbq-counter', 'prd-table-top-bbq-grill', 'prd-water-duct-khood',
+    'prd-storage-unit-bbq-counter', 'prd-table-top-bbq-grill',
     'prd-mobile-trolley',
 ]
 _HANDRAIL_SLUGS = [
@@ -525,8 +529,6 @@ _DRAINAGE_SLUGS = [
     'prd-drainage-powder-coated-clean-out', 'prd-drainage-roof-drain',
     'prd-drainage-rain-water-outlet-round', 'prd-drainage-ss-flap-type-drain',
     'prd-drainage-scrupper-drain', 'prd-drainage-slotted-drain-outlet', 'prd-drainage-parapet-drain',
-    # misc
-    'prd-duct',
 ]
 
 PRODUCT_CATEGORIES = [
@@ -630,7 +632,7 @@ PRODUCT_CATEGORIES = [
         photos=_HATCH_SLUGS,
     ),
     dict(
-        slug='customized-kitchen', title='Customized Kitchen', tag='Hospitality &amp; catering', hero='prd-kitchen-hood',
+        slug='customized-kitchen', title='Customized Kitchen Products', tag='Hospitality &amp; catering', hero='prd-kitchen-hood',
         short='Commercial kitchen and catering metalwork made to the equipment schedule: hoods, worktops, sinks and storage.',
         lead='Commercial kitchen and catering metalwork made to the equipment schedule: extraction hoods and ducting, worktops, sinks, storage and display units for restaurants, hotels and staff catering facilities.',
         overview=[
