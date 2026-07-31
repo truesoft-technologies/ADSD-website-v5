@@ -731,7 +731,7 @@ PRODUCT_CATEGORIES = [
         photos=_DECORATIVE_SLUGS,
     ),
     dict(
-        slug='tailor-made-products', title='Tailor Made Products', tag='Custom fabrication', hero='prd-decorative-panels',
+        slug='tailor-made-products', title='Tailor Made Products', tag='Custom fabrication', hero='prd-tme-outdoor-light-box',
         short='One-off metalwork, custom enclosures, decorative screens, planters and bespoke site-specific fabrication.',
         lead='Custom one-off fabrication beyond standard product ranges: decorative screens, enclosures, planters, villa metalwork and anything else that does not fit a standard product line, built to your drawing or design.',
         overview=[
@@ -814,9 +814,6 @@ GALLERY = [
 
     # ---- product photography, drawn from ALL_PRODUCT_PHOTOS below ----
     ('prd-ablution-gratings', 'Decorative ablution gratings with brass surround, floor drain'),
-    ('prd-decorative-screen-with-table-for-vase', 'Brushed brass fin screen with integrated console table'),
-    ('prd-decorative-panels', 'CNC-cut geometric screen doors, private villa entrance'),
-    ('prd-decorative-wall-display', 'Fretwork brass grille panel, framed wall display'),
     ('prd-balcony-balustard', 'Horizontal-fin balustrade at a villa entrance'),
     ('prd-balcony-fence', 'Horizontal-fin balcony screen and guarding'),
     ('prd-kitchen-hood', 'Patterned stainless steel kitchen extraction hood'),
@@ -1000,6 +997,32 @@ ALL_PRODUCT_PHOTOS = [
     ('prd-drainage-scrupper-drain', 'Scupper Drain'),
     ('prd-drainage-slotted-drain-outlet', 'Slotted Drain Outlet'),
     ('prd-drainage-parapet-drain', 'Parapet Drain'),
+
+    # ---- Tailor Made Products (End To End reference folder) ----
+    ('prd-tme-handrail', 'Handrail'),
+    ('prd-tme-ss-handrail', 'SS Handrail'),
+    ('prd-tme-glass-handrail', 'Glass Handrail'),
+    ('prd-tme-handrail-glass-partition', 'Handrail With Glass Partition'),
+    ('prd-tme-handrail-wooden-handle', 'Handrail With Wooden Handle'),
+    ('prd-tme-staircase-handrail', 'Staircase Handrail'),
+    ('prd-tme-wall-mounted-handrail', 'Wall Mounted Handrail'),
+    ('prd-tme-pool-handrail', 'Swimming Pool Handrail'),
+    ('prd-tme-ladder', 'Ladder'),
+    ('prd-tme-sliding-door', 'Sliding Door'),
+    ('prd-tme-lift-cladding', 'Lift Cladding'),
+    ('prd-tme-wall-fencing', 'Wall Fencing'),
+    ('prd-tme-corner-guard', 'Stainless Steel Corner Guard'),
+    ('prd-tme-ceiling-tile', 'Ceiling Tile'),
+    ('prd-tme-roof-platform', 'Platform For Roof'),
+    ('prd-tme-pool-platform', 'Swimming Pool Platform'),
+    ('prd-tme-marble-top', 'Marble Top'),
+    ('prd-tme-powder-coated-cabinet', 'Powder Coated Cabinet'),
+    ('prd-tme-storage-shelving', 'Storage Shelving'),
+    ('prd-tme-flower-stand', 'Flower Stand'),
+    ('prd-tme-floor-mounting-bollard', 'Floor Mounting Bollard'),
+    ('prd-tme-ev-charging-unit', 'EV Charging Unit'),
+    ('prd-tme-outdoor-light-box', 'Outdoor Light Box'),
+    ('prd-tme-bbq-tray', 'BBQ Tray'),
 ]
 
 # Tailor Made Products picks up every photo the other five categories didn't
