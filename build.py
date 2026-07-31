@@ -599,7 +599,7 @@ PRODUCT_CATEGORIES = [
         photos=_DRAINAGE_SLUGS,
     ),
     dict(
-        slug='access-hatch-cover', title='Access Hatch Cover', tag='Access &amp; covers', hero='prd-floor-access-hatch',
+        slug='access-hatch-cover', title='Access Hatch Cover', tag='Access &amp; covers', hero='prd-access-hatch-1',
         short='Floor, roof, wall and basement access hatches and covers, sized to the opening and finished to match the surrounding surface.',
         lead='Floor, roof, wall and basement access hatches and covers, sized to the opening and finished to match the surrounding surface, with manhole covers and trench panels for the same access requirement.',
         overview=[
