@@ -584,6 +584,15 @@ body.menu-open .menu { clip-path: inset(0 0 0 0); visibility: visible; }
 .gal__i--w { grid-column: span 2; aspect-ratio: 2/1; }
 .gal__i::after { content: ''; position: absolute; inset: 0; background: rgba(0,169,232,0); transition: background .45s var(--ease); }
 .gal__i:hover::after { background: rgba(0,169,232,.14); }
+.gal__i .pc__tag { opacity: 0; transform: translateY(-4px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
+.gal__i:hover .pc__tag { opacity: 1; transform: none; }
+
+/* --- 20a. main gallery wall: 6-col responsive grid ---------------------- */
+.gal--wall { grid-template-columns: repeat(2,1fr); gap: clamp(.45rem,1vw,.75rem); }
+@media (min-width: 560px) { .gal--wall { grid-template-columns: repeat(3,1fr); } }
+@media (min-width: 820px) { .gal--wall { grid-template-columns: repeat(4,1fr); } }
+@media (min-width: 1100px) { .gal--wall { grid-template-columns: repeat(5,1fr); } }
+@media (min-width: 1440px) { .gal--wall { grid-template-columns: repeat(6,1fr); } }
 
 /* --- 20b. all-products grid --------------------------------------------- */
 .pgrid { display: grid; gap: clamp(1.2rem,2.4vw,1.8rem) clamp(.9rem,1.6vw,1.4rem); grid-template-columns: repeat(2,1fr); }
