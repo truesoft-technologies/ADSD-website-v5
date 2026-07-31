@@ -7,7 +7,7 @@ verbatim from ADSD-COMPANY-PROFILE_-_Steel_Structure.pdf. Anything the profile
 did not contain is written as industry-appropriate placeholder copy and listed
 in CONTENT-NOTES.md.
 """
-import os, json, html, shutil
+import os, json, html, shutil, random
 
 OUT = '.'
 SITE = 'https://www.adsdsteel.ae'          # <- replace with the live domain
@@ -780,105 +780,105 @@ PROJECTS = [
 
 # ----------------------------------------------------------------- gallery --
 # 90 photographs drawn from every product category, curated to give each
-# discipline solid representation. (slug, alt text, category label).
+# discipline solid representation. (slug, alt text, category label, caption).
 GALLERY = [
     # ---- UPVC ----
-    ('prd-dry-gully-trap-upvc', 'UPVC dry gully trap, workshop finish', 'UPVC'),
-    ('prd-upvc-dry-manhole-cover', 'UPVC dry manhole cover set flush', 'UPVC'),
-    ('prd-upvc-fittings', 'UPVC drainage fittings and pipe junctions', 'UPVC'),
-    ('prd-grease-trap', 'UPVC grease trap for commercial kitchen drainage', 'UPVC'),
-    ('prd-grease-trap-c-type', 'C-type grease trap fabricated for a kitchen line', 'UPVC'),
-    ('prd-grp-ladder-for-pump-room', 'GRP ladder fitted inside a pump room access hatch', 'UPVC'),
+    ('prd-dry-gully-trap-upvc', 'UPVC dry gully trap, workshop finish', 'UPVC', 'UPVC Gully Trap'),
+    ('prd-upvc-dry-manhole-cover', 'UPVC dry manhole cover set flush', 'UPVC', 'UPVC Manhole Cover'),
+    ('prd-upvc-fittings', 'UPVC drainage fittings and pipe junctions', 'UPVC', 'UPVC Drainage Fittings'),
+    ('prd-grease-trap', 'UPVC grease trap for commercial kitchen drainage', 'UPVC', 'Kitchen Grease Trap'),
+    ('prd-grease-trap-c-type', 'C-type grease trap fabricated for a kitchen line', 'UPVC', 'C-Type Grease Trap'),
+    ('prd-grp-ladder-for-pump-room', 'GRP ladder fitted inside a pump room access hatch', 'UPVC', 'GRP Pump Room Ladder'),
     # ---- Access Hatch Cover ----
-    ('prd-access-hatch-1', 'Factory-finished steel access hatch, hinge and stay detail', 'Access Hatch Cover'),
-    ('prd-alain-municipality-park-access-hatch', 'Park access hatch, Al Ain municipality project', 'Access Hatch Cover'),
-    ('prd-dewa-dubai-south-project-access-door', 'Access door, DEWA Dubai South project', 'Access Hatch Cover'),
-    ('prd-floor-access-hatch', 'Floor access hatch set into a waterproofed upstand', 'Access Hatch Cover'),
-    ('prd-roof-access-hatch', 'Roof access hatch, factory finished', 'Access Hatch Cover'),
-    ('prd-wall-access-panel', 'Flush wall access panel, service duct', 'Access Hatch Cover'),
-    ('prd-floor-deck-cover-with-stone-infill', 'Floor deck cover with stone infill, finished flush', 'Access Hatch Cover'),
-    ('prd-multi-tray-mhc', 'Multi-tray manhole cover, recessed for infill', 'Access Hatch Cover'),
-    ('prd-recessed-mhc', 'Recessed manhole cover set into paving', 'Access Hatch Cover'),
-    ('prd-solid-top-mhc', 'Solid-top manhole cover, workshop finish', 'Access Hatch Cover'),
-    ('prd-elv-trench-panel', 'Chequer plate trench covers, ready for installation', 'Access Hatch Cover'),
-    ('prd-dubai-south-dewa-substation', 'Access covers, DEWA substation, Dubai South', 'Access Hatch Cover'),
+    ('prd-access-hatch-1', 'Factory-finished steel access hatch, hinge and stay detail', 'Access Hatch Cover', 'Steel Access Hatch'),
+    ('prd-alain-municipality-park-access-hatch', 'Park access hatch, Al Ain municipality project', 'Access Hatch Cover', 'Park Access Hatch'),
+    ('prd-dewa-dubai-south-project-access-door', 'Access door, DEWA Dubai South project', 'Access Hatch Cover', 'DEWA Access Door'),
+    ('prd-floor-access-hatch', 'Floor access hatch set into a waterproofed upstand', 'Access Hatch Cover', 'Floor Access Hatch'),
+    ('prd-roof-access-hatch', 'Roof access hatch, factory finished', 'Access Hatch Cover', 'Roof Access Hatch'),
+    ('prd-wall-access-panel', 'Flush wall access panel, service duct', 'Access Hatch Cover', 'Wall Access Panel'),
+    ('prd-floor-deck-cover-with-stone-infill', 'Floor deck cover with stone infill, finished flush', 'Access Hatch Cover', 'Stone Infill Deck Cover'),
+    ('prd-multi-tray-mhc', 'Multi-tray manhole cover, recessed for infill', 'Access Hatch Cover', 'Multi-Tray Manhole Cover'),
+    ('prd-recessed-mhc', 'Recessed manhole cover set into paving', 'Access Hatch Cover', 'Recessed Manhole Cover'),
+    ('prd-solid-top-mhc', 'Solid-top manhole cover, workshop finish', 'Access Hatch Cover', 'Solid-Top Manhole Cover'),
+    ('prd-elv-trench-panel', 'Chequer plate trench covers, ready for installation', 'Access Hatch Cover', 'Chequer Plate Trench Cover'),
+    ('prd-dubai-south-dewa-substation', 'Access covers, DEWA substation, Dubai South', 'Access Hatch Cover', 'Substation Access Cover'),
     # ---- Customized Kitchen ----
-    ('prd-kitchen-hood-duct', 'Kitchen extraction ducting fixed to a building facade', 'Customized Kitchen'),
-    ('prd-duct', 'Stainless steel extraction ducting, commercial kitchen', 'Customized Kitchen'),
-    ('prd-bainmarie', 'Stainless steel bain-marie unit for a commercial kitchen', 'Customized Kitchen'),
-    ('prd-cafe-display-unit', 'Cafe display counter, stainless steel finish', 'Customized Kitchen'),
-    ('prd-etihad-hotkitchen', 'Hot kitchen fit-out, Etihad catering facility', 'Customized Kitchen'),
-    ('prd-etihad-staff-catering-storage-cabinet', 'Staff catering storage cabinet, Etihad facility', 'Customized Kitchen'),
-    ('prd-janitorial-sink', 'Stainless steel janitorial and mop sink', 'Customized Kitchen'),
-    ('prd-kitchen-hood', 'Patterned stainless steel kitchen extraction hood', 'Customized Kitchen'),
-    ('prd-lazzat-resturant-in-karam', 'Kitchen fit-out, Lazzat Restaurant, Karama', 'Customized Kitchen'),
-    ('prd-nouf-private-villa-kitchen', 'Private villa kitchen metalwork, Nouf residence', 'Customized Kitchen'),
-    ('prd-oil-pullout-tralley', 'Oil pull-out trolley for a commercial kitchen line', 'Customized Kitchen'),
-    ('prd-resturant-in-al-zahia-mall', 'Restaurant kitchen fit-out, Al Zahia Mall', 'Customized Kitchen'),
-    ('prd-whatsapp-image-2026-07-21-at-13-03-13-2', 'Restaurant kitchen hood installation, on site', 'Customized Kitchen'),
-    ('prd-storage-unit-bbq-counter', 'Outdoor storage unit and BBQ counter', 'Customized Kitchen'),
-    ('prd-mobile-trolley', 'Stainless steel mobile kitchen trolley', 'Customized Kitchen'),
+    ('prd-kitchen-hood-duct', 'Kitchen extraction ducting fixed to a building facade', 'Customized Kitchen', 'Kitchen Hood Ducting'),
+    ('prd-duct', 'Stainless steel extraction ducting, commercial kitchen', 'Customized Kitchen', 'Extraction Ducting'),
+    ('prd-bainmarie', 'Stainless steel bain-marie unit for a commercial kitchen', 'Customized Kitchen', 'Bain-Marie Unit'),
+    ('prd-cafe-display-unit', 'Cafe display counter, stainless steel finish', 'Customized Kitchen', 'Cafe Display Counter'),
+    ('prd-etihad-hotkitchen', 'Hot kitchen fit-out, Etihad catering facility', 'Customized Kitchen', 'Hot Kitchen Fit-Out'),
+    ('prd-etihad-staff-catering-storage-cabinet', 'Staff catering storage cabinet, Etihad facility', 'Customized Kitchen', 'Staff Storage Cabinet'),
+    ('prd-janitorial-sink', 'Stainless steel janitorial and mop sink', 'Customized Kitchen', 'Janitorial Sink Unit'),
+    ('prd-kitchen-hood', 'Patterned stainless steel kitchen extraction hood', 'Customized Kitchen', 'Kitchen Extraction Hood'),
+    ('prd-lazzat-resturant-in-karam', 'Kitchen fit-out, Lazzat Restaurant, Karama', 'Customized Kitchen', 'Restaurant Kitchen Fit-Out'),
+    ('prd-nouf-private-villa-kitchen', 'Private villa kitchen metalwork, Nouf residence', 'Customized Kitchen', 'Villa Kitchen Metalwork'),
+    ('prd-oil-pullout-tralley', 'Oil pull-out trolley for a commercial kitchen line', 'Customized Kitchen', 'Oil Pull-Out Trolley'),
+    ('prd-resturant-in-al-zahia-mall', 'Restaurant kitchen fit-out, Al Zahia Mall', 'Customized Kitchen', 'Mall Restaurant Kitchen'),
+    ('prd-whatsapp-image-2026-07-21-at-13-03-13-2', 'Restaurant kitchen hood installation, on site', 'Customized Kitchen', 'Kitchen Hood Installation'),
+    ('prd-storage-unit-bbq-counter', 'Outdoor storage unit and BBQ counter', 'Customized Kitchen', 'BBQ Storage Counter'),
+    ('prd-mobile-trolley', 'Stainless steel mobile kitchen trolley', 'Customized Kitchen', 'Mobile Kitchen Trolley'),
     # ---- Balustrades & Handrails ----
-    ('prd-handrail-type-2', 'Tubular stainless steel handrail, stair application', 'Balustrades & Handrails'),
-    ('prd-handrain-3', 'Stainless steel and glass stair handrail, on site', 'Balustrades & Handrails'),
-    ('prd-handrain-type-4', 'Glass-infill balustrade handrail, balcony application', 'Balustrades & Handrails'),
-    ('prd-balcony-fence', 'Horizontal-fin balcony screen and guarding', 'Balustrades & Handrails'),
-    ('prd-swimming-pool-fence', 'Stainless steel pool safety fence and self-closing gate', 'Balustrades & Handrails'),
-    ('prd-ramp-rail', 'Continuous handrail fixed to an accessible ramp', 'Balustrades & Handrails'),
-    ('prd-partician-rail', 'Partition rail dividing an internal walkway', 'Balustrades & Handrails'),
-    ('prd-protection-guard', 'Stainless bollard guards at an escalator landing', 'Balustrades & Handrails'),
-    ('prd-cat-ladder', 'Fixed cat ladder to a workshop roof', 'Balustrades & Handrails'),
-    ('prd-metal-stari-case-2', 'Fabricated steel staircase frame, workshop assembly', 'Balustrades & Handrails'),
-    ('prd-stair-case-type-1', 'Steel stair frame and treads, fabricated to site rise', 'Balustrades & Handrails'),
-    ('prd-whatsapp-image-2026-07-21-at-12-01-21-1', 'Fabricated steel staircase frame under construction', 'Balustrades & Handrails'),
+    ('prd-handrail-type-2', 'Tubular stainless steel handrail, stair application', 'Balustrades & Handrails', 'Tubular Stair Handrail'),
+    ('prd-handrain-3', 'Stainless steel and glass stair handrail, on site', 'Balustrades & Handrails', 'Glass Stair Handrail'),
+    ('prd-handrain-type-4', 'Glass-infill balustrade handrail, balcony application', 'Balustrades & Handrails', 'Balcony Balustrade Handrail'),
+    ('prd-balcony-fence', 'Horizontal-fin balcony screen and guarding', 'Balustrades & Handrails', 'Balcony Screen Fence'),
+    ('prd-swimming-pool-fence', 'Stainless steel pool safety fence and self-closing gate', 'Balustrades & Handrails', 'Pool Safety Fence'),
+    ('prd-ramp-rail', 'Continuous handrail fixed to an accessible ramp', 'Balustrades & Handrails', 'Accessible Ramp Handrail'),
+    ('prd-partician-rail', 'Partition rail dividing an internal walkway', 'Balustrades & Handrails', 'Partition Rail'),
+    ('prd-protection-guard', 'Stainless bollard guards at an escalator landing', 'Balustrades & Handrails', 'Bollard Protection Guard'),
+    ('prd-cat-ladder', 'Fixed cat ladder to a workshop roof', 'Balustrades & Handrails', 'Fixed Cat Ladder'),
+    ('prd-metal-stari-case-2', 'Fabricated steel staircase frame, workshop assembly', 'Balustrades & Handrails', 'Steel Staircase Frame'),
+    ('prd-stair-case-type-1', 'Steel stair frame and treads, fabricated to site rise', 'Balustrades & Handrails', 'Custom Stair Fabrication'),
+    ('prd-whatsapp-image-2026-07-21-at-12-01-21-1', 'Fabricated steel staircase frame under construction', 'Balustrades & Handrails', 'Staircase Fabrication'),
     # ---- Decorative Products ----
-    ('prd-decorative-ac-grill', 'Decorative CNC-cut AC grille panel', 'Decorative Products'),
-    ('prd-decorative-bollard', 'Domed stainless steel decorative bollard', 'Decorative Products'),
-    ('prd-decorative-book-shelf', 'Fabricated decorative book shelf unit', 'Decorative Products'),
-    ('prd-decorative-ceiling-feature', 'Laser-cut decorative ceiling feature', 'Decorative Products'),
-    ('prd-decorative-customized-board', 'Custom decorative signage board', 'Decorative Products'),
-    ('prd-decorative-display-shelf', 'Decorative metal display shelving unit', 'Decorative Products'),
-    ('prd-decorative-screen-panel', 'CNC-cut decorative screen panel, fretwork design', 'Decorative Products'),
-    ('prd-decorative-swimming-pool-handrail', 'Decorative stainless steel pool handrail', 'Decorative Products'),
-    ('prd-decorative-wall-design', 'Decorative feature wall design in metal', 'Decorative Products'),
-    ('prd-decorative-water-feature', 'Decorative metal water feature installation', 'Decorative Products'),
-    ('prd-decorative-window-panel', 'Decorative CNC-cut window panel', 'Decorative Products'),
-    ('prd-laundry-cabinet-unit', 'Custom fabricated laundry cabinet unit', 'Decorative Products'),
+    ('prd-decorative-ac-grill', 'Decorative CNC-cut AC grille panel', 'Decorative Products', 'Decorative AC Grille'),
+    ('prd-decorative-bollard', 'Domed stainless steel decorative bollard', 'Decorative Products', 'Decorative Bollard'),
+    ('prd-decorative-book-shelf', 'Fabricated decorative book shelf unit', 'Decorative Products', 'Decorative Book Shelf'),
+    ('prd-decorative-ceiling-feature', 'Laser-cut decorative ceiling feature', 'Decorative Products', 'Decorative Ceiling Feature'),
+    ('prd-decorative-customized-board', 'Custom decorative signage board', 'Decorative Products', 'Custom Signage Board'),
+    ('prd-decorative-display-shelf', 'Decorative metal display shelving unit', 'Decorative Products', 'Decorative Display Shelf'),
+    ('prd-decorative-screen-panel', 'CNC-cut decorative screen panel, fretwork design', 'Decorative Products', 'Decorative Screen Panel'),
+    ('prd-decorative-swimming-pool-handrail', 'Decorative stainless steel pool handrail', 'Decorative Products', 'Decorative Pool Handrail'),
+    ('prd-decorative-wall-design', 'Decorative feature wall design in metal', 'Decorative Products', 'Decorative Steel Panel'),
+    ('prd-decorative-water-feature', 'Decorative metal water feature installation', 'Decorative Products', 'Decorative Water Feature'),
+    ('prd-decorative-window-panel', 'Decorative CNC-cut window panel', 'Decorative Products', 'Decorative Window Panel'),
+    ('prd-laundry-cabinet-unit', 'Custom fabricated laundry cabinet unit', 'Decorative Products', 'Custom Laundry Cabinet'),
     # ---- Drainage Products ----
-    ('prd-floor-gully-trap', 'Floor-mounted gully trap, finished flush', 'Drainage Products'),
-    ('prd-drainage-round-floor-drain', 'Round stainless steel floor drain', 'Drainage Products'),
-    ('prd-showerdrain', 'Recessed shower drain, bathroom application', 'Drainage Products'),
-    ('prd-drainage-ss-slot-type-drain', 'Stainless steel slot-type floor drain', 'Drainage Products'),
-    ('prd-drainage-ss-floor-cover', 'Stainless steel floor drain cover', 'Drainage Products'),
-    ('prd-drainage-slotted-top-threaded-outlet', 'Slotted-top threaded drainage outlet', 'Drainage Products'),
-    ('prd-radius-water-feature-linear-drain', 'Radius linear drain trim for a water feature, on site', 'Drainage Products'),
-    ('prd-drainage-linear-drain', 'Linear channel drain, workshop finish', 'Drainage Products'),
-    ('prd-drainage-ss-double-slot-drain', 'Stainless steel double slot drain', 'Drainage Products'),
-    ('prd-drainage-ss-slotted-drain', 'Stainless steel slotted floor drain', 'Drainage Products'),
-    ('prd-drainage-angle-frame-non-slip-grating', 'Angle-frame drain with non-slip grating', 'Drainage Products'),
-    ('prd-drainage-channel-grating', 'Stainless steel channel grating, full length', 'Drainage Products'),
-    ('prd-drainage-heavy-duty-grating', 'Heavy-duty floor grating for plant room drainage', 'Drainage Products'),
-    ('prd-drainage-industrial-floor-grating', 'Industrial floor grating, car park application', 'Drainage Products'),
-    ('prd-drainage-ss-rain-water-outlet', 'Stainless steel rain water outlet, roof drainage', 'Drainage Products'),
-    ('prd-drainage-powder-coated-clean-out', 'Powder-coated drainage clean-out cover', 'Drainage Products'),
-    ('prd-drainage-ss-flap-type-drain', 'Stainless steel flap-type drain valve', 'Drainage Products'),
-    ('prd-drainage-parapet-drain', 'Parapet drain outlet, roof edge installation', 'Drainage Products'),
+    ('prd-floor-gully-trap', 'Floor-mounted gully trap, finished flush', 'Drainage Products', 'Floor Gully Trap'),
+    ('prd-drainage-round-floor-drain', 'Round stainless steel floor drain', 'Drainage Products', 'Round Floor Drain'),
+    ('prd-showerdrain', 'Recessed shower drain, bathroom application', 'Drainage Products', 'Shower Drain'),
+    ('prd-drainage-ss-slot-type-drain', 'Stainless steel slot-type floor drain', 'Drainage Products', 'SS Slot Drain'),
+    ('prd-drainage-ss-floor-cover', 'Stainless steel floor drain cover', 'Drainage Products', 'SS Floor Cover'),
+    ('prd-drainage-slotted-top-threaded-outlet', 'Slotted-top threaded drainage outlet', 'Drainage Products', 'Threaded Drain Outlet'),
+    ('prd-radius-water-feature-linear-drain', 'Radius linear drain trim for a water feature, on site', 'Drainage Products', 'Radius Linear Drain'),
+    ('prd-drainage-linear-drain', 'Linear channel drain, workshop finish', 'Drainage Products', 'Linear Channel Drain'),
+    ('prd-drainage-ss-double-slot-drain', 'Stainless steel double slot drain', 'Drainage Products', 'SS Double Slot Drain'),
+    ('prd-drainage-ss-slotted-drain', 'Stainless steel slotted floor drain', 'Drainage Products', 'SS Slotted Drain'),
+    ('prd-drainage-angle-frame-non-slip-grating', 'Angle-frame drain with non-slip grating', 'Drainage Products', 'Non-Slip Floor Grating'),
+    ('prd-drainage-channel-grating', 'Stainless steel channel grating, full length', 'Drainage Products', 'Channel Grating'),
+    ('prd-drainage-heavy-duty-grating', 'Heavy-duty floor grating for plant room drainage', 'Drainage Products', 'Heavy-Duty Grating'),
+    ('prd-drainage-industrial-floor-grating', 'Industrial floor grating, car park application', 'Drainage Products', 'Industrial Floor Grating'),
+    ('prd-drainage-ss-rain-water-outlet', 'Stainless steel rain water outlet, roof drainage', 'Drainage Products', 'Rain Water Outlet'),
+    ('prd-drainage-powder-coated-clean-out', 'Powder-coated drainage clean-out cover', 'Drainage Products', 'Drainage Clean-Out Cover'),
+    ('prd-drainage-ss-flap-type-drain', 'Stainless steel flap-type drain valve', 'Drainage Products', 'Flap-Type Drain Valve'),
+    ('prd-drainage-parapet-drain', 'Parapet drain outlet, roof edge installation', 'Drainage Products', 'Parapet Drain Outlet'),
     # ---- Tailor Made Products ----
-    ('prd-grp-water-tank', 'GRP sectional water tank, plant room', 'Tailor Made Products'),
-    ('prd-tree-grate', 'Decorative sunburst tree grate, mall floor', 'Tailor Made Products'),
-    ('prd-majilis-meal-screen', 'Custom fabricated majlis meal screen', 'Tailor Made Products'),
-    ('prd-door-screen', 'Decorative CNC-cut door screen panel', 'Tailor Made Products'),
-    ('prd-metal-canopy', 'Fabricated steel entrance canopy', 'Tailor Made Products'),
-    ('prd-skirting-profile', 'Custom fabricated metal skirting profile', 'Tailor Made Products'),
-    ('prd-staff-locker-cabinet', 'Staff locker and storage cabinet unit', 'Tailor Made Products'),
-    ('prd-tme-handrail', 'Stainless steel tube handrail, custom fabrication', 'Tailor Made Products'),
-    ('prd-tme-handrail-glass-partition', 'Handrail with glass partition infill', 'Tailor Made Products'),
-    ('prd-tme-wall-mounted-handrail', 'Wall-mounted tubular handrail along an access ramp', 'Tailor Made Products'),
-    ('prd-tme-lift-cladding', 'Custom stainless steel lift cladding', 'Tailor Made Products'),
-    ('prd-tme-ceiling-tile', 'Fabricated decorative ceiling tile', 'Tailor Made Products'),
-    ('prd-tme-marble-top', 'Custom metal-framed marble top unit', 'Tailor Made Products'),
-    ('prd-tme-floor-mounting-bollard', 'Floor-mounted stainless steel bollard', 'Tailor Made Products'),
-    ('prd-tme-bbq-tray', 'Custom fabricated BBQ tray unit', 'Tailor Made Products'),
+    ('prd-grp-water-tank', 'GRP sectional water tank, plant room', 'Tailor Made Products', 'GRP Water Tank'),
+    ('prd-tree-grate', 'Decorative sunburst tree grate, mall floor', 'Tailor Made Products', 'Decorative Tree Grate'),
+    ('prd-majilis-meal-screen', 'Custom fabricated majlis meal screen', 'Tailor Made Products', 'Custom Majlis Screen'),
+    ('prd-door-screen', 'Decorative CNC-cut door screen panel', 'Tailor Made Products', 'Decorative Door Screen'),
+    ('prd-metal-canopy', 'Fabricated steel entrance canopy', 'Tailor Made Products', 'Bespoke Entrance Canopy'),
+    ('prd-skirting-profile', 'Custom fabricated metal skirting profile', 'Tailor Made Products', 'Custom Skirting Profile'),
+    ('prd-staff-locker-cabinet', 'Staff locker and storage cabinet unit', 'Tailor Made Products', 'Staff Locker Cabinet'),
+    ('prd-tme-handrail', 'Stainless steel tube handrail, custom fabrication', 'Tailor Made Products', 'Bespoke Tube Handrail'),
+    ('prd-tme-handrail-glass-partition', 'Handrail with glass partition infill', 'Tailor Made Products', 'Glass Partition Handrail'),
+    ('prd-tme-wall-mounted-handrail', 'Wall-mounted tubular handrail along an access ramp', 'Tailor Made Products', 'Wall-Mounted Handrail'),
+    ('prd-tme-lift-cladding', 'Custom stainless steel lift cladding', 'Tailor Made Products', 'Custom Lift Cladding'),
+    ('prd-tme-ceiling-tile', 'Fabricated decorative ceiling tile', 'Tailor Made Products', 'Decorative Ceiling Tile'),
+    ('prd-tme-marble-top', 'Custom metal-framed marble top unit', 'Tailor Made Products', 'Custom Marble Top Unit'),
+    ('prd-tme-floor-mounting-bollard', 'Floor-mounted stainless steel bollard', 'Tailor Made Products', 'Floor-Mounted Bollard'),
+    ('prd-tme-bbq-tray', 'Custom fabricated BBQ tray unit', 'Tailor Made Products', 'Custom BBQ Tray'),
 ]
 
 # ------------------------------------------------------- all-products page --
@@ -2065,13 +2065,17 @@ def build_product_category(pc, i):
 
 def build_gallery():
     gal_sizes = '(min-width:1440px) 16vw, (min-width:1100px) 20vw, (min-width:820px) 25vw, (min-width:560px) 33vw, 50vw'
+    shuffled = list(GALLERY)
+    random.Random(7).shuffle(shuffled)
     gal = ''.join(f'''
       <figure class="gal__i" data-full="assets/img/{g}-1400.jpg">
-        <picture><source srcset="assets/img/{g}-800.webp 800w, assets/img/{g}-1400.webp 1400w" type="image/webp"><source srcset="assets/img/{g}-800.jpg 800w, assets/img/{g}-1400.jpg 1400w" type="image/jpeg"><img src="assets/img/{g}-800.jpg" sizes="{gal_sizes}" alt="{a}" width="800" height="800" loading="lazy" decoding="async"></picture>
-        <span class="pc__tag">{c}</span>
-      </figure>''' for g, a, c in GALLERY)
+        <div class="gal__i-img">
+          <picture><source srcset="assets/img/{g}-800.webp 800w, assets/img/{g}-1400.webp 1400w" type="image/webp"><source srcset="assets/img/{g}-800.jpg 800w, assets/img/{g}-1400.jpg 1400w" type="image/jpeg"><img src="assets/img/{g}-800.jpg" sizes="{gal_sizes}" alt="{a}" width="800" height="800" loading="lazy" decoding="async"></picture>
+        </div>
+        <p class="gal__i-cap">{cap}</p>
+      </figure>''' for g, a, c, cap in shuffled)
 
-    cats = sorted(set(c for _, _, c in GALLERY))
+    cats = sorted(set(c for _, _, c, _ in GALLERY))
     title = f'Project Gallery | {CO_SHORT}, Dubai'
     desc = ('A comprehensive photograph collection of completed ADSD Steel work and products: '
              + ', '.join(cats) + ', drawn from finished projects across the UAE.')

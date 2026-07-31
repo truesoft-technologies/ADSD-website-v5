@@ -584,15 +584,29 @@ body.menu-open .menu { clip-path: inset(0 0 0 0); visibility: visible; }
 .gal__i--w { grid-column: span 2; aspect-ratio: 2/1; }
 .gal__i::after { content: ''; position: absolute; inset: 0; background: rgba(0,169,232,0); transition: background .45s var(--ease); }
 .gal__i:hover::after { background: rgba(0,169,232,.14); }
-.gal__i .pc__tag { opacity: 0; transform: translateY(-4px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
-.gal__i:hover .pc__tag { opacity: 1; transform: none; }
 
-/* --- 20a. main gallery wall: 6-col responsive grid ---------------------- */
-.gal--wall { grid-template-columns: repeat(2,1fr); gap: clamp(.45rem,1vw,.75rem); }
+/* --- 20a. main gallery wall: cards with caption, 6-col responsive grid -- */
+.gal--wall { grid-template-columns: repeat(2,1fr); gap: clamp(.9rem,1.6vw,1.4rem); }
 @media (min-width: 560px) { .gal--wall { grid-template-columns: repeat(3,1fr); } }
 @media (min-width: 820px) { .gal--wall { grid-template-columns: repeat(4,1fr); } }
 @media (min-width: 1100px) { .gal--wall { grid-template-columns: repeat(5,1fr); } }
 @media (min-width: 1440px) { .gal--wall { grid-template-columns: repeat(6,1fr); } }
+.gal--wall .gal__i {
+  aspect-ratio: auto; overflow: visible; background: var(--white);
+  border: 1px solid var(--hair); border-radius: 16px;
+  padding: .55rem .55rem .9rem; display: flex; flex-direction: column;
+  box-shadow: 0 2px 10px rgba(11,16,20,.05);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);
+}
+.gal--wall .gal__i:hover { transform: translateY(-5px); box-shadow: 0 18px 34px -16px rgba(11,16,20,.22); border-color: rgba(0,169,232,.3); }
+.gal--wall .gal__i::after { display: none; }
+.gal--wall .gal__i-img { position: relative; overflow: hidden; border-radius: 11px; aspect-ratio: 4/3; background: var(--paper-2); }
+.gal--wall .gal__i-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
+.gal--wall .gal__i:hover .gal__i-img img { transform: scale(1.06); }
+.gal--wall .gal__i-cap {
+  margin-top: .7rem; text-align: center; font-family: var(--ff-d); font-weight: 700;
+  font-size: .88rem; line-height: 1.3; letter-spacing: -.005em; color: var(--t1);
+}
 
 /* --- 20b. all-products grid --------------------------------------------- */
 .pgrid { display: grid; gap: clamp(1.2rem,2.4vw,1.8rem) clamp(.9rem,1.6vw,1.4rem); grid-template-columns: repeat(2,1fr); }
