@@ -451,7 +451,8 @@ body.menu-open .menu { clip-path: inset(0 0 0 0); visibility: visible; }
 @media (min-width: 940px) { .about__grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: start; } }
 .about__body { display: grid; gap: 1.25rem; max-width: 54ch; }
 .about__stack { display: grid; gap: 1rem; margin-top: .6rem; }
-.vm { border: 1px solid var(--hair); border-radius: var(--r); padding: clamp(1.25rem,2vw,1.7rem); background: var(--white); }
+.vm { border: 1px solid var(--hair); border-radius: var(--r); padding: clamp(1.25rem,2vw,1.7rem); background: var(--white); transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease); cursor: pointer; }
+.vm:hover { transform: translateY(-6px); box-shadow: 0 16px 36px -12px rgba(11,16,20,.18); border-color: rgba(0,169,232,.35); }
 .vm__k { display: flex; align-items: center; gap: .6rem; margin-bottom: .7rem; }
 .vm__k b { font: 600 .68rem/1 var(--ff-m); letter-spacing: .16em; text-transform: uppercase; color: var(--cyan-2); }
 .vm p { color: var(--t2); font-size: .975rem; }
