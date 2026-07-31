@@ -1309,11 +1309,13 @@ def footer(base=''):
 
 def img_tag(name, alt, w, h, cls='', lazy=True, parallax=None, sizes='(min-width:1100px) 33vw, (min-width:700px) 50vw, 100vw'):
     p = f' data-parallax="{parallax}"' if parallax else ''
-    return (f'<img{" class=" + chr(34) + cls + chr(34) if cls else ""} '
-            f'src="assets/img/{name}-800.jpg" '
-            f'srcset="assets/img/{name}-800.jpg 800w, assets/img/{name}-1400.jpg 1400w" '
-            f'sizes="{sizes}" alt="{alt}" width="{w}" height="{h}" '
-            f'{"loading=" + chr(34) + "lazy" + chr(34) + " " if lazy else ""}decoding="async"{p}>')
+    cls_attr = f' class="{cls}"' if cls else ''
+    loading_attr = f' loading="lazy"' if lazy else ''
+    return (f'<picture>'
+            f'<source srcset="assets/img/{name}-800.webp 800w, assets/img/{name}-1400.webp 1400w" type="image/webp">'
+            f'<source srcset="assets/img/{name}-800.jpg 800w, assets/img/{name}-1400.jpg 1400w" type="image/jpeg">'
+            f'<img{cls_attr} src="assets/img/{name}-800.jpg" sizes="{sizes}" alt="{alt}" width="{w}" height="{h}"{loading_attr} decoding="async"{p}>'
+            f'</picture>')
 
 
 # ============================================================== HOME =======
@@ -1689,7 +1691,7 @@ def build_service(s, i):
     specs = ''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in s['specs'])
     gal = ''.join(f'''
       <figure class="gal__i" data-full="{base}assets/img/{g}-1400.jpg">
-        <img src="{base}assets/img/{g}-800.jpg" alt="{html.unescape(s['plain'])}: {g.replace('-',' ')}" width="800" height="800" loading="lazy" decoding="async">
+        <picture><source srcset="{base}assets/img/{g}-800.webp 800w, {base}assets/img/{g}-1400.webp 1400w" type="image/webp"><source srcset="{base}assets/img/{g}-800.jpg 800w, {base}assets/img/{g}-1400.jpg 1400w" type="image/jpeg"><img src="{base}assets/img/{g}-800.jpg" alt="{html.unescape(s['plain'])}: {g.replace('-',' ')}" width="800" height="800" loading="lazy" decoding="async"></picture>
       </figure>''' for g in s['gallery'])
     body = ''.join(f'<p data-reveal>{p}</p>' for p in s['body'])
 
@@ -1713,7 +1715,7 @@ def build_service(s, i):
 
   <section class="phero">
     <div class="phero__bg" aria-hidden="true">
-      <img src="{base}assets/img/{s['hero']}-1400.jpg" alt="" width="1400" height="1400" fetchpriority="high" decoding="async" data-parallax="-8">
+      <picture><source srcset="{base}assets/img/{s['hero']}-800.webp 800w, {base}assets/img/{s['hero']}-1400.webp 1400w" type="image/webp"><source srcset="{base}assets/img/{s['hero']}-800.jpg 800w, {base}assets/img/{s['hero']}-1400.jpg 1400w" type="image/jpeg"><img src="{base}assets/img/{s['hero']}-1400.jpg" alt="" width="1400" height="1400" fetchpriority="high" decoding="async" data-parallax="-8"></picture>
     </div>
     <div class="wrap phero__in">
       <nav class="crumbs" aria-label="Breadcrumb">
@@ -1802,7 +1804,7 @@ def build_product(p, i):
     bens = ''.join(f'<li>{ICON["tick"]}<span><b>{t}</b>: {d}</span></li>' for t, d in p['benefits'])
     gal = ''.join(f'''
       <figure class="gal__i{' gal__i--w' if n == 0 else ''}" data-full="{base}assets/img/{g}-1400.jpg">
-        <img src="{base}assets/img/{g}-800.jpg" alt="{html.unescape(p['title'])}: {g.replace('-',' ')}" width="800" height="800" loading="lazy" decoding="async">
+        <picture><source srcset="{base}assets/img/{g}-800.webp 800w, {base}assets/img/{g}-1400.webp 1400w" type="image/webp"><source srcset="{base}assets/img/{g}-800.jpg 800w, {base}assets/img/{g}-1400.jpg 1400w" type="image/jpeg"><img src="{base}assets/img/{g}-800.jpg" alt="{html.unescape(p['title'])}: {g.replace('-',' ')}" width="800" height="800" loading="lazy" decoding="async"></picture>
       </figure>''' for n, g in enumerate(p['gallery']))
     over = ''.join(f'<p data-reveal>{x}</p>' for x in p['overview'])
 
@@ -1923,7 +1925,7 @@ def build_product_category(pc, i):
     pgrid = ''.join(f'''
       <div class="pgrid__item">
         <figure class="gal__i" data-full="{base}assets/img/{g}-1400.jpg">
-          <img src="{base}assets/img/{g}-800.jpg" alt="{_PHOTO_TITLE[g]}" width="800" height="800" loading="lazy" decoding="async">
+          <picture><source srcset="{base}assets/img/{g}-800.webp 800w, {base}assets/img/{g}-1400.webp 1400w" type="image/webp"><source srcset="{base}assets/img/{g}-800.jpg 800w, {base}assets/img/{g}-1400.jpg 1400w" type="image/jpeg"><img src="{base}assets/img/{g}-800.jpg" alt="{_PHOTO_TITLE[g]}" width="800" height="800" loading="lazy" decoding="async"></picture>
         </figure>
         <p class="pgrid__cap">{_PHOTO_TITLE[g]}</p>
       </div>''' for g in pc['photos'])
