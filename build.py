@@ -665,7 +665,7 @@ PRODUCT_CATEGORIES = [
         photos=_KITCHEN_SLUGS,
     ),
     dict(
-        slug='all-handrail', title='All Handrail', tag='Access &amp; safety', hero='prd-handrain-3',
+        slug='all-handrail', title='Balustrades &amp; Handrails', tag='Access &amp; safety', hero='prd-handrain-3',
         short='Stair, ramp, balcony and pool handrails and balustrades, fabricated to a site measurement.',
         lead='Stair, ramp, balcony and pool handrails and balustrades, fabricated to a site measurement in tube, box section, glass-infill or stainless steel, with the ladders and stair fabrication that go alongside them.',
         overview=[
