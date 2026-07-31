@@ -518,17 +518,24 @@ body.menu-open .menu { clip-path: inset(0 0 0 0); visibility: visible; }
 @media (min-width: 640px) { .prod { grid-template-columns: repeat(2,1fr); } }
 @media (min-width: 900px) { .prod { grid-template-columns: repeat(3,1fr); } }
 @media (min-width: 1280px) { .prod { grid-template-columns: repeat(4,1fr); } }
-.pc { display: grid; gap: .85rem; align-content: start; }
-.pc__m { position: relative; overflow: hidden; border-radius: var(--r); aspect-ratio: 3/2; background: var(--paper-2); }
+.pc { display: block; position: relative; }
+.pc__m { position: relative; overflow: hidden; border-radius: 1.25rem; aspect-ratio: 3/2; background: var(--paper-2); }
 .pc__m img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
-.pc:hover .pc__m img { transform: scale(1.05); }
-.pc__m::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg,transparent 45%,rgba(11,16,20,.55)); opacity: 0; transition: opacity .5s var(--ease); }
+.pc:hover .pc__m img { transform: scale(1.06); }
+.pc__m::after { content: ''; position: absolute; inset: 0; z-index: 1; background: rgba(11,16,20,.5); opacity: 0; transition: opacity .45s var(--ease); }
 .pc:hover .pc__m::after { opacity: 1; }
 .pc__tag { position: absolute; top: .8rem; left: .8rem; z-index: 2; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); padding: .38rem .6rem; font: 600 .625rem/1 var(--ff-m); letter-spacing: .13em; text-transform: uppercase; border-radius: 2px; }
-.pc__b { display: grid; gap: .5rem; }
-.pc__b p { color: var(--t2); font-size: .93rem; }
-.pc:hover .pc__t { color: var(--cyan-2); }
-.pc__t { transition: color .35s var(--ease); }
+.pc__ov {
+  position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 1.2rem 1.3rem 1.35rem; background: linear-gradient(180deg,transparent 42%,rgba(11,16,20,.78) 100%);
+}
+.pc__t { color: #fff; font-family: var(--ff-d); font-weight: 700; font-size: clamp(1.05rem,1.3vw,1.25rem); line-height: 1.15; letter-spacing: -.01em; }
+.pc__cta {
+  margin-top: .9rem; align-self: flex-start; opacity: 0; transform: translateY(10px);
+  transition: opacity .4s var(--ease), transform .4s var(--ease);
+}
+.pc:hover .pc__cta { opacity: 1; transform: translateY(0); }
+@media (pointer: coarse) { .pc__cta { opacity: 1; transform: none; } .pc__m::after { opacity: .35; } }
 .pc--tall .pc__m { aspect-ratio: 4/5; }
 .prod__more { margin-top: clamp(1.6rem,3vw,2.4rem); display: flex; justify-content: center; }
 

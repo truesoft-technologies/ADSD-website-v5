@@ -1381,9 +1381,10 @@ def build_index():
       <a class="pc" href="products/{pc['slug']}.html">
         <div class="pc__m">
           {img_tag(pc['hero'], pc['title'] + ', ' + CO_SHORT, 800, 600)}
-        </div>
-        <div class="pc__b">
-          <h3 class="h4 pc__t">{pc['title']}</h3>
+          <div class="pc__ov">
+            <h3 class="h4 pc__t">{pc['title']}</h3>
+            <span class="btn btn--pri btn--sm pc__cta"><span class="btn__t">Explore More</span>{ICON['arrow']}</span>
+          </div>
         </div>
       </a>''' for pc in PRODUCT_CATEGORIES)
 
