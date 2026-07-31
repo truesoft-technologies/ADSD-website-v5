@@ -1948,7 +1948,7 @@ def build_product_category(pc, i):
 
   <section class="phero">
     <div class="phero__bg" aria-hidden="true">
-      <img src="{base}assets/img/{pc['hero']}-1400.jpg" alt="" width="1400" height="1400" fetchpriority="high" decoding="async" data-parallax="-8">
+      <picture><source srcset="{base}assets/img/{pc['hero']}-800.webp 800w, {base}assets/img/{pc['hero']}-1400.webp 1400w" type="image/webp"><source srcset="{base}assets/img/{pc['hero']}-800.jpg 800w, {base}assets/img/{pc['hero']}-1400.jpg 1400w" type="image/jpeg"><img src="{base}assets/img/{pc['hero']}-1400.jpg" alt="" width="1400" height="1400" fetchpriority="high" decoding="async" data-parallax="-8"></picture>
     </div>
     <div class="wrap phero__in">
       <nav class="crumbs" aria-label="Breadcrumb">
