@@ -460,22 +460,21 @@ PRODUCTS = [
 # assigned to exactly one category — Tailor Made Products picks up whatever
 # the other four don't claim.
 _UPVC_SLUGS = [
-    'prd-dry-gully-trap-upvc', 'prd-upvc-dry-manhole-cover', 'prd-upvc-fittings', 'prd-duct',
-    'prd-floor-gully-trap', 'prd-grease-trap', 'prd-grease-trap-c-type', 'prd-shower-drain',
-    'prd-showerdrain', 'prd-slot-drain', 'prd-water-feature-slot-drain',
-    'prd-radius-water-feature-linear-drain', 'prd-pool-linear-gratings', 'prd-ablution-gratings',
+    'prd-dry-gully-trap-upvc', 'prd-upvc-dry-manhole-cover', 'prd-upvc-fittings',
+    'prd-grease-trap', 'prd-grease-trap-c-type', 'prd-grp-ladder-for-pump-room',
 ]
 _HATCH_SLUGS = [
     'prd-access-hatch-1', 'prd-alain-municipality-park-access-hatch',
     'prd-basement-access-hatch-alain-municipality-project',
     'prd-dewa-dubai-south-project-access-door', 'prd-floor-access-hatch', 'prd-roof-access-hatch',
     'prd-wall-access-cover', 'prd-wall-access-panel', 'prd-floor-deck-cover-with-stone-infill',
-    'prd-grp-ladder-for-pump-room', 'prd-multi-cover-mhc-with-grp', 'prd-multi-tray-mhc',
+    'prd-multi-cover-mhc-with-grp', 'prd-multi-tray-mhc',
     'prd-recessed-mhc', 'prd-solid-top-mhc', 'prd-meter-box', 'prd-elv-trench-panel',
+    'prd-dubai-south-dewa-substation',
 ]
 _KITCHEN_SLUGS = [
     'prd-bainmarie', 'prd-bbq-outdoor-unit', 'prd-cafe-display-unit', 'prd-customized-mop-sink',
-    'prd-dubai-hill-mall-display-unit-olab-cafe', 'prd-display-unit', 'prd-etihad-dry-kitchen',
+    'prd-etihad-dry-kitchen',
     'prd-etihad-hotkitchen', 'prd-etihad-staff-storage-cabinet', 'prd-etihad-staff-catering-storage-cabinet',
     'prd-hot-plate-with-burner', 'prd-janitorial-sink', 'prd-khawanij-private-villa-kitchen',
     'prd-kitchen-hood', 'prd-kitchen-hood-duct', 'prd-lazzat-kitchen-supplied-products',
@@ -483,9 +482,9 @@ _KITCHEN_SLUGS = [
     'prd-nouf-private-villa-kitchen', 'prd-nouf-private-villa-kitchen-2', 'prd-oil-pullout-tralley',
     'prd-private-villa-hot-kitchen', 'prd-resturant-in-al-zahia-c4', 'prd-resturant-in-al-zahia-mall',
     'prd-whatsapp-image-2026-07-21-at-13-03-13-1', 'prd-whatsapp-image-2026-07-21-at-13-03-13-2',
-    'prd-whatsapp-image-2026-07-21-at-13-03-13', 'prd-staff-locker-cabinet',
+    'prd-whatsapp-image-2026-07-21-at-13-03-13',
     'prd-storage-unit-bbq-counter', 'prd-table-top-bbq-grill', 'prd-water-duct-khood',
-    'prd-center-table', 'prd-mobile-trolley',
+    'prd-mobile-trolley',
 ]
 _HANDRAIL_SLUGS = [
     'prd-handrail-type-2', 'prd-handrain-3', 'prd-handrain-type-4', 'prd-balcony-balustard',
