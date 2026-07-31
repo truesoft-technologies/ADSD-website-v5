@@ -426,6 +426,10 @@ body.menu-open .menu { clip-path: inset(0 0 0 0); visibility: visible; }
   content: ''; position: absolute; top: .1em; bottom: .1em; right: calc(clamp(2rem,4.5vw,3.6rem) / -2 - .5px);
   width: 1px; background: var(--hair-i);
 }
+@media (max-width: 520px) {
+  .hero__specs { gap: 1.2rem; }
+  .hero__specs > div:not(:last-child)::after { display: none; }
+}
 .spec__k { font: 500 .655rem/1 var(--ff-m); letter-spacing: .17em; text-transform: uppercase; color: var(--t3i); }
 .spec__v { font-family: var(--ff-d); font-weight: 700; font-size: clamp(1.3rem,2vw,1.75rem); letter-spacing: -.02em; line-height: 1; }
 .spec__v--sm { font-size: clamp(1.05rem,1.5vw,1.3rem); }
