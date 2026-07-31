@@ -1528,7 +1528,7 @@ def build_index():
       <div class="shead">
         <div class="shead__top"><span class="shead__idx">02</span><p class="eyebrow">Why ADSD</p></div>
         <div class="shead__grid">
-          <h2 class="h2 shead__title" data-split>Four reasons contractors keep coming back.</h2>
+          <h2 class="h2 shead__title" data-split>The ADSD difference: Four key advantages.</h2>
           <p class="lead" data-reveal>None of them is a claim about tonnage. They are all about who is accountable when something on site does not match the drawing.</p>
         </div>
       </div>
