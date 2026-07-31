@@ -1590,7 +1590,6 @@ def build_index():
         <div class="shead__top"><span class="shead__idx">06</span><p class="eyebrow">Reference projects</p></div>
         <div class="shead__grid">
           <h2 class="h2 shead__title" data-split>Work we can point to.</h2>
-          <p class="lead" data-reveal>Villas, hospitality fit-outs and civil sites across the UAE. Click a photo for a larger view.</p>
         </div>
       </div>
       <div class="proj" data-stagger>{proj}</div>
