@@ -1515,7 +1515,6 @@ def build_index():
           <figure class="media media--11 media__zoom" data-img-reveal>
             {img_tag('base-plates-fabrication', 'Fabricated base plates with holding-down bolt groups and templates', 800, 775, sizes='(min-width:940px) 23vw, 50vw')}
           </figure>
-          <figcaption class="cap" style="grid-column:1/-1"><b>Fig. 01</b> Workshop: cutting, fitting, welding and finishing before anything reaches site.</figcaption>
         </div>
       </div>
     </div>
