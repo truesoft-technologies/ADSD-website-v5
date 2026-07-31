@@ -188,7 +188,7 @@ SERVICES = [
         title='Tailor-Made Fabrication Products for the Landscape &amp; Hospitality Industry',
         plain='Tailor-Made Fabrication Products for the Landscape and Hospitality Industry',
         short='Custom steel pergolas, shade structures and outdoor metalwork fabricated for landscape and hospitality projects.',
-        hero='prd-metal-car-shade',
+        hero='car-parking-shade-row',
         lead='Pergolas, shade structures and outdoor metalwork fabricated to a landscape or hospitality design intent, built to hold a finish as well as a load.',
         body=[
             'Landscape and hospitality work is judged on appearance as much as strength, so fabrication is set out from the design drawing issued by the architect or landscape designer, with attention to clean welds, consistent radii and a finish that will be seen up close.',
@@ -1563,7 +1563,7 @@ def build_index():
       </div>
       <div class="prod" data-stagger>{prod}</div>
       <div class="prod__more" data-reveal>
-        <a class="btn btn--pri" href="all-products.html" data-magnet="0.2"><span class="btn__t">View All Products</span>{ICON['arrow']}</a>
+        <a class="tlink" href="gallery.html">Explore gallery{ICON['arr_sm']}</a>
       </div>
     </div>
   </section>

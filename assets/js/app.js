@@ -300,10 +300,29 @@
     let on = false;
     let scrolling = false;
     let scrollTimer;
+    let activeRow = null;
+
+    /* Docked to the row's own right-hand gutter (ahead of the arrow button)
+       and vertically centred on that row, rather than chasing the raw
+       cursor position — a fixed cursor offset overlapped the title/copy of
+       neighbouring rows whenever a row near the top or bottom of the list
+       was hovered, most visibly on the last row where there is no room
+       below to shift into instead. Clamped to the viewport so it never
+       crops off-screen near the edges. */
+    const PEEK_W = 260, PEEK_H = 195, PAD = 24, EDGE = 16;
+    const place = (row) => {
+      const r = row.getBoundingClientRect();
+      const go = $('.srv__go', row);
+      const rightEdge = go ? go.getBoundingClientRect().left : r.right;
+      const x = Math.max(EDGE, Math.min(rightEdge - PEEK_W - PAD, window.innerWidth - PEEK_W - EDGE));
+      const y = Math.max(EDGE, Math.min(r.top + r.height / 2 - PEEK_H / 2, window.innerHeight - PEEK_H - EDGE));
+      qx(x); qy(y);
+    };
 
     const hide = () => {
       if (!on) return;
       on = false;
+      activeRow = null;
       gsap.to(peek, { opacity: 0, scale: .92, duration: .3, ease: 'power2.in' });
     };
 
@@ -328,15 +347,14 @@
         if (scrolling) return;
         img.src = row.dataset.peek;
         img.alt = '';
+        activeRow = row;
+        place(row);
         on = true;
         gsap.to(peek, { opacity: 1, scale: 1, duration: .45, ease: 'power3.out' });
       });
       row.addEventListener('pointerleave', hide);
     });
-    window.addEventListener('pointermove', (e) => {
-      if (!on) return;
-      qx(e.clientX - 130); qy(e.clientY - 220);
-    }, { passive: true });
+    window.addEventListener('resize', () => { if (activeRow) place(activeRow); });
   }
 
   /* ------------------------------------------------------------- accordion */
