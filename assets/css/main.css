@@ -519,7 +519,7 @@ body.menu-open .menu { clip-path: inset(0 0 0 0); visibility: visible; }
 @media (min-width: 900px) { .prod { grid-template-columns: repeat(3,1fr); } }
 @media (min-width: 1280px) { .prod { grid-template-columns: repeat(4,1fr); } }
 .pc { display: block; position: relative; }
-.pc__m { position: relative; overflow: hidden; border-radius: 1.25rem; aspect-ratio: 3/2; background: var(--paper-2); }
+.pc__m { position: relative; overflow: hidden; border-radius: 1.25rem; aspect-ratio: 3/4; background: var(--paper-2); }
 .pc__m img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
 .pc:hover .pc__m img { transform: scale(1.06); }
 .pc__m::after { content: ''; position: absolute; inset: 0; z-index: 1; background: rgba(11,16,20,.5); opacity: 0; transition: opacity .45s var(--ease); }
