@@ -1558,7 +1558,7 @@ def build_index():
       <div class="shead">
         <div class="shead__top"><span class="shead__idx">04</span><p class="eyebrow">Products</p></div>
         <div class="shead__grid">
-          <h2 class="h2 shead__title" data-split>Things we make, ready to specify.</h2>
+          <h2 class="h2 shead__title" data-split>Structural Steel Engineering Metal Craft Works.</h2>
           <p class="lead" data-reveal>Product categories drawn from completed projects: UPVC drainage, dedicated drainage products, access hatches and covers, customised kitchens, handrails, decorative metalwork, and tailor-made fabrication. Open a category for the full range.</p>
         </div>
       </div>
